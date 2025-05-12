@@ -1,0 +1,125 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+import { Box, Stack, Typography, Grid, Rating } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import PersonIcon from '@mui/icons-material/Person';
+import LocalDiningIcon from '@mui/icons-material/LocalDining';
+import LunchDiningIcon from '@mui/icons-material/LunchDining';
+import LunchDiningOutlinedIcon from '@mui/icons-material/LunchDiningOutlined';
+
+import { boxCat } from '../../utils/constants';
+
+const RecipeStack = styled(Stack)(({ theme }) => ({
+    display: 'flex',
+    backgroundColor: '#404040',
+    ...theme.typography.body2,
+    borderLeft: '1px solid #fff',
+    //paddingBottom: '4px',
+    '&:hover': {
+        cursor: 'pointer',
+    },
+}));
+
+const RecipeTitle = styled(Typography)(() => ({
+    fontSize: '1.75rem',
+    //marginBottom: '1rem',
+    padding: '0.5rem 1rem',
+    //paddingLeft: '0.75rem',
+    borderBottom: '1px solid #fff',
+    color: '#fff',
+}));
+
+const CardDetails = styled(Box)(() => ({
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingLeft: '1rem',
+    //paddingRight: '0.25rem',
+}));
+
+const DetailBox = styled(Box)(() => ({
+    display: 'flex',
+    alignItems: 'center',
+    gap: 4
+}));
+
+const CardText = styled(Typography)(() => ({
+    color: '#d9d9d9',
+}));
+
+const StyledRating = styled(Rating)({
+    '& .MuiRating-iconFilled': {
+        color: '#ff8533',
+    },
+});
+
+const RecipeMap = ({ recipes, recipeType }) => {
+
+    return (
+        <>
+            {recipes.map((recipe, index) => (
+                <>
+                    { recipe.type === recipeType
+                        ?
+                            <Grid size={6} key={index}>
+                                <Link
+                                    to={`/recipe?index=${recipe.index}`}
+                                >
+                                    <RecipeStack className='recipe-card'>
+                                        <RecipeTitle>
+                                            {recipe.recipeName}
+                                        </RecipeTitle>
+                                        <CardDetails>
+                                            <Stack
+                                                gap={2.5}
+                                            >
+                                                <DetailBox>
+                                                    <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
+                                                    <CardText>
+                                                        Prep time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.prepTime}</span>
+                                                    </CardText>
+                                                </DetailBox>
+                                                <DetailBox>
+                                                    <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
+                                                    <CardText>
+                                                        Cook time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.cookTime}</span>
+                                                    </CardText>
+                                                </DetailBox>
+                                                <DetailBox>
+                                                    <PersonIcon fontSize='' sx={{ color: '#fff' }} />
+                                                    <CardText>
+                                                        Serves&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.serves}</span>
+                                                    </CardText>
+                                                </DetailBox>
+                                                <DetailBox>
+                                                    <LocalDiningIcon fontSize='' sx={{ color: '#fff' }} />
+                                                    <CardText>
+                                                        Difficulty&nbsp;&nbsp;
+                                                    </CardText>
+                                                    <StyledRating
+                                                        readonly
+                                                        size="small"
+                                                        value={recipe.difficulty}
+                                                        precision={0.5}
+                                                        icon={<LunchDiningIcon fontSize="inherit" />}
+                                                        emptyIcon={<LunchDiningOutlinedIcon fontSize="inherit" />}
+                                                    />
+                                                </DetailBox>
+                                            </Stack>
+                                            <img className="" src={boxCat} height={200}/>
+                                        </CardDetails>
+                                    </RecipeStack>
+                                </Link>
+                            </Grid>
+                        :
+                            <></>
+                    }
+                </>
+            ))}
+        </>
+    );
+}
+
+export default RecipeMap;

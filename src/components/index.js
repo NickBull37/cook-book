@@ -11,3 +11,4 @@ export { default as Recipe } from './pages/Recipe';
 //################################### COOK BOOK ELEMENTS ###################################//
 //##########################################################################################//
 export { default as Navbar } from './elements/Navbar';
+export { default as RecipeMap } from './elements/RecipeMap';
