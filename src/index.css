@@ -1,13 +1,317 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/********************************************************************************************************************************************
+*********************************************************** TABLE OF CONTENTS ***************************************************************
+********************************************************************************************************************************************/
+/*
+    1. ROOT VARIABLES
+        1.1 Colors
+        1.2 Text Size
+	    1.3 Color Palette
+
+    2. DEFAULT STYLES
+        2.1 Default page styling
+        2.2 Default font styling
+        2.3 Default component styling
+        2.4 Additional fonts
+
+    3. GENERIC STYLES
+        3.1 Spacing
+        3.2 Color
+        3.3 Display
+        3.4 Typography
+
+    5. TYPOGRAPHY
+
+    4. HEADER
+
+    5. FOOTER
+
+    9. PAGE
+    	9.1 Desktop Styles
+    	9.2 Laptop Styles
+	9.3 Tablet Styles
+	9.4 Mobile Styles
+
+    10. MEDIA QUERIES
+        10.1 Laptop View
+        10.2 Tablet View
+        10.3 Mobile View
+*/
+
+/********************************************************************************************************************************************
+************************************************************ 1. ROOT VARIABLES **************************************************************
+********************************************************************************************************************************************/
+:root {
+
+    /* ----------------- 1.1 Colors ----------------- */
+    --white-100: #e6e6e6;
+    --white-200: #cccccc;
+    --white-300: #b3b3b3;
+    --white-400: #999999;
+
+    --gray-500: #808080;
+
+    --black-600: #666666;
+    --black-700: #4d4d4d;
+    --black-800: #333333;
+    --black-900: #1a1a1a;
+
+    --slate-400: #94a3b8;
+    --slate-500: #64748b;
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-800: #1e293b;
+    --slate-900: #0f172a;
+
+    --zinc-400: #a1a1aa;
+    --zinc-500: #71717a;
+    --zinc-600: #52525b;
+    --zinc-700: #3f3f46;
+    --zinc-800: #27272a;
+    --zinc-900: #18181b;
+
+    /* Color Palette */
+    --pal-primary: #000;
+    --pal-secondary: #000;
+    --pal-tertiary: #000;
+
+    --pal-red: #ff0000;
+    --pal-red-light: #ff8080;
+    --pal-red-dark: #800000;
+
+    --pal-orange: #ff6600;
+    --pal-orange-light: #ffb380;
+    --pal-orange-dark: #803300;
+
+    --pal-yellow: #ffff00;
+    --pal-yellow-light: #ffff80;
+    --pal-yellow-dark: #808000;
+
+    --pal-green: #00cc00;
+    --pal-green-light: #4dff4d;
+    --pal-green-dark: #004d00;
+
+    --pal-blue: #0000ff;
+    --pal-blue-light: #8080ff;
+    --pal-blue-dark: #000080;
+
+    --pal-purple: #bf00ff;
+    --pal-purple-light: #df80ff;
+    --pal-purple-dark: #600080;
+
+    --pal-pink: #ff1aff;
+    --pal-pink-light: #ff99ff;
+    --pal-pink-dark: #b300b3;
+
+    /* ---------------- 1.2 Text Size --------------*/
+    --txt-10: 0.625rem;
+    --txt-12: 0.75rem;
+    --txt-14: 0.875rem;
+    --txt-16: 1rem;
+    --txt-20: 1.25rem;
+    --txt-24: 1.5rem;
+    --txt-28: 1.75rem;
+    --txt-32: 2rem;
+    --txt-36: 2.25rem;
+    --txt-40: 2.5rem;
+    --txt-48: 3rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/********************************************************************************************************************************************
+*********************************************************** 2. DEFAULT STYLES ***************************************************************
+********************************************************************************************************************************************/
+/* ------------------- 2.1 Default page styling ------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none!important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Set background color for entire site */
+    background: #404040;
+    /* Set default text color for entire site */
+    color: #fff;
+}
+
+/* ------------------- 2.2 Default font styling ------------------- */
+.body1 {
+    font-size: var(--txt-16);
+}
+
+.body2 {
+    font-size: var(--txt-14);
+}
+
+.pg-header1 {
+    font-size: var(--txt-48);
+}
+
+.pg-header2 {
+    font-size: var(--txt-36);
+}
+
+.pg-header3 {
+    font-size: var(--txt-30);
+}
+
+.sec-header1 {
+    font-size: var(--txt-28);
+}
+
+.sec-header2 {
+    font-size: var(--txt-24);
+}
+
+.sec-header3 {
+    font-size: var(--txt-20);
+}
+
+.sub-title1 {
+    font-size: var(--txt-14);
+}
+
+.sub-title2 {
+    font-size: var(--txt-12);
+}
+
+/* ----------------- 2.3 Default component styling ----------------- */
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--pal-primary);
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: var(--pal-secondary);
+}
+
+/* ------------------ 2.4 Additional fonts added ------------------ */
+@font-face {
+    font-family: 'Kepo';
+    src: local('Kepo'),
+         url('./fonts/Kepo.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Signature';
+    src: local('Signature'),
+         url('./fonts/TheSignature.ttf') format('truetype');
+}
+
+
+/********************************************************************************************************************************************
+************************************************************ 3. GENERIC STYLES **************************************************************
+********************************************************************************************************************************************/
+
+/* ------------------- 3.1 Spacing  ------------------*/
+.container {
+    padding: 10px 10%;
+}
+
+.tight-container {
+    padding: 10px 20%;
+}
+
+/* ------------------- 3.2 Color  ------------------*/
+.color-primary {
+    color: var(--pal-purple);
+}
+
+.color-primary2 {
+    color: var(--pal-pink);
+}
+
+
+/* ------------------- 3.3 Display  ------------------*/
+.hide-on-mobile {
+    display: none;
+}
+
+.pad-list {
+    margin: 1rem;
+}
+
+/* ------------------- 3.4 Typography  ------------------*/
+/* KEPO */
+.kepo-h1-orange {
+    font-family: Kepo !important;
+    font-weight: 300;
+    font-size: 3.5rem!important;
+    line-height: 1.3!important;
+    letter-spacing: 0.075em!important;
+    color: rgba(255, 102, 0, 0.3);
+}
+
+/* SIGNATURE */
+.signature-h1-dark {
+    font-family: Signature !important;
+    font-size: 7rem!important;
+    font-weight: 500!important;
+    background: linear-gradient(to right, #8a0f21, #F71218)!important;
+    -webkit-background-clip: text!important;
+    -webkit-text-fill-color: transparent!important;
+}
+
+
+/********************************************************************************************************************************************
+************************************************************** 4. HEADER ********************************************************************
+********************************************************************************************************************************************/
+
+
+
+
+/********************************************************************************************************************************************
+************************************************************** 5. FOOTER ********************************************************************
+********************************************************************************************************************************************/
+
+
+
+/********************************************************************************************************************************************
+************************************************************* 9. PAGE ***************************************************************
+********************************************************************************************************************************************/
+.recipe-detail {
+    font-size: 1rem;
+    color: #b34700;
+    font-weight: bold;
+    background-color: #ffb380;
+    padding: 3px 5px;
+    border-radius: 4px;
+}
+
+.recipe-det {
+    font-size: 0.938rem;
+    /* 90% */
+    color: #e6e6e6;
+}
+
+
+
+
+/********************************************************************************************************************************************
+*********************************************************** 6. MEDIA QUERIES ***************************************************************
+********************************************************************************************************************************************/
+
+/* LAPTOP VIEW */
+@media only screen and (max-width: 1540px) {
+
+}
+
+/* TABLET VIEW */
+@media only screen and (max-width: 821px) {
+
+}
+
+/* MOBILE VIEW */
+@media only screen and (max-width: 600px) {
+
 }
