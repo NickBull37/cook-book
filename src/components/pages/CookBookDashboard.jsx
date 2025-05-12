@@ -18,8 +18,17 @@ const SectionTitle = styled(Typography)(() => ({
 
 const RecipeMapContainer = styled(Box)(() => ({
     width: '100%',
-    padding: '0 8rem'
+    padding: '0 9rem'
 }));
+
+const GridContainer = (props) => (
+    <Grid
+        container
+        rowSpacing={12}
+        columnSpacing={24}
+        {...props}
+    />
+);
 
 const CookBookDashboard = () => {
 
@@ -37,13 +46,9 @@ const CookBookDashboard = () => {
 
                         {/* container for dinner recipe map */}
                         <RecipeMapContainer>
-                            <Grid
-                                container
-                                rowSpacing={12}
-                                columnSpacing={20}
-                            >
+                            <GridContainer>
                                 <RecipeMap recipes={recipes} recipeType={"dinner"} />
-                            </Grid>
+                            </GridContainer>
                         </RecipeMapContainer>
                     </Stack>
                 </SectionContainer>
@@ -55,13 +60,9 @@ const CookBookDashboard = () => {
 
                         {/* container for dessert recipe map */}
                         <RecipeMapContainer>
-                            <Grid
-                                container
-                                rowSpacing={6}
-                                columnSpacing={16}
-                            >
+                            <GridContainer>
                                 <RecipeMap recipes={recipes} recipeType={"dessert"} />
-                            </Grid>
+                            </GridContainer>
                         </RecipeMapContainer>
                     </Stack>
                 </SectionContainer>
@@ -73,13 +74,9 @@ const CookBookDashboard = () => {
 
                         {/* container for drink recipe map */}
                         <RecipeMapContainer>
-                            <Grid
-                                container
-                                rowSpacing={6}
-                                columnSpacing={16}
-                            >
+                            <GridContainer>
                                 <RecipeMap recipes={recipes} recipeType={"drink"} />
-                            </Grid>
+                            </GridContainer>
                         </RecipeMapContainer>
                     </Stack>
                 </SectionContainer>
@@ -91,13 +88,9 @@ const CookBookDashboard = () => {
 
                         {/* container for extra recipe map */}
                         <RecipeMapContainer>
-                            <Grid
-                                container
-                                rowSpacing={6}
-                                columnSpacing={16}
-                            >
+                            <GridContainer>
                                 <RecipeMap recipes={recipes} recipeType={"extra"} />
-                            </Grid>
+                            </GridContainer>
                         </RecipeMapContainer>
                     </Stack>
                 </SectionContainer>

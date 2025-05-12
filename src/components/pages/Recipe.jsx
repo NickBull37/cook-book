@@ -5,7 +5,6 @@ import { styled } from '@mui/material/styles';
 import { Box, Stack, Typography, Paper } from '@mui/material';
 
 import { Navbar } from '../../components';
-import { boxCat } from '../../utils/constants';
 import recipes from '../../data/recipes';
 
 const RecipePaper = styled(Paper)(() => ({
@@ -52,7 +51,7 @@ const Recipe = () => {
                                     <Typography className='kepo-h3-orange'>
                                         {recipe.recipeName}
                                     </Typography>
-                                    <img className="" src={boxCat} height={200}/>
+                                    <img className="" src={recipe.photo} height={200}/>
                                 </Box>
                                 <Box>
                                     <SectionTitle>Ingredients</SectionTitle>

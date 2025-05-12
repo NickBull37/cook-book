@@ -1,3 +1,12 @@
+import {
+    chickenPicatta,
+    tenerloinSteak,
+    potatoMochi,
+    chocolateCheeseCake,
+    watermelonMarg,
+    burgerSauce
+} from "../utils/constants";
+
 const recipes = [
     {
         index: 1,
@@ -14,7 +23,7 @@ const recipes = [
         serves: '1-2',
         rating: 4.5,
         difficulty: 3,
-        // photo: '',
+        photo: tenerloinSteak,
     },
     {
         index: 2,
@@ -31,7 +40,7 @@ const recipes = [
         serves: '6-12',
         rating: 4.5,
         difficulty: 3,
-        // photo: '',
+        photo: chickenPicatta,
     },
     {
         index: 3,
@@ -48,7 +57,7 @@ const recipes = [
         serves: '6-12',
         rating: 4.5,
         difficulty: 3,
-        // photo: '',
+        photo: potatoMochi,
     },
     {
         index: 4,
@@ -75,7 +84,7 @@ const recipes = [
         serves: '6-12',
         rating: 4.5,
         difficulty: 2,
-        // photo: '',
+        photo: chocolateCheeseCake,
     },
     {
         index: 5,
@@ -99,7 +108,7 @@ const recipes = [
         serves: '1',
         rating: 4.5,
         difficulty: 2.5,
-        // photo: '',
+        photo: watermelonMarg,
     },
     {
         index: 6,
@@ -123,7 +132,7 @@ const recipes = [
         serves: '4-6',
         rating: 4,
         difficulty: 1,
-        // photo: '',
+        photo: burgerSauce,
     },
 ];
 

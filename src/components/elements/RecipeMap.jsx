@@ -9,14 +9,11 @@ import LocalDiningIcon from '@mui/icons-material/LocalDining';
 import LunchDiningIcon from '@mui/icons-material/LunchDining';
 import LunchDiningOutlinedIcon from '@mui/icons-material/LunchDiningOutlined';
 
-import { boxCat } from '../../utils/constants';
-
 const RecipeStack = styled(Stack)(({ theme }) => ({
     display: 'flex',
     backgroundColor: '#404040',
     ...theme.typography.body2,
     borderLeft: '1px solid #fff',
-    //paddingBottom: '4px',
     '&:hover': {
         cursor: 'pointer',
     },
@@ -24,9 +21,7 @@ const RecipeStack = styled(Stack)(({ theme }) => ({
 
 const RecipeTitle = styled(Typography)(() => ({
     fontSize: '1.75rem',
-    //marginBottom: '1rem',
     padding: '0.5rem 1rem',
-    //paddingLeft: '0.75rem',
     borderBottom: '1px solid #fff',
     color: '#fff',
 }));
@@ -36,7 +31,6 @@ const CardDetails = styled(Box)(() => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingLeft: '1rem',
-    //paddingRight: '0.25rem',
 }));
 
 const DetailBox = styled(Box)(() => ({
@@ -108,7 +102,7 @@ const RecipeMap = ({ recipes, recipeType }) => {
                                                     />
                                                 </DetailBox>
                                             </Stack>
-                                            <img className="" src={boxCat} height={200}/>
+                                            <img className="recipe-card-photo" src={recipe.photo} />
                                         </CardDetails>
                                     </RecipeStack>
                                 </Link>
