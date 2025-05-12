@@ -5,6 +5,9 @@ import { Box, Stack, Typography, Paper, Grid, Rating } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PersonIcon from '@mui/icons-material/Person';
+import LocalDiningIcon from '@mui/icons-material/LocalDining';
+import LunchDiningIcon from '@mui/icons-material/LunchDining';
+import LunchDiningOutlinedIcon from '@mui/icons-material/LunchDiningOutlined';
 
 import { Navbar } from '../../components';
 import { boxCat } from '../../utils/constants';
@@ -14,7 +17,7 @@ const SectionContainer = styled(Box)(() => ({
 }));
 
 const SectionTitle = styled(Typography)(() => ({
-    marginBottom: '1.5rem',
+    marginBottom: '2rem',
     paddingLeft: '2rem',
 }));
 
@@ -32,7 +35,7 @@ const RecipeStack = styled(Stack)(({ theme }) => ({
     //borderRadius: '10px',
     '&:hover': {
         cursor: 'pointer',
-        backgroundColor: 'rgba(255, 102, 0, 0.1)',
+        backgroundColor: 'rgba(255, 102, 0, 0.05)',
         borderLeft: 'none',
         borderRadius: '6px',
         boxShadow: '0px 2px 15px 2px #000',
@@ -49,21 +52,27 @@ const RecipeTitle = styled(Typography)(() => ({
 
 const CardDetails = styled(Box)(() => ({
     display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     paddingLeft: '1rem',
     paddingRight: '0.25rem',
-    justifyContent: 'space-between'
 }));
 
 const DetailBox = styled(Box)(() => ({
     display: 'flex',
     alignItems: 'center',
-    marginBottom: '12px',
-    gap: 5
+    gap: 4
 }));
 
 const CardText = styled(Typography)(() => ({
-    color: '#fff',
+    color: '#d9d9d9',
 }));
+
+const StyledRating = styled(Rating)({
+    '& .MuiRating-iconFilled': {
+        color: '#ff8533',
+    },
+});
 
 const CookBookDashboard = () => {
 
@@ -91,6 +100,17 @@ const CookBookDashboard = () => {
             rating: 4.5,
             difficulty: 3
         },
+        {
+            index: 3,
+            type: 'dinner',
+            recipeName: 'Potato Mochi',
+            // photo: '',
+            prepTime: '15',
+            cookTime: '30',
+            serves: '6-12',
+            rating: 4.5,
+            difficulty: 3
+        },
     ];
 
     const dessertRecipes = [
@@ -103,7 +123,7 @@ const CookBookDashboard = () => {
             cookTime: '30',
             serves: '6-12',
             rating: 4.5,
-            difficulty: 3
+            difficulty: 2
         }
     ];
 
@@ -117,7 +137,7 @@ const CookBookDashboard = () => {
             cookTime: '0',
             serves: '1',
             rating: 4.5,
-            difficulty: 3
+            difficulty: 2.5
         }
     ];
 
@@ -131,7 +151,7 @@ const CookBookDashboard = () => {
             cookTime: '10',
             serves: '4-6',
             rating: 4,
-            difficulty: 5
+            difficulty: 1
         }
     ];
 
@@ -151,7 +171,7 @@ const CookBookDashboard = () => {
                         <RecipeMapContainer>
                             <Grid
                                 container
-                                rowSpacing={6}
+                                rowSpacing={12}
                                 columnSpacing={16}
                             >
                                 {dinnerRecipes.map((recipe, index) => (
@@ -161,24 +181,40 @@ const CookBookDashboard = () => {
                                                 {recipe.recipeName}
                                             </RecipeTitle>
                                             <CardDetails>
-                                                <Stack>
+                                                <Stack
+                                                    gap={2.5}
+                                                >
                                                     <DetailBox>
                                                         <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
                                                         <CardText>
-                                                            Prep time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail'>{recipe.prepTime}</span>
+                                                            Prep time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.prepTime}</span>
                                                         </CardText>
                                                     </DetailBox>
                                                     <DetailBox>
                                                         <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
                                                         <CardText>
-                                                            Cook time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail'>{recipe.cookTime}</span>
+                                                            Cook time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.cookTime}</span>
                                                         </CardText>
                                                     </DetailBox>
                                                     <DetailBox>
                                                         <PersonIcon fontSize='' sx={{ color: '#fff' }} />
                                                         <CardText>
-                                                            Serves&nbsp;&nbsp;&nbsp;<span className='recipe-detail'>{recipe.serves}</span>
+                                                            Serves&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.serves}</span>
                                                         </CardText>
+                                                    </DetailBox>
+                                                    <DetailBox>
+                                                        <LocalDiningIcon fontSize='' sx={{ color: '#fff' }} />
+                                                        <CardText>
+                                                            Difficulty&nbsp;&nbsp;
+                                                        </CardText>
+                                                        <StyledRating
+                                                            readonly
+                                                            size="small"
+                                                            value={recipe.difficulty}
+                                                            precision={0.5}
+                                                            icon={<LunchDiningIcon fontSize="inherit" />}
+                                                            emptyIcon={<LunchDiningOutlinedIcon fontSize="inherit" />}
+                                                        />
                                                     </DetailBox>
                                                 </Stack>
                                                 <img className="" src={boxCat} height={200}/>
@@ -210,24 +246,40 @@ const CookBookDashboard = () => {
                                                 {recipe.recipeName}
                                             </RecipeTitle>
                                             <CardDetails>
-                                                <Stack>
+                                                <Stack
+                                                    gap={2.5}
+                                                >
                                                     <DetailBox>
                                                         <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
                                                         <CardText>
-                                                            Prep time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail'>{recipe.prepTime}</span>
+                                                            Prep time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.prepTime}</span>
                                                         </CardText>
                                                     </DetailBox>
                                                     <DetailBox>
                                                         <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
                                                         <CardText>
-                                                            Cook time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail'>{recipe.cookTime}</span>
+                                                            Cook time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.cookTime}</span>
                                                         </CardText>
                                                     </DetailBox>
                                                     <DetailBox>
                                                         <PersonIcon fontSize='' sx={{ color: '#fff' }} />
                                                         <CardText>
-                                                            Serves&nbsp;&nbsp;&nbsp;<span className='recipe-detail'>{recipe.serves}</span>
+                                                            Serves&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.serves}</span>
                                                         </CardText>
+                                                    </DetailBox>
+                                                    <DetailBox>
+                                                        <LocalDiningIcon fontSize='' sx={{ color: '#fff' }} />
+                                                        <CardText>
+                                                            Difficulty&nbsp;&nbsp;
+                                                        </CardText>
+                                                        <StyledRating
+                                                            readonly
+                                                            size="small"
+                                                            value={recipe.difficulty}
+                                                            precision={0.5}
+                                                            icon={<LunchDiningIcon fontSize="inherit" />}
+                                                            emptyIcon={<LunchDiningOutlinedIcon fontSize="inherit" />}
+                                                        />
                                                     </DetailBox>
                                                 </Stack>
                                                 <img className="" src={boxCat} height={200}/>
@@ -259,24 +311,40 @@ const CookBookDashboard = () => {
                                                 {recipe.recipeName}
                                             </RecipeTitle>
                                             <CardDetails>
-                                                <Stack>
+                                                <Stack
+                                                    gap={2.5}
+                                                >
                                                     <DetailBox>
                                                         <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
                                                         <CardText>
-                                                            Prep time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail'>{recipe.prepTime}</span>
+                                                            Prep time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.prepTime}</span>
                                                         </CardText>
                                                     </DetailBox>
                                                     <DetailBox>
                                                         <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
                                                         <CardText>
-                                                            Cook time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail'>{recipe.cookTime}</span>
+                                                            Cook time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.cookTime}</span>
                                                         </CardText>
                                                     </DetailBox>
                                                     <DetailBox>
                                                         <PersonIcon fontSize='' sx={{ color: '#fff' }} />
                                                         <CardText>
-                                                            Serves&nbsp;&nbsp;&nbsp;<span className='recipe-detail'>{recipe.serves}</span>
+                                                            Serves&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.serves}</span>
                                                         </CardText>
+                                                    </DetailBox>
+                                                    <DetailBox>
+                                                        <LocalDiningIcon fontSize='' sx={{ color: '#fff' }} />
+                                                        <CardText>
+                                                            Difficulty&nbsp;&nbsp;
+                                                        </CardText>
+                                                        <StyledRating
+                                                            readonly
+                                                            size="small"
+                                                            value={recipe.difficulty}
+                                                            precision={0.5}
+                                                            icon={<LunchDiningIcon fontSize="inherit" />}
+                                                            emptyIcon={<LunchDiningOutlinedIcon fontSize="inherit" />}
+                                                        />
                                                     </DetailBox>
                                                 </Stack>
                                                 <img className="" src={boxCat} height={200}/>
@@ -308,24 +376,40 @@ const CookBookDashboard = () => {
                                                 {recipe.recipeName}
                                             </RecipeTitle>
                                             <CardDetails>
-                                                <Stack>
+                                                <Stack
+                                                    gap={2.5}
+                                                >
                                                     <DetailBox>
                                                         <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
                                                         <CardText>
-                                                            Prep time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail'>{recipe.prepTime}</span>
+                                                            Prep time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.prepTime}</span>
                                                         </CardText>
                                                     </DetailBox>
                                                     <DetailBox>
                                                         <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
                                                         <CardText>
-                                                            Cook time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail'>{recipe.cookTime}</span>
+                                                            Cook time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.cookTime}</span>
                                                         </CardText>
                                                     </DetailBox>
                                                     <DetailBox>
                                                         <PersonIcon fontSize='' sx={{ color: '#fff' }} />
                                                         <CardText>
-                                                            Serves&nbsp;&nbsp;&nbsp;<span className='recipe-detail'>{recipe.serves}</span>
+                                                            Serves&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.serves}</span>
                                                         </CardText>
+                                                    </DetailBox>
+                                                    <DetailBox>
+                                                        <LocalDiningIcon fontSize='' sx={{ color: '#fff' }} />
+                                                        <CardText>
+                                                            Difficulty&nbsp;&nbsp;
+                                                        </CardText>
+                                                        <StyledRating
+                                                            readonly
+                                                            size="small"
+                                                            value={recipe.difficulty}
+                                                            precision={0.5}
+                                                            icon={<LunchDiningIcon fontSize="inherit" />}
+                                                            emptyIcon={<LunchDiningOutlinedIcon fontSize="inherit" />}
+                                                        />
                                                     </DetailBox>
                                                 </Stack>
                                                 <img className="" src={boxCat} height={200}/>
