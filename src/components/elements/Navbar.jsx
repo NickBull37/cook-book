@@ -30,9 +30,9 @@ const NavItemsContainer = styled(Box)(() => ({
 }));
 
 const ReturnLink = styled(Typography)(() => ({
-    color: 'rgba(255, 102, 0, 0.6)',
+    color: 'rgba(255, 102, 0, 0.7)',
     '&:hover': {
-        color: 'rgba(255, 102, 0, 0.9)',
+        color: 'rgba(255, 102, 0, 0.95)',
     },
 }));
 
@@ -41,7 +41,7 @@ const Navbar = ({ showReturnLink }) => {
         <HeaderBox>
             <NavItemsContainer>
                 <Link to="/">
-                    <img src={bullLogo} height={58}/>
+                    <img src={bullLogo} height={55}/>
                 </Link>
                 { showReturnLink
                     ?
