@@ -19,28 +19,50 @@ const RecipeStack = styled(Stack)(({ theme }) => ({
     },
 }));
 
-const RecipeTitle = styled(Typography)(() => ({
+const RecipeTitle = styled(Typography)(({ theme }) => ({
     fontSize: '1.75rem',
     padding: '0.5rem 1rem',
     borderBottom: '1px solid #b3b3b3',
     color: '#e6e6e6',
+    [theme.breakpoints.down('sm')]: {
+        padding: '0.5rem 1rem',
+    },
 }));
 
-const CardDetails = styled(Box)(() => ({
+const CardDetails = styled(Box)(({ theme }) => ({
     display: 'flex',
+    flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingLeft: '1rem',
+    padding: '0 0 0 1rem',
+    [theme.breakpoints.down('sm')]: {
+        flexDirection: 'column-reverse',
+        padding: '1rem',
+        alignItems: 'flex-start',
+    },
 }));
 
-const DetailBox = styled(Box)(() => ({
+const DetailBox = styled(Box)(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
-    gap: 4
+    gap: 4,
+    [theme.breakpoints.down('sm')]: {
+        //alignItems: 'center',
+    },
 }));
 
 const CardText = styled(Typography)(() => ({
     color: '#d9d9d9',
+}));
+
+const CardImageBox = styled(Box)(({ theme }) => ({
+    display: 'flex',
+    justifyContent: 'center',
+    width: 'inherit',
+    [theme.breakpoints.down('sm')]: {
+        width: '100%',
+        marginBottom: '1.5rem',
+    },
 }));
 
 const StyledRating = styled(Rating)({
@@ -57,7 +79,7 @@ const RecipeMap = ({ recipes, recipeType }) => {
                 <>
                     { recipe.type === recipeType
                         ?
-                            <Grid size={6} key={index}>
+                            <Grid size={{ xs: 12, md: 6 }} key={index}>
                                 <Link
                                     to={`/recipe?index=${recipe.index}`}
                                 >
@@ -67,7 +89,7 @@ const RecipeMap = ({ recipes, recipeType }) => {
                                         </RecipeTitle>
                                         <CardDetails>
                                             <Stack
-                                                gap={2.5}
+                                                gap={{ xs: 1.5, md: 2.5 }}
                                             >
                                                 <DetailBox>
                                                     <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
@@ -102,7 +124,9 @@ const RecipeMap = ({ recipes, recipeType }) => {
                                                     />
                                                 </DetailBox>
                                             </Stack>
-                                            <img className="recipe-card-photo" src={recipe.photo} />
+                                            <CardImageBox>
+                                                <img className="recipe-card-photo" src={recipe.photo} />
+                                            </CardImageBox>
                                         </CardDetails>
                                     </RecipeStack>
                                 </Link>

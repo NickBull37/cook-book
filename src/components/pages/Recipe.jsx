@@ -12,39 +12,58 @@ import LunchDiningOutlinedIcon from '@mui/icons-material/LunchDiningOutlined';
 import { Navbar } from '../../components';
 import recipes from '../../data/recipes';
 
-const RecipeContainer = styled(Box)(() => ({
-    margin: '8rem 24rem 6rem 24rem',
+const RecipeContainer = styled(Box)(({ theme }) => ({
+    margin: '8rem 26rem 6rem 26rem',
+    [theme.breakpoints.down('md')]: {
+        margin: '8rem 2rem 6rem 2rem',
+    },
 }));
 
-const RecipePaper = styled(Paper)(() => ({
+const RecipePaper = styled(Paper)(({ theme }) => ({
     backgroundColor: '#595959',
     padding: '1.25rem',
 }));
 
-const SectionStack = styled(Stack)(() => ({
+const RecipeHeaderBox = styled(Box)(({ theme }) => ({
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    [theme.breakpoints.down('md')]: {
+        display: 'flex',
+        flexDirection: 'column-reverse',
+        //justifyContent: 'space-between',
+    },
+}));
+
+const SectionStack = styled(Stack)(({ theme }) => ({
     display: 'flex',
     gap: '2.5rem'
 }));
 
-const SectionTitle = styled(Typography)(() => ({
+const SectionTitle = styled(Typography)(({ theme }) => ({
     fontSize: '1.5rem',
     margin: '0 4px 12px 4px',
     borderBottom: '1px solid #b3b3b3',
     color: '#e6e6e6',
 }));
 
-const SectionElement = styled(Typography)(() => ({
+const SectionElement = styled(Typography)(({ theme }) => ({
     margin: '4px',
     color: '#e6e6e6',
 }));
 
-const DetailBox = styled(Box)(() => ({
+const InstructionText = styled(Typography)(({ theme }) => ({
+    margin: '1rem 4px',
+    color: '#e6e6e6',
+}));
+
+const DetailBox = styled(Box)(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     gap: 4
 }));
 
-const CardText = styled(Typography)(() => ({
+const CardText = styled(Typography)(({ theme }) => ({
     color: '#d9d9d9',
 }));
 
@@ -53,6 +72,14 @@ const StyledRating = styled(Rating)({
         color: '#ff8533',
     },
 });
+
+const RecipeImageBox = styled(Box)(({ theme }) => ({
+    display: 'flex',
+    justifyContent: 'center',
+    [theme.breakpoints.down('sm')]: {
+        margin: '1rem 0 2.25rem 0',
+    },
+}));
 
 const Recipe = () => {
 
@@ -69,10 +96,7 @@ const Recipe = () => {
                     <SectionStack>
                         {recipe ? (
                             <>
-                                <Box
-                                    display="flex"
-                                    justifyContent="space-between"
-                                >
+                                <RecipeHeaderBox>
                                     <Stack
                                         display="flex"
                                         gap={1.5}
@@ -119,8 +143,10 @@ const Recipe = () => {
                                             />
                                         </DetailBox>
                                     </Stack>
-                                    <img className="recipe-photo" src={recipe.photo}/>
-                                </Box>
+                                    <RecipeImageBox>
+                                        <img className="recipe-photo" src={recipe.photo}/>
+                                    </RecipeImageBox>
+                                </RecipeHeaderBox>
                                 <Box>
                                     <SectionTitle>Ingredients</SectionTitle>
                                     {recipe.ingredientsList.map((ingredient, idx) => (
@@ -130,7 +156,7 @@ const Recipe = () => {
                                 <Box>
                                     <SectionTitle>Steps</SectionTitle>
                                     {recipe.instructionsList.map((step, idx) => (
-                                        <SectionElement key={idx}>{step}</SectionElement>
+                                        <InstructionText key={idx}>{step}</InstructionText>
                                     ))}
                                 </Box>
                             </>
