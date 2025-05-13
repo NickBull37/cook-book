@@ -12,6 +12,10 @@ import LunchDiningOutlinedIcon from '@mui/icons-material/LunchDiningOutlined';
 import { Navbar } from '../../components';
 import recipes from '../../data/recipes';
 
+const RecipeContainer = styled(Box)(() => ({
+    margin: '8rem 24rem 6rem 24rem',
+}));
+
 const RecipePaper = styled(Paper)(() => ({
     backgroundColor: '#595959',
     padding: '1.25rem',
@@ -25,13 +29,13 @@ const SectionStack = styled(Stack)(() => ({
 const SectionTitle = styled(Typography)(() => ({
     fontSize: '1.5rem',
     margin: '0 4px 12px 4px',
-    borderBottom: '1px solid #fff',
-    color: '#fff',
+    borderBottom: '1px solid #b3b3b3',
+    color: '#e6e6e6',
 }));
 
 const SectionElement = styled(Typography)(() => ({
     margin: '4px',
-    color: '#fff',
+    color: '#e6e6e6',
 }));
 
 const DetailBox = styled(Box)(() => ({
@@ -58,14 +62,9 @@ const Recipe = () => {
     const recipe = recipes.find(r => r.index === index);
 
     return (
-        <>
-            <Navbar />
-            <Box
-                sx={{
-                    mx: '24rem',
-                    mb: '6rem'
-                }}
-            >
+        <Stack>
+            <Navbar showReturnLink={true} />
+            <RecipeContainer>
                 <RecipePaper elevation={12}>
                     <SectionStack>
                         {recipe ? (
@@ -142,8 +141,8 @@ const Recipe = () => {
                         )}
                     </SectionStack>
                 </RecipePaper>
-            </Box>
-        </>
+            </RecipeContainer>
+        </Stack>
     );
 };
 

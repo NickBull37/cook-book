@@ -13,7 +13,7 @@ const RecipeStack = styled(Stack)(({ theme }) => ({
     display: 'flex',
     backgroundColor: '#404040',
     ...theme.typography.body2,
-    borderLeft: '1px solid #fff',
+    borderLeft: '1px solid #b3b3b3',
     '&:hover': {
         cursor: 'pointer',
     },
@@ -22,8 +22,8 @@ const RecipeStack = styled(Stack)(({ theme }) => ({
 const RecipeTitle = styled(Typography)(() => ({
     fontSize: '1.75rem',
     padding: '0.5rem 1rem',
-    borderBottom: '1px solid #fff',
-    color: '#fff',
+    borderBottom: '1px solid #b3b3b3',
+    color: '#e6e6e6',
 }));
 
 const CardDetails = styled(Box)(() => ({

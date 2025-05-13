@@ -6,13 +6,17 @@ import { styled } from '@mui/material/styles';
 import { Navbar, RecipeMap } from '../../components';
 import recipes from '../../data/recipes';
 
+const DashboardContainer = styled(Box)(() => ({
+    marginTop: '8rem',
+}));
+
 const SectionContainer = styled(Box)(() => ({
     marginBottom: '9rem',
 }));
 
 const SectionTitle = styled(Typography)(() => ({
-    marginBottom: '2.25rem',
-    paddingLeft: '2rem',
+    marginBottom: '1.75rem',
+    paddingLeft: '4rem',
     cursor: 'default',
 }));
 
@@ -34,17 +38,17 @@ const CookBookDashboard = () => {
 
     return (
         <Stack>
-            <Navbar />
-
-            {/* container for dashboard page */}
-            <Box>
+            <Navbar showReturnLink={false} />
+            <DashboardContainer>
 
                 {/* container for dinner section */}
                 <SectionContainer>
                     <Stack>
-                        <SectionTitle className='kepo-h1-orange'>Dinner Recipes</SectionTitle>
-
-                        {/* container for dinner recipe map */}
+                        <SectionTitle
+                            className='kepo-h1-orange'
+                        >
+                            Dinners / Sides
+                        </SectionTitle>
                         <RecipeMapContainer>
                             <GridContainer>
                                 <RecipeMap recipes={recipes} recipeType={"dinner"} />
@@ -56,9 +60,11 @@ const CookBookDashboard = () => {
                 {/* container for dessert section */}
                 <SectionContainer>
                     <Stack>
-                        <SectionTitle className='kepo-h1-orange'>Dessert Recipes</SectionTitle>
-
-                        {/* container for dessert recipe map */}
+                        <SectionTitle
+                            className='kepo-h1-orange'
+                        >
+                            Desserts
+                        </SectionTitle>
                         <RecipeMapContainer>
                             <GridContainer>
                                 <RecipeMap recipes={recipes} recipeType={"dessert"} />
@@ -70,9 +76,11 @@ const CookBookDashboard = () => {
                 {/* container for drinks section */}
                 <SectionContainer>
                     <Stack>
-                        <SectionTitle className='kepo-h1-orange'>Drink Recipes</SectionTitle>
-
-                        {/* container for drink recipe map */}
+                        <SectionTitle
+                            className='kepo-h1-orange'
+                        >
+                            Drinks
+                        </SectionTitle>
                         <RecipeMapContainer>
                             <GridContainer>
                                 <RecipeMap recipes={recipes} recipeType={"drink"} />
@@ -84,9 +92,11 @@ const CookBookDashboard = () => {
                 {/* container for extra section */}
                 <SectionContainer>
                     <Stack>
-                        <SectionTitle className='kepo-h1-orange'>Extra Recipes</SectionTitle>
-
-                        {/* container for extra recipe map */}
+                        <SectionTitle
+                            className='kepo-h1-orange'
+                        >
+                            Extras
+                        </SectionTitle>
                         <RecipeMapContainer>
                             <GridContainer>
                                 <RecipeMap recipes={recipes} recipeType={"extra"} />
@@ -94,7 +104,7 @@ const CookBookDashboard = () => {
                         </RecipeMapContainer>
                     </Stack>
                 </SectionContainer>
-            </Box>
+            </DashboardContainer>
         </Stack>
     );
 }
