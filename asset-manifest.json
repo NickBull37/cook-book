@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/cook-book/static/css/main.d5ef89cc.css",
-    "main.js": "/cook-book/static/js/main.658a4cd9.js",
+    "main.css": "/cook-book/static/css/main.d626935b.css",
+    "main.js": "/cook-book/static/js/main.48e1f159.js",
     "static/media/bulls-restaurant.png": "/cook-book/static/media/bulls-restaurant.500b2a8c3623702ef7b7.png",
+    "static/media/bulls-kitchen.png": "/cook-book/static/media/bulls-kitchen.e81612a8e6f4dfdabb98.png",
     "static/media/bulls-menu.png": "/cook-book/static/media/bulls-menu.4f4e488123145dbfc39c.png",
     "static/media/chicken-picatta.png": "/cook-book/static/media/chicken-picatta.814a07cc0f6e8d90f2cf.png",
     "static/media/watermelon-marg.jpeg": "/cook-book/static/media/watermelon-marg.45753466c82914b2997a.jpeg",
@@ -15,11 +16,11 @@
     "static/media/Kepo.ttf": "/cook-book/static/media/Kepo.6a7e9ac1cec53217ea4a.ttf",
     "static/media/TheSignature.ttf": "/cook-book/static/media/TheSignature.57d1b8bdb828ed798354.ttf",
     "index.html": "/cook-book/index.html",
-    "main.d5ef89cc.css.map": "/cook-book/static/css/main.d5ef89cc.css.map",
-    "main.658a4cd9.js.map": "/cook-book/static/js/main.658a4cd9.js.map"
+    "main.d626935b.css.map": "/cook-book/static/css/main.d626935b.css.map",
+    "main.48e1f159.js.map": "/cook-book/static/js/main.48e1f159.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5ef89cc.css",
-    "static/js/main.658a4cd9.js"
+    "static/css/main.d626935b.css",
+    "static/js/main.48e1f159.js"
   ]
 }
