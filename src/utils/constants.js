@@ -2,6 +2,7 @@
 export const bullLogo = require('../images/bull-logo.png');
 export const bullsRestaurant = require('../images/bulls-restaurant.png');
 export const bullsMenu = require('../images/bulls-menu.png');
+export const bullsKitchen = require('../images/bulls-kitchen.png');
 export const boxCat = require('../images/box-cat.jpg');
 
 // Recipes

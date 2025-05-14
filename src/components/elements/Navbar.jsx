@@ -55,7 +55,8 @@ const Navbar = ({ showReturnLink }) => {
                                     alignItems="center"
                                 >
                                     <ArrowBackIcon fontSize='small' />&nbsp;
-                                    Return to Dashboard
+                                    <span className='kepo-nav-link'>Back to Menu</span>
+                                    {/* Return to Menu */}
                                 </Box>
                             </ReturnLink>
                         </Link>
