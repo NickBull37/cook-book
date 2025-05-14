@@ -42,13 +42,10 @@ const CardDetails = styled(Box)(({ theme }) => ({
     },
 }));
 
-const DetailBox = styled(Box)(({ theme }) => ({
+const DetailBox = styled(Box)(() => ({
     display: 'flex',
     alignItems: 'center',
     gap: 4,
-    [theme.breakpoints.down('sm')]: {
-        //alignItems: 'center',
-    },
 }));
 
 const CardText = styled(Typography)(() => ({
@@ -95,19 +92,19 @@ const RecipeMap = ({ recipes, recipeType }) => {
                                                 <DetailBox>
                                                     <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
                                                     <CardText>
-                                                        Prep time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.prepTime}</span>
+                                                        Prep time <span className='subtext'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='value-highlight'>{recipe.prepTime}</span>
                                                     </CardText>
                                                 </DetailBox>
                                                 <DetailBox>
                                                     <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
                                                     <CardText>
-                                                        Cook time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.cookTime}</span>
+                                                        Cook time <span className='subtext'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='value-highlight'>{recipe.cookTime}</span>
                                                     </CardText>
                                                 </DetailBox>
                                                 <DetailBox>
                                                     <PersonIcon fontSize='' sx={{ color: '#fff' }} />
                                                     <CardText>
-                                                        Serves&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.serves}</span>
+                                                        Serves&nbsp;&nbsp;&nbsp;<span className='value-highlight'>{recipe.serves}</span>
                                                     </CardText>
                                                 </DetailBox>
                                                 <DetailBox>

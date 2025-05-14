@@ -39,7 +39,6 @@ const GridContainer = (props) => (
         container
         flexDirection={{ xs: 'column', sm: 'row' }}
         rowSpacing={{ xs: 10, sm: 12 }}
-        //rowSpacing={12}
         columnSpacing={{ xs: 0, sm: 24 }}
         {...props}
     />

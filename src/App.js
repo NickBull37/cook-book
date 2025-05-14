@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
 import { Routes, Route } from 'react-router-dom';
-import { Box, CssBaseline } from '@mui/material';
+import { Box } from '@mui/material';
 import { CookBookLanding, CookBookDashboard, Recipe } from "./components";
 
 function App() {

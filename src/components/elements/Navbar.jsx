@@ -15,7 +15,7 @@ const HeaderBox = styled(Box)(({ theme }) => ({
     display: "flex",
     alignItems: 'center',
     padding: '0 28px',
-    backgroundColor: '#1a1a1a', // 10%
+    backgroundColor: '#1a1a1a',
     boxShadow: '0px 0px 15px 2px #0d0d0d',
     zIndex: '100',
     [theme.breakpoints.down('md')]: {

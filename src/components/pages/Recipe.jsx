@@ -19,7 +19,7 @@ const RecipeContainer = styled(Box)(({ theme }) => ({
     },
 }));
 
-const RecipePaper = styled(Paper)(({ theme }) => ({
+const RecipePaper = styled(Paper)(() => ({
     backgroundColor: '#595959',
     padding: '1.25rem',
 }));
@@ -34,35 +34,44 @@ const RecipeHeaderBox = styled(Box)(({ theme }) => ({
     },
 }));
 
-const SectionStack = styled(Stack)(({ theme }) => ({
+const SectionStack = styled(Stack)(() => ({
     display: 'flex',
     gap: '2.5rem'
 }));
 
-const SectionTitle = styled(Typography)(({ theme }) => ({
+const SectionTitle = styled(Typography)(() => ({
     fontSize: '1.5rem',
     marginBottom: '12px',
     borderBottom: '1px solid #b3b3b3',
     color: '#e6e6e6',
 }));
 
-const IngredientsText = styled(Typography)(({ theme }) => ({
+const IngredientsText = styled(Typography)(() => ({
     margin: '6px 4px',
     color: '#e6e6e6',
 }));
 
-const InstructionText = styled(Typography)(({ theme }) => ({
+const InstructionText = styled(Typography)(() => ({
     margin: '1rem 4px',
     color: '#e6e6e6',
 }));
 
-const DetailBox = styled(Box)(({ theme }) => ({
+const DetailBox = styled(Box)(() => ({
     display: 'flex',
     alignItems: 'center',
     gap: 4
 }));
 
-const CardText = styled(Typography)(({ theme }) => ({
+const RecipeNameText = styled(Typography)(({ theme }) => ({
+    textAlign: 'center',
+    width: '100%',
+    marginBottom: '4px',
+    [theme.breakpoints.down('sm')]: {
+        marginBottom: '16px',
+    },
+}));
+
+const CardText = styled(Typography)(() => ({
     color: '#d9d9d9',
 }));
 
@@ -100,32 +109,25 @@ const Recipe = () => {
                                         display="flex"
                                         gap={1.5}
                                     >
-                                        <Typography
-                                            className='kepo-h3-orange'
-                                            sx={{
-                                                textAlign: 'center',
-                                                width: '100%',
-                                                mb: 1.75,
-                                            }}
-                                        >
+                                        <RecipeNameText className='kepo-h3-orange'>
                                             {recipe.recipeName}
-                                        </Typography>
+                                        </RecipeNameText>
                                         <DetailBox>
                                             <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
                                             <CardText>
-                                                Prep time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.prepTime}</span>
+                                                Prep time <span className='subtext'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='value-highlight'>{recipe.prepTime}</span>
                                             </CardText>
                                         </DetailBox>
                                         <DetailBox>
                                             <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
                                             <CardText>
-                                                Cook time <span className='recipe-det'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.cookTime}</span>
+                                                Cook time <span className='subtext'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='value-highlight'>{recipe.cookTime}</span>
                                             </CardText>
                                         </DetailBox>
                                         <DetailBox>
                                             <PersonIcon fontSize='' sx={{ color: '#fff' }} />
                                             <CardText>
-                                                Serves&nbsp;&nbsp;&nbsp;<span className='recipe-detail-value'>{recipe.serves}</span>
+                                                Serves&nbsp;&nbsp;&nbsp;<span className='value-highlight'>{recipe.serves}</span>
                                             </CardText>
                                         </DetailBox>
                                         <DetailBox>
