@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cook-book/static/css/main.9d3a5dd5.css",
-    "main.js": "/cook-book/static/js/main.aa56fbb7.js",
+    "main.css": "/cook-book/static/css/main.ab25be62.css",
+    "main.js": "/cook-book/static/js/main.f9cb7f39.js",
     "static/media/bulls-restaurant.png": "/cook-book/static/media/bulls-restaurant.500b2a8c3623702ef7b7.png",
     "static/media/bulls-menu.png": "/cook-book/static/media/bulls-menu.4f4e488123145dbfc39c.png",
     "static/media/chicken-picatta.png": "/cook-book/static/media/chicken-picatta.814a07cc0f6e8d90f2cf.png",
@@ -15,11 +15,11 @@
     "static/media/Kepo.ttf": "/cook-book/static/media/Kepo.6a7e9ac1cec53217ea4a.ttf",
     "static/media/TheSignature.ttf": "/cook-book/static/media/TheSignature.57d1b8bdb828ed798354.ttf",
     "index.html": "/cook-book/index.html",
-    "main.9d3a5dd5.css.map": "/cook-book/static/css/main.9d3a5dd5.css.map",
-    "main.aa56fbb7.js.map": "/cook-book/static/js/main.aa56fbb7.js.map"
+    "main.ab25be62.css.map": "/cook-book/static/css/main.ab25be62.css.map",
+    "main.f9cb7f39.js.map": "/cook-book/static/js/main.f9cb7f39.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d3a5dd5.css",
-    "static/js/main.aa56fbb7.js"
+    "static/css/main.ab25be62.css",
+    "static/js/main.f9cb7f39.js"
   ]
 }
