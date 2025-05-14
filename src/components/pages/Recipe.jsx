@@ -15,7 +15,7 @@ import recipes from '../../data/recipes';
 const RecipeContainer = styled(Box)(({ theme }) => ({
     margin: '8rem 26rem 6rem 26rem',
     [theme.breakpoints.down('md')]: {
-        margin: '8rem 2rem 6rem 2rem',
+        margin: '7rem 2rem 6rem 2rem',
     },
 }));
 
@@ -31,7 +31,6 @@ const RecipeHeaderBox = styled(Box)(({ theme }) => ({
     [theme.breakpoints.down('md')]: {
         display: 'flex',
         flexDirection: 'column-reverse',
-        //justifyContent: 'space-between',
     },
 }));
 
@@ -42,13 +41,13 @@ const SectionStack = styled(Stack)(({ theme }) => ({
 
 const SectionTitle = styled(Typography)(({ theme }) => ({
     fontSize: '1.5rem',
-    margin: '0 4px 12px 4px',
+    marginBottom: '12px',
     borderBottom: '1px solid #b3b3b3',
     color: '#e6e6e6',
 }));
 
-const SectionElement = styled(Typography)(({ theme }) => ({
-    margin: '4px',
+const IngredientsText = styled(Typography)(({ theme }) => ({
+    margin: '6px 4px',
     color: '#e6e6e6',
 }));
 
@@ -104,8 +103,9 @@ const Recipe = () => {
                                         <Typography
                                             className='kepo-h3-orange'
                                             sx={{
+                                                textAlign: 'center',
                                                 width: '100%',
-                                                mb: 0.5,
+                                                mb: 1.75,
                                             }}
                                         >
                                             {recipe.recipeName}
@@ -150,7 +150,7 @@ const Recipe = () => {
                                 <Box>
                                     <SectionTitle>Ingredients</SectionTitle>
                                     {recipe.ingredientsList.map((ingredient, idx) => (
-                                        <SectionElement key={idx}>{ingredient}</SectionElement>
+                                        <IngredientsText key={idx}>{ingredient}</IngredientsText>
                                     ))}
                                 </Box>
                                 <Box>

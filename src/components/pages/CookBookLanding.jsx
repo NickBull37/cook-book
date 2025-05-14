@@ -19,6 +19,20 @@ const LandingStack = styled(Stack)(() => ({
     gap: '4rem',
 }));
 
+const DesktopImageBox = styled(Box)(({ theme }) => ({
+    display: 'block',
+    [theme.breakpoints.down('md')]: {
+        display: 'none',
+    },
+}));
+
+const MobileImageBox = styled(Box)(({ theme }) => ({
+    display: 'none',
+    [theme.breakpoints.down('md')]: {
+        display: 'block',
+    },
+}));
+
 const GradientButton = styled(Button)(() => ({
     height: '50px',
     width: '120px',
@@ -39,9 +53,12 @@ const CookBookLanding = () => {
     return (
         <PageContainer>
             <LandingStack>
-                <Box>
+                <DesktopImageBox>
                     <img src={bullsMenu} height={350} />
-                </Box>
+                </DesktopImageBox>
+                <MobileImageBox>
+                    <img src={bullsMenu} height={200} />
+                </MobileImageBox>
                 <Link to="/dashboard">
                     <GradientButton
                         variant="contained"

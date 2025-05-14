@@ -61,7 +61,8 @@ const CardImageBox = styled(Box)(({ theme }) => ({
     width: 'inherit',
     [theme.breakpoints.down('sm')]: {
         width: '100%',
-        marginBottom: '1.5rem',
+        marginTop: '0.75rem',
+        marginBottom: '2.25rem',
     },
 }));
 

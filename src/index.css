@@ -380,7 +380,7 @@ body {
     }
 
     .recipe-card-photo {
-        height: 120px;
+        height: 130px;
         width: 180px;
         object-fit: cover;
         border-radius: 8px;

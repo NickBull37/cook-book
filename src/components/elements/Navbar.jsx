@@ -7,7 +7,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 import { bullLogo } from '../../utils/constants';
 
-const HeaderBox = styled(Box)(() => ({
+const HeaderBox = styled(Box)(({ theme }) => ({
     height: '14vh',
     maxHeight: '70px',
     width: '100%',
@@ -18,6 +18,9 @@ const HeaderBox = styled(Box)(() => ({
     backgroundColor: '#1a1a1a', // 10%
     boxShadow: '0px 0px 15px 2px #0d0d0d',
     zIndex: '100',
+    [theme.breakpoints.down('md')]: {
+        padding: '0 16px',
+    },
 }));
 
 const NavItemsContainer = styled(Box)(() => ({
