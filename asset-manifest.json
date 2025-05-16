@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/cook-book/static/css/main.874f8e95.css",
-    "main.js": "/cook-book/static/js/main.c06e010d.js",
+    "main.css": "/cook-book/static/css/main.a530ada3.css",
+    "main.js": "/cook-book/static/js/main.844f2fec.js",
     "static/media/bulls-kitchen.png": "/cook-book/static/media/bulls-kitchen.e81612a8e6f4dfdabb98.png",
     "static/media/bulls-menu-text-trimmed.png": "/cook-book/static/media/bulls-menu-text-trimmed.a98252f42d720d4f70d3.png",
     "static/media/chicken-picatta.png": "/cook-book/static/media/chicken-picatta.814a07cc0f6e8d90f2cf.png",
-    "static/media/bull-logo.png": "/cook-book/static/media/bull-logo.0e11044080ac2b729e4d.png",
+    "static/media/bull-logo.png": "/cook-book/static/media/bull-logo.61d5157ea4361641922e.png",
     "static/media/watermelon-marg.jpeg": "/cook-book/static/media/watermelon-marg.45753466c82914b2997a.jpeg",
     "static/media/potato-mochi.jpg": "/cook-book/static/media/potato-mochi.d60adef1d1fbc0e219e8.jpg",
     "static/media/box-cat.jpg": "/cook-book/static/media/box-cat.36c0159b06f3d276d6bd.jpg",
@@ -15,11 +15,11 @@
     "static/media/Kepo.ttf": "/cook-book/static/media/Kepo.6a7e9ac1cec53217ea4a.ttf",
     "static/media/TheSignature.ttf": "/cook-book/static/media/TheSignature.57d1b8bdb828ed798354.ttf",
     "index.html": "/cook-book/index.html",
-    "main.874f8e95.css.map": "/cook-book/static/css/main.874f8e95.css.map",
-    "main.c06e010d.js.map": "/cook-book/static/js/main.c06e010d.js.map"
+    "main.a530ada3.css.map": "/cook-book/static/css/main.a530ada3.css.map",
+    "main.844f2fec.js.map": "/cook-book/static/js/main.844f2fec.js.map"
   },
   "entrypoints": [
-    "static/css/main.874f8e95.css",
-    "static/js/main.c06e010d.js"
+    "static/css/main.a530ada3.css",
+    "static/js/main.844f2fec.js"
   ]
 }
