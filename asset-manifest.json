@@ -1,26 +1,25 @@
 {
   "files": {
-    "main.css": "/cook-book/static/css/main.d626935b.css",
-    "main.js": "/cook-book/static/js/main.48e1f159.js",
-    "static/media/bulls-restaurant.png": "/cook-book/static/media/bulls-restaurant.500b2a8c3623702ef7b7.png",
+    "main.css": "/cook-book/static/css/main.874f8e95.css",
+    "main.js": "/cook-book/static/js/main.b0339579.js",
     "static/media/bulls-kitchen.png": "/cook-book/static/media/bulls-kitchen.e81612a8e6f4dfdabb98.png",
-    "static/media/bulls-menu.png": "/cook-book/static/media/bulls-menu.4f4e488123145dbfc39c.png",
+    "static/media/bulls-menu-text-trimmed.png": "/cook-book/static/media/bulls-menu-text-trimmed.a98252f42d720d4f70d3.png",
     "static/media/chicken-picatta.png": "/cook-book/static/media/chicken-picatta.814a07cc0f6e8d90f2cf.png",
+    "static/media/bull-logo.png": "/cook-book/static/media/bull-logo.0e11044080ac2b729e4d.png",
     "static/media/watermelon-marg.jpeg": "/cook-book/static/media/watermelon-marg.45753466c82914b2997a.jpeg",
     "static/media/potato-mochi.jpg": "/cook-book/static/media/potato-mochi.d60adef1d1fbc0e219e8.jpg",
     "static/media/box-cat.jpg": "/cook-book/static/media/box-cat.36c0159b06f3d276d6bd.jpg",
     "static/media/burger-sauce.png": "/cook-book/static/media/burger-sauce.4ca58e7b636ed66a3c88.png",
-    "static/media/bull-logo.png": "/cook-book/static/media/bull-logo.e5fcf5a28e8101b56796.png",
     "static/media/chocolate-cheese-cake.jpg": "/cook-book/static/media/chocolate-cheese-cake.08d494ae9ae256ed662c.jpg",
     "static/media/tenderloin-steak.jpg": "/cook-book/static/media/tenderloin-steak.56f017433d06bc2382db.jpg",
     "static/media/Kepo.ttf": "/cook-book/static/media/Kepo.6a7e9ac1cec53217ea4a.ttf",
     "static/media/TheSignature.ttf": "/cook-book/static/media/TheSignature.57d1b8bdb828ed798354.ttf",
     "index.html": "/cook-book/index.html",
-    "main.d626935b.css.map": "/cook-book/static/css/main.d626935b.css.map",
-    "main.48e1f159.js.map": "/cook-book/static/js/main.48e1f159.js.map"
+    "main.874f8e95.css.map": "/cook-book/static/css/main.874f8e95.css.map",
+    "main.b0339579.js.map": "/cook-book/static/js/main.b0339579.js.map"
   },
   "entrypoints": [
-    "static/css/main.d626935b.css",
-    "static/js/main.48e1f159.js"
+    "static/css/main.874f8e95.css",
+    "static/js/main.b0339579.js"
   ]
 }
