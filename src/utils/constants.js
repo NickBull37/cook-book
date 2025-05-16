@@ -1,8 +1,7 @@
 // Logo
-export const bullLogo = require('../images/bull-logo.png');
-export const bullsRestaurant = require('../images/bulls-restaurant.png');
-export const bullsMenu = require('../images/bulls-menu.png');
-export const bullsKitchen = require('../images/bulls-kitchen.png');
+export const bullLogo = require('../images/logos/bull-logo.png');
+export const bullsKitchen = require('../images/logos/bulls-kitchen.png');
+export const bullsMenuTextTrimmed = require('../images/logos/bulls-menu-text-trimmed.png');
 export const boxCat = require('../images/box-cat.jpg');
 
 // Recipes

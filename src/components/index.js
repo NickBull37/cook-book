@@ -2,7 +2,7 @@
 //################################### COOK BOOK PAGES ###################################//
 //#######################################################################################//
 export { default as CookBookLanding } from './pages/CookBookLanding';
-export { default as CookBookDashboard } from './pages/CookBookDashboard';
+export { default as Menu } from './pages/Menu';
 export { default as Recipe } from './pages/Recipe';
 
 

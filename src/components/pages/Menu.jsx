@@ -3,13 +3,13 @@ import React from 'react';
 import { Box, Stack } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-import { Navbar, MenuSection } from '../../components';
+import { Navbar, MenuSection } from '..';
 
 const DashboardContainer = styled(Box)(() => ({
     marginTop: '8rem',
 }));
 
-const CookBookDashboard = () => {
+const Menu = () => {
 
     const sections = [
         {
@@ -49,4 +49,4 @@ const CookBookDashboard = () => {
     );
 }
 
-export default CookBookDashboard;
+export default Menu;

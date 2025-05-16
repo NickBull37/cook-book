@@ -49,7 +49,7 @@ const CookBookLanding = () => {
                 </MobileImageBox>
 
                 <Stack
-                    gap={0.5}
+                    gap={1.5}
                     sx={{
                         width: '100%',
                         display: 'flex',
@@ -61,16 +61,16 @@ const CookBookLanding = () => {
                         sx={{
                             fontSize: '1.25rem',
                             color: '#e6e6e6',
-                            letterSpacing: '0.15em'
+                            letterSpacing: '0.2em'
                         }}
                     >
                         Menu
                     </Typography>
-                    <Link to="/dashboard">
+                    <Link to="/menu">
                         <IconButton
                             size="large"
                             sx={{
-                                //background: '#000',
+                                background: '#333333',
                                 height: '70px',
                                 width: '70px',
                                 '&:hover': {
@@ -80,7 +80,7 @@ const CookBookLanding = () => {
                         >
                             <MenuBookIcon
                                 sx={{
-                                    fontSize: '2.875rem',
+                                    fontSize: '2.75rem',
                                     color: '#dabd8b',
                                     mt: '-4px',
                                 }}

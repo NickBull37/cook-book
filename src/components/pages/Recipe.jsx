@@ -2,7 +2,7 @@ import React from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
-import { Box, Stack, Typography, Paper, Rating } from '@mui/material';
+import { Box, Stack, Typography, Paper, Rating, Checkbox } from '@mui/material';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PersonIcon from '@mui/icons-material/Person';
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
@@ -52,9 +52,22 @@ const IngredientsText = styled(Typography)(() => ({
     color: '#e6e6e6',
 }));
 
+const InstructionBox = styled(Box)(() => ({
+    display: 'flex',
+    alignItems: 'flex-start',
+    margin: '1.25rem 4px',
+}));
+
 const InstructionText = styled(Typography)(() => ({
-    margin: '1rem 4px',
     color: '#e6e6e6',
+}));
+
+const InstructionCheckbox = styled(Checkbox)(() => ({
+    padding: '0 0.75rem 0 0',
+    color: '#e6e6e6',
+    '&.Mui-checked': {
+        color: '#ff8533',
+    },
 }));
 
 const DetailBox = styled(Box)(() => ({
@@ -86,7 +99,6 @@ const RecipeImageBox = styled(Box)(({ theme }) => ({
     display: 'flex',
     justifyContent: 'center',
     borderRadius: '12px',
-    boxShadow: '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
     [theme.breakpoints.down('sm')]: {
         margin: '1rem 0 2.25rem 0',
     },
@@ -154,14 +166,21 @@ const Recipe = () => {
                                 </RecipeHeaderBox>
                                 <Box>
                                     <SectionTitle>Ingredients</SectionTitle>
-                                    {recipe.ingredientsList.map((ingredient, idx) => (
-                                        <IngredientsText key={idx}>{ingredient}</IngredientsText>
+                                    {recipe.ingredientsList.map((ingredient, index) => (
+                                        <IngredientsText key={index}>{ingredient}</IngredientsText>
                                     ))}
                                 </Box>
                                 <Box>
-                                    <SectionTitle>Steps</SectionTitle>
-                                    {recipe.instructionsList.map((step, idx) => (
-                                        <InstructionText key={idx}>{step}</InstructionText>
+                                    <SectionTitle>
+                                        Steps
+                                    </SectionTitle>
+                                    {recipe.instructionsList.map((instruction, index) => (
+                                        <InstructionBox>
+                                            <InstructionCheckbox />
+                                            <InstructionText key={index}>
+                                                {instruction}
+                                            </InstructionText>
+                                        </InstructionBox>
                                     ))}
                                 </Box>
                             </>

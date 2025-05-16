@@ -43,12 +43,14 @@ const Navbar = ({ showReturnLink }) => {
     return (
         <HeaderBox>
             <NavItemsContainer>
-                <Link to="/">
-                    <img src={bullLogo} height={55}/>
-                </Link>
+                <Box sx={{ mt: '2px' }}>
+                    <Link to="/">
+                        <img src={bullLogo} height={50}/>
+                    </Link>
+                </Box>
                 { showReturnLink
                     ?
-                        <Link to="/dashboard">
+                        <Link to="/menu">
                             <ReturnLink>
                                 <Box
                                     display="flex"
@@ -56,7 +58,6 @@ const Navbar = ({ showReturnLink }) => {
                                 >
                                     <ArrowBackIcon fontSize='small' />&nbsp;
                                     <span className='kepo-nav-link'>Back to Menu</span>
-                                    {/* Return to Menu */}
                                 </Box>
                             </ReturnLink>
                         </Link>
