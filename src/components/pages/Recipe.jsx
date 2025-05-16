@@ -7,6 +7,7 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PersonIcon from '@mui/icons-material/Person';
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
 import LunchDiningIcon from '@mui/icons-material/LunchDining';
+import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
 import LunchDiningOutlinedIcon from '@mui/icons-material/LunchDiningOutlined';
 
 import { Navbar } from '../../components';
@@ -84,6 +85,8 @@ const StyledRating = styled(Rating)({
 const RecipeImageBox = styled(Box)(({ theme }) => ({
     display: 'flex',
     justifyContent: 'center',
+    borderRadius: '12px',
+    boxShadow: '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
     [theme.breakpoints.down('sm')]: {
         margin: '1rem 0 2.25rem 0',
     },
@@ -113,7 +116,7 @@ const Recipe = () => {
                                             {recipe.recipeName}
                                         </RecipeNameText>
                                         <DetailBox>
-                                            <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
+                                            <LocalDiningIcon fontSize='' sx={{ color: '#fff' }} />
                                             <CardText>
                                                 Prep time <span className='subtext'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='value-highlight'>{recipe.prepTime}</span>
                                             </CardText>
@@ -131,7 +134,7 @@ const Recipe = () => {
                                             </CardText>
                                         </DetailBox>
                                         <DetailBox>
-                                            <LocalDiningIcon fontSize='' sx={{ color: '#fff' }} />
+                                            <SignalCellularAltIcon fontSize='' sx={{ color: '#fff' }} />
                                             <CardText>
                                                 Difficulty&nbsp;&nbsp;
                                             </CardText>

@@ -78,7 +78,7 @@ const recipes = [
     },
     {
         index: 3,
-        type: 'dinner',
+        type: 'side',
         recipeName: 'Potato Mochi',
         ingredientsList: [
             '',

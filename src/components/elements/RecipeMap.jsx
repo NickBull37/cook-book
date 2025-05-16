@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Box, Stack, Typography, Grid, Rating } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { Box, Stack, Typography, Grid, Rating } from '@mui/material';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PersonIcon from '@mui/icons-material/Person';
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
