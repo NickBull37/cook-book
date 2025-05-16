@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
-import { Box, Stack, Typography, Paper, Rating, Checkbox } from '@mui/material';
+import { Box, Stack, Typography, Paper, Rating, Checkbox, FormControlLabel } from '@mui/material';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PersonIcon from '@mui/icons-material/Person';
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
@@ -50,12 +50,6 @@ const SectionTitle = styled(Typography)(() => ({
 const IngredientsText = styled(Typography)(() => ({
     margin: '6px 4px',
     color: '#e6e6e6',
-}));
-
-const InstructionBox = styled(Box)(() => ({
-    display: 'flex',
-    alignItems: 'flex-start',
-    margin: '1.25rem 4px',
 }));
 
 const InstructionText = styled(Typography)(() => ({
@@ -111,6 +105,18 @@ const Recipe = () => {
     const index = parseInt(searchParams.get('index'), 10);
     const recipe = recipes.find(r => r.index === index);
 
+    // State variables
+    const [checkboxStates, setCheckboxStates] = useState(
+        recipe?.instructionsList.map(() => false) || []
+    );
+
+    // Event handlers
+    const handleCheckboxChange = (index) => (event) => {
+        const newStates = [...checkboxStates];
+        newStates[index] = event.target.checked;
+        setCheckboxStates(newStates);
+    };
+
     return (
         <Stack>
             <Navbar showReturnLink={true} />
@@ -165,7 +171,9 @@ const Recipe = () => {
                                     </RecipeImageBox>
                                 </RecipeHeaderBox>
                                 <Box>
-                                    <SectionTitle>Ingredients</SectionTitle>
+                                    <SectionTitle>
+                                        Ingredients
+                                    </SectionTitle>
                                     {recipe.ingredientsList.map((ingredient, index) => (
                                         <IngredientsText key={index}>{ingredient}</IngredientsText>
                                     ))}
@@ -175,12 +183,22 @@ const Recipe = () => {
                                         Steps
                                     </SectionTitle>
                                     {recipe.instructionsList.map((instruction, index) => (
-                                        <InstructionBox>
-                                            <InstructionCheckbox />
-                                            <InstructionText key={index}>
-                                                {instruction}
-                                            </InstructionText>
-                                        </InstructionBox>
+                                        <FormControlLabel
+                                            key={index}
+                                            control={
+                                                <InstructionCheckbox
+                                                    checked={checkboxStates[index] || false}
+                                                    onChange={handleCheckboxChange(index)}
+                                                />
+                                            }
+                                            label={
+                                                <InstructionText>{instruction}</InstructionText>
+                                            }
+                                            sx={{
+                                                alignItems: 'flex-start',
+                                                margin: '0.675rem 4px'
+                                            }}
+                                        />
                                     ))}
                                 </Box>
                             </>
