@@ -98,20 +98,21 @@ const recipes = [
         type: 'dessert',
         recipeName: 'Chocolate Cheese Cake',
         ingredientsList: [
-            '1 cup flour',
-            '1/2 cup cocoa powder',
-            '1 tsp baking soda',
-            '1/2 tsp salt',
-            '1 cup sugar',
-            '1/2 cup butter',
-            '2 eggs',
-            '1 tsp vanilla extract'
+            '400g cream cheese',
+            '350g nutella',
+            '200g chocolate wafers',
+            '50g powdered sugar',
+            '450ml heavy cream'
         ],
         instructionsList: [
-            '1. Preheat oven to 350°F.',
-            '2. Mix dry ingredients.',
-            '3. Add wet ingredients and mix well.',
-            '4. Pour into pan and bake for 30 minutes.'
+            '1. Crush 200g wafers into mixing bowl. Add 200g nutella and mix throroughly.',
+            '2. Transfer base layer to tray and pack down.',
+            '3. Add 400g cream cheese & 150g nutella to a bowl and mix throroughly.',
+            '4. Add 50g powdered sugar and 300ml heavy cream to the same bowl and whip until the filling holds its shape.',
+            '5. Transfer middle layer to tray and smooth out the top.',
+            '6. Melt 150g milk chocolate and 150ml heavy cream on low heat.',
+            '7. Once melted pour top layer into tray (may be extra depending on size of tray).',
+            '8. Place tray in refrigerator to set for 5-6 hours.'
         ],
         prepTime: '< 5',
         cookTime: '30',
