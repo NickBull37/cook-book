@@ -4,7 +4,9 @@ import {
     potatoMochi,
     chocolateCheeseCake,
     watermelonMarg,
-    burgerSauce
+    burgerSauce,
+    cowboyButter,
+    steakAioli
 } from "../utils/constants";
 
 const recipes = [
@@ -21,22 +23,22 @@ const recipes = [
             'crushed black pepper',
         ],
         instructionsList: [
-            '1. Heat cast iron skillet on high until smoking',
-            '2. Add enough avacado oil to cover the bottom of the skillet',
-            '3. Place steak in skillet and place steak press on top',
-            '4. Sear each side for approx 1.5 mins',
-            '5. Turn heat down to low, remove steak from pan and drain remaining oil',
-            '6. Add 1 stick of butter, garlic, & shallots to skillet',
-            '7. Once butter is mostly melted, add the steak back in and baste on each side for 1 min',
-            '8. Place entire skillet in 400 degree oven for 4 mins',
-            '9. Remove skillet from oven & steak from the skillet',
-            '10. Allow 5-10 mins to rest before cutting',
+            '1. Heat cast iron skillet on high until smoking.',
+            '2. Add enough avacado oil to cover the bottom of the skillet.',
+            '3. Place steak in skillet and place steak press on top.',
+            '4. Sear each side for approx 1 min 30 seconds.',
+            '5. Turn heat down to low, remove steak from pan and drain remaining oil.',
+            '6. Add 1 stick of butter, garlic, & shallots to skillet.',
+            '7. Once butter is mostly melted, add the steak back in and baste on each side for 1 min.',
+            '8. Place the entire skillet in 400 degree oven for 4 mins.',
+            '9. Remove skillet from oven & steak from the skillet.',
+            '10. Allow 5-10 mins to rest before cutting.',
         ],
         prepTime: '25',
         cookTime: '10',
         serves: '1-2',
         rating: 4.5,
-        difficulty: 3,
+        difficulty: 3.5,
         photo: tenerloinSteak,
     },
     {
@@ -81,16 +83,28 @@ const recipes = [
         type: 'side',
         recipeName: 'Potato Mochi',
         ingredientsList: [
-            '',
+            '2 large russet potatoes',
+            '1 cup shredded mozz cheese',
+            '4 tbsp potato starch',
+            '2 tbsp milk',
+            '1 tbsp avocado oil',
+            '2 tbsp soy sauce',
+            '2 tbsp mirin',
+            '2 tbsp sugar',
         ],
         instructionsList: [
-            '1. '
+            '1. Peel, chop, and boil potatoes.',
+            '2. Once soft, mash potatoes in a bowl and mix in potato starch, salt, and avocado oil. Mix thoroughly.',
+            '3. Take a small handfull of mashed potatoes and form a ball with a pinch of mozz cheese in the center.',
+            '4. Pan fry both sides until golden brown.',
+            '5. Remove potato cakes and add soy sauce, mirin, and sugar to pan and stir.',
+            '6. Add potatoes back to pan.',
         ],
         prepTime: '15',
         cookTime: '30',
-        serves: '6-12',
+        serves: '1-2',
         rating: 4.5,
-        difficulty: 3,
+        difficulty: 2.5,
         photo: potatoMochi,
     },
     {
@@ -163,11 +177,62 @@ const recipes = [
             '1. Mix all listed ingredients into a bowl.'
         ],
         prepTime: '0',
-        cookTime: '10',
+        cookTime: '5',
         serves: '4-6',
         rating: 4,
         difficulty: 1,
         photo: burgerSauce,
+    },
+    {
+        index: 7,
+        type: 'extra',
+        recipeName: 'Cowboy Butter',
+        ingredientsList: [
+            '6 tbsp butter',
+            '4-5 cloves garlic (minced)',
+            'juice from 1/2 a lemon',
+            '1/2 tbsp lemon zest',
+            '1 tbsp dijon mustard',
+            '1/2 tsp cayenne pepper',
+            '1 tsp paprika',
+            '2 tbsp fresh parsley',
+            '1 tbsp chives',
+            '1 tsp chili flakes',
+            '1 tsp thyme',
+            'salt & pepper to taste'
+        ],
+        instructionsList: [
+            '1. Melt butter in a sauce pan with garlic, lemon juice, lemon zest, dijon mustard, salt, pepper, paprika, & cayenne.',
+            '2. Stir and add parsley, chives, chili flakes, & thyme.'
+        ],
+        prepTime: '0',
+        cookTime: '10',
+        serves: '4-6',
+        rating: 4,
+        difficulty: 1,
+        photo: cowboyButter,
+    },
+    {
+        index: 8,
+        type: 'extra',
+        recipeName: 'Aioli Steak Sauce',
+        ingredientsList: [
+            '1 cup mayo',
+            '1/4 cup steak sauce',
+            '2 tbsp horseradish',
+            '2 tbsp black pepper',
+            '1 tbsp chives'
+        ],
+        instructionsList: [
+            '1. Mix all listed ingredients into a bowl.',
+            '2. Chill in fridge for 30 mins.'
+        ],
+        prepTime: '0',
+        cookTime: '5',
+        serves: '4-6',
+        rating: 4,
+        difficulty: 1,
+        photo: steakAioli,
     },
 ];
 

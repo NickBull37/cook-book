@@ -11,3 +11,5 @@ export const potatoMochi = require('../images/recipes/potato-mochi.jpg');
 export const chocolateCheeseCake = require('../images/recipes/chocolate-cheese-cake.jpg');
 export const watermelonMarg = require('../images/recipes/watermelon-marg.jpeg');
 export const burgerSauce = require('../images/recipes/burger-sauce.png');
+export const steakAioli = require('../images/recipes/steak-aioli.jpg');
+export const cowboyButter = require('../images/recipes/cowboy-butter.jpg');
