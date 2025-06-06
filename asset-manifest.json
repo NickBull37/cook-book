@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cook-book/static/css/main.a530ada3.css",
-    "main.js": "/cook-book/static/js/main.17bc9e9a.js",
+    "main.js": "/cook-book/static/js/main.0a2cf786.js",
     "static/media/bulls-kitchen.png": "/cook-book/static/media/bulls-kitchen.e81612a8e6f4dfdabb98.png",
     "static/media/bulls-menu-text-trimmed.png": "/cook-book/static/media/bulls-menu-text-trimmed.a98252f42d720d4f70d3.png",
     "static/media/chicken-picatta.png": "/cook-book/static/media/chicken-picatta.814a07cc0f6e8d90f2cf.png",
@@ -10,18 +10,21 @@
     "static/media/potato-mochi.jpg": "/cook-book/static/media/potato-mochi.d60adef1d1fbc0e219e8.jpg",
     "static/media/box-cat.jpg": "/cook-book/static/media/box-cat.36c0159b06f3d276d6bd.jpg",
     "static/media/burger-sauce.png": "/cook-book/static/media/burger-sauce.4ca58e7b636ed66a3c88.png",
+    "static/media/chicken-tacos.jpg": "/cook-book/static/media/chicken-tacos.d660c133ff07368d594c.jpg",
+    "static/media/greek-salad.jpg": "/cook-book/static/media/greek-salad.3412d0a5d33a4133561c.jpg",
     "static/media/chocolate-cheese-cake.jpg": "/cook-book/static/media/chocolate-cheese-cake.08d494ae9ae256ed662c.jpg",
     "static/media/cowboy-butter.jpg": "/cook-book/static/media/cowboy-butter.c48202e11aa1dcc0143e.jpg",
     "static/media/tenderloin-steak.jpg": "/cook-book/static/media/tenderloin-steak.56f017433d06bc2382db.jpg",
     "static/media/steak-aioli.jpg": "/cook-book/static/media/steak-aioli.68bce3ca6f6de1e5b741.jpg",
     "static/media/Kepo.ttf": "/cook-book/static/media/Kepo.6a7e9ac1cec53217ea4a.ttf",
     "static/media/TheSignature.ttf": "/cook-book/static/media/TheSignature.57d1b8bdb828ed798354.ttf",
+    "static/media/crab-topped-salmon.jpg": "/cook-book/static/media/crab-topped-salmon.43ed1f83b5141ac66f6f.jpg",
     "index.html": "/cook-book/index.html",
     "main.a530ada3.css.map": "/cook-book/static/css/main.a530ada3.css.map",
-    "main.17bc9e9a.js.map": "/cook-book/static/js/main.17bc9e9a.js.map"
+    "main.0a2cf786.js.map": "/cook-book/static/js/main.0a2cf786.js.map"
   },
   "entrypoints": [
     "static/css/main.a530ada3.css",
-    "static/js/main.17bc9e9a.js"
+    "static/js/main.0a2cf786.js"
   ]
 }
