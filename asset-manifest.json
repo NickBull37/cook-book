@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/cook-book/static/css/main.a530ada3.css",
-    "main.js": "/cook-book/static/js/main.0a2cf786.js",
+    "main.js": "/cook-book/static/js/main.400c03e7.js",
     "static/media/bulls-kitchen.png": "/cook-book/static/media/bulls-kitchen.e81612a8e6f4dfdabb98.png",
     "static/media/bulls-menu-text-trimmed.png": "/cook-book/static/media/bulls-menu-text-trimmed.a98252f42d720d4f70d3.png",
+    "static/media/honey-garlic-chicken.jpg": "/cook-book/static/media/honey-garlic-chicken.aa6593a6db5573d3895e.jpg",
     "static/media/chicken-picatta.png": "/cook-book/static/media/chicken-picatta.814a07cc0f6e8d90f2cf.png",
     "static/media/bull-logo.png": "/cook-book/static/media/bull-logo.61d5157ea4361641922e.png",
     "static/media/watermelon-marg.jpeg": "/cook-book/static/media/watermelon-marg.45753466c82914b2997a.jpeg",
@@ -16,15 +17,16 @@
     "static/media/cowboy-butter.jpg": "/cook-book/static/media/cowboy-butter.c48202e11aa1dcc0143e.jpg",
     "static/media/tenderloin-steak.jpg": "/cook-book/static/media/tenderloin-steak.56f017433d06bc2382db.jpg",
     "static/media/steak-aioli.jpg": "/cook-book/static/media/steak-aioli.68bce3ca6f6de1e5b741.jpg",
+    "static/media/alfredo-sauce.jpg": "/cook-book/static/media/alfredo-sauce.f51bbfd76e6883d483d8.jpg",
     "static/media/Kepo.ttf": "/cook-book/static/media/Kepo.6a7e9ac1cec53217ea4a.ttf",
     "static/media/TheSignature.ttf": "/cook-book/static/media/TheSignature.57d1b8bdb828ed798354.ttf",
     "static/media/crab-topped-salmon.jpg": "/cook-book/static/media/crab-topped-salmon.43ed1f83b5141ac66f6f.jpg",
     "index.html": "/cook-book/index.html",
     "main.a530ada3.css.map": "/cook-book/static/css/main.a530ada3.css.map",
-    "main.0a2cf786.js.map": "/cook-book/static/js/main.0a2cf786.js.map"
+    "main.400c03e7.js.map": "/cook-book/static/js/main.400c03e7.js.map"
   },
   "entrypoints": [
     "static/css/main.a530ada3.css",
-    "static/js/main.0a2cf786.js"
+    "static/js/main.400c03e7.js"
   ]
 }
