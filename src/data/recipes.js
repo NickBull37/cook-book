@@ -10,7 +10,8 @@ import {
     crabToppedSalmon,
     greekSalad,
     chickenTacos,
-    alfredoSauce
+    alfredoSauce,
+    honeyGarlicChicken
 } from "../utils/constants";
 
 const recipes = [
@@ -349,7 +350,7 @@ const recipes = [
         photo: alfredoSauce,
     },
     {
-        index: 12,
+        index: 13,
         type: 'dinner',
         recipeName: 'Honey Garlic Chicken',
         ingredientsList: [
