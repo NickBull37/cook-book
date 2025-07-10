@@ -9,7 +9,8 @@ import {
     steakAioli,
     crabToppedSalmon,
     greekSalad,
-    chickenTacos
+    chickenTacos,
+    alfredoSauce
 } from "../utils/constants";
 
 const recipes = [
@@ -319,6 +320,62 @@ const recipes = [
         rating: 3.5,
         difficulty: 1.5,
         photo: chickenTacos,
+    },
+    {
+        index: 12,
+        type: 'extra',
+        recipeName: 'Alfredo Sauce',
+        ingredientsList: [
+            '2 oz shredded parmesean cheese',
+            '1 oz shredded romano cheese',
+            '3/4 cup heavy cream',
+            '3 tbsp unsalted butter',
+            '1/2 tbsp minced garlic',
+        ],
+        instructionsList: [
+            '1. Melt button in a pan and add minced garlic. Cook till golden brown.',
+            '2. Remove pan from heat, let cool 1-2 mins.',
+            '3. Add in room temperature heavy cream, whisk until blended.',
+            '4. Add pan back to heat on low - do not allow sauce to boil.',
+            '5. Slowly add shredded cheese, whisking to blend in melted cheese.',
+            '6. Add salt & pepper.',
+            '7. Mix in pasta when ready.',
+        ],
+        prepTime: '10',
+        cookTime: '15',
+        serves: '1-2',
+        rating: 3.5,
+        difficulty: 2,
+        photo: alfredoSauce,
+    },
+    {
+        index: 12,
+        type: 'dinner',
+        recipeName: 'Honey Garlic Chicken',
+        ingredientsList: [
+            '2 chicken thighs',
+            '1/2 cup cornstarch',
+            'salt',
+            '2 tbsp honey',
+            '2 tbsp soy sauce',
+            '1 tbsp vinegar',
+            '1/2 tbsp minced garlic',
+        ],
+        instructionsList: [
+            '1. Cut chicken thighs into 1 inch cubes.',
+            '2. Add corstach and salt to mixing bowl.',
+            '3. Toss chicken until evenly coated.',
+            '4. Cook chicken in oven at 400 for 20 mins.',
+            '5. Add soy sauce, honey, vinegar, and minced garlic to sauce pot on MED heat.',
+            '6. Simmer for 4-5 mins until it starts to thicken.',
+            '7. Remove chicken from oven and toss with honey garlic sauce.',
+        ],
+        prepTime: '10',
+        cookTime: '25',
+        serves: '1-2',
+        rating: 4,
+        difficulty: 2.5,
+        photo: honeyGarlicChicken,
     },
 ];
 

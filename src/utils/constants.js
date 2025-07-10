@@ -16,3 +16,5 @@ export const cowboyButter = require('../images/recipes/cowboy-butter.jpg');
 export const crabToppedSalmon = require('../images/recipes/crab-topped-salmon.jpg');
 export const greekSalad = require('../images/recipes/greek-salad.jpg');
 export const chickenTacos = require('../images/recipes/chicken-tacos.jpg');
+export const alfredoSauce = require('../images/recipes/alfredo-sauce.jpg');
+export const honeyGarlicChicken = require('../images/recipes/honey-garlic-chicken.jpg');
