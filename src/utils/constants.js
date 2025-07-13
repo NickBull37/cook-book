@@ -18,3 +18,5 @@ export const greekSalad = require('../images/recipes/greek-salad.jpg');
 export const chickenTacos = require('../images/recipes/chicken-tacos.jpg');
 export const alfredoSauce = require('../images/recipes/alfredo-sauce.jpg');
 export const honeyGarlicChicken = require('../images/recipes/honey-garlic-chicken.jpg');
+export const chickenParm = require('../images/recipes/chicken-parm.jpg');
+export const guacamole = require('../images/recipes/guacamole.jpg');

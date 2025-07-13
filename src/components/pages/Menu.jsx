@@ -13,7 +13,11 @@ const Menu = () => {
 
     const sections = [
         {
-            title: 'Dinner',
+            title: 'Appetizers',
+            recipeType: 'appetizer'
+        },
+        {
+            title: 'Entrees',
             recipeType: 'dinner'
         },
         {
@@ -21,12 +25,12 @@ const Menu = () => {
             recipeType: 'side'
         },
         {
-            title: 'Desserts',
-            recipeType: 'dessert'
-        },
-        {
             title: 'Drinks',
             recipeType: 'drink'
+        },
+        {
+            title: 'Desserts',
+            recipeType: 'dessert'
         },
         {
             title: 'Extra',
