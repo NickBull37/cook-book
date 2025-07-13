@@ -2,12 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
-import { Box, Stack, Typography, Grid, Rating } from '@mui/material';
+import { Box, Stack, Typography, Grid, Rating, IconButton } from '@mui/material';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PersonIcon from '@mui/icons-material/Person';
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
 import LunchDiningIcon from '@mui/icons-material/LunchDining';
 import LunchDiningOutlinedIcon from '@mui/icons-material/LunchDiningOutlined';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 const RecipeStack = styled(Stack)(({ theme }) => ({
     display: 'flex',
@@ -19,14 +20,19 @@ const RecipeStack = styled(Stack)(({ theme }) => ({
     },
 }));
 
-const RecipeTitle = styled(Typography)(({ theme }) => ({
-    fontSize: '1.75rem',
-    padding: '0.5rem 1rem',
+const RecipeTitleBox = styled(Box)(({ theme }) => ({
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '0.5rem 0.5rem 0.5rem 1rem',
     borderBottom: '1px solid #b3b3b3',
-    color: '#e6e6e6',
     [theme.breakpoints.down('sm')]: {
         padding: '0.5rem 1rem',
     },
+}));
+
+const RecipeTitle = styled(Typography)(({ theme }) => ({
+    fontSize: '1.75rem',
+    color: '#e6e6e6',
 }));
 
 const CardDetails = styled(Box)(({ theme }) => ({
@@ -69,7 +75,26 @@ const StyledRating = styled(Rating)({
     },
 });
 
-const RecipeMap = ({ recipes, recipeType }) => {
+const RecipeMap = ({ recipes, recipeType, setShoppingList }) => {
+
+    // Constants
+    
+
+    // State variables
+
+
+    // Event handlers
+    const handleAddToShoppingListClick = (index) => () => {
+
+        let recipe = recipes.find(r => r.index === index);
+        if (!recipe) return;
+
+        setShoppingList(prevList => {
+            // avoids duplicates
+            const newItems = recipe.ingredientsList.filter(item => !prevList.includes(item));
+            return [...prevList, ...newItems];
+        });
+    };
 
     return (
         <>
@@ -82,9 +107,19 @@ const RecipeMap = ({ recipes, recipeType }) => {
                                     to={`/recipe?index=${recipe.index}`}
                                 >
                                     <RecipeStack className='recipe-card'>
-                                        <RecipeTitle>
-                                            {recipe.recipeName}
-                                        </RecipeTitle>
+                                        <RecipeTitleBox>
+                                            <RecipeTitle>
+                                                {recipe.recipeName}
+                                            </RecipeTitle>
+                                            <IconButton aria-label="delete">
+                                                <AddShoppingCartIcon
+                                                    sx={{
+                                                        color: '#fff'
+                                                    }}
+                                                    onClick={handleAddToShoppingListClick(recipe.index)}
+                                                />
+                                            </IconButton>
+                                        </RecipeTitleBox>
                                         <CardDetails>
                                             <Stack
                                                 gap={{ xs: 1.5, md: 2.5 }}

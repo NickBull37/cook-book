@@ -40,7 +40,7 @@ const GridContainer = (props) => (
     />
 );
 
-const MenuSection = ({ sectionTitle, recipeType }) => {
+const MenuSection = ({ sectionTitle, recipeType, setShoppingList }) => {
     return (
         <SectionContainer>
             <Stack>
@@ -51,7 +51,11 @@ const MenuSection = ({ sectionTitle, recipeType }) => {
                 </SectionTitle>
                 <RecipeMapContainer>
                     <GridContainer>
-                        <RecipeMap recipes={recipes} recipeType={recipeType} />
+                        <RecipeMap
+                            recipes={recipes}
+                            recipeType={recipeType}
+                            setShoppingList={setShoppingList}
+                        />
                     </GridContainer>
                 </RecipeMapContainer>
             </Stack>

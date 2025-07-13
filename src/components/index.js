@@ -4,6 +4,7 @@
 export { default as CookBookLanding } from './pages/CookBookLanding';
 export { default as Menu } from './pages/Menu';
 export { default as Recipe } from './pages/Recipe';
+export { default as ShoppingList } from './pages/ShoppingList';
 
 
 

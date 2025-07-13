@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Box, Stack } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -9,8 +9,9 @@ const DashboardContainer = styled(Box)(() => ({
     marginTop: '8rem',
 }));
 
-const Menu = () => {
+const Menu = ({ setShoppingList }) => {
 
+    // Constants
     const sections = [
         {
             title: 'Appetizers',
@@ -40,12 +41,13 @@ const Menu = () => {
 
     return (
         <Stack>
-            <Navbar showReturnLink={false} />
+            <Navbar showReturnLink={false} showShoppingListLink={true} />
             <DashboardContainer>
                 {sections.map((section, index) => (
                     <MenuSection
                         sectionTitle={section.title}
                         recipeType={section.recipeType}
+                        setShoppingList={setShoppingList}
                     />
                 ))}
             </DashboardContainer>
