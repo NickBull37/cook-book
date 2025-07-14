@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
-import { Box, Stack, Typography, Paper, Rating, Checkbox, FormControlLabel } from '@mui/material';
+import { Box, Stack, Typography, Paper, Rating, Checkbox, FormControlLabel, Button } from '@mui/material';
+import { Card, CardActions, CardContent, CardMedia } from '@mui/material';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PersonIcon from '@mui/icons-material/Person';
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
@@ -13,10 +14,24 @@ import LunchDiningOutlinedIcon from '@mui/icons-material/LunchDiningOutlined';
 import { Navbar } from '../../components';
 import recipes from '../../data/recipes';
 
+const AddToShoppingListButton = styled(Button)(() => ({
+    color: '#fff',
+    backgroundColor: '#ff6600',
+    padding: '4px 8px',
+    boxShadow: "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+    '&:hover': {
+        backgroundColor: '#cc5200',
+        boxShadow: "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+    }
+}));
+
 const RecipeContainer = styled(Box)(({ theme }) => ({
-    margin: '8rem 26rem 6rem 26rem',
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: '8rem',
+    marginBottom: '6rem',
     [theme.breakpoints.down('md')]: {
-        margin: '7rem 2rem 6rem 2rem',
+        margin: '7rem 2rem 4rem 2rem',
     },
 }));
 
@@ -41,14 +56,16 @@ const SectionStack = styled(Stack)(() => ({
 }));
 
 const SectionTitle = styled(Typography)(() => ({
-    fontSize: '1.5rem',
+    fontSize: '1.25rem',
     marginBottom: '12px',
     borderBottom: '1px solid #b3b3b3',
     color: '#e6e6e6',
 }));
 
 const IngredientsText = styled(Typography)(() => ({
-    margin: '6px 4px',
+    fontSize: '0.875rem',
+    lineHeight: '1.43',
+    letterSpacing: '0.01071em',
     color: '#e6e6e6',
 }));
 
@@ -98,7 +115,7 @@ const RecipeImageBox = styled(Box)(({ theme }) => ({
     },
 }));
 
-const Recipe = () => {
+const Recipe = ({ setShoppingList }) => {
 
     // Constants
     const [searchParams] = useSearchParams();
@@ -117,10 +134,141 @@ const Recipe = () => {
         setCheckboxStates(newStates);
     };
 
+    const handleAddToShoppingListClick = () => () => {
+        setShoppingList(prevList => {
+            // avoids duplicates
+            const newItems = recipe.ingredientsList.filter(item => !prevList.includes(item));
+            return [...prevList, ...newItems];
+        });
+    };
+
     return (
         <Stack>
             <Navbar showReturnLink={true} />
+
             <RecipeContainer>
+                <Card
+                    sx={{
+                        maxWidth: 500,
+                        bgcolor: '#595959',
+                        color: '#fff',
+                    }}
+                >
+                    <CardMedia
+                        sx={{
+                            height: 225,
+                        }}
+                        image={recipe.photo}
+                        title={recipe.recipeName}
+                    />
+
+                    <CardContent>
+                        
+                        <Typography className='kepo-h3-orange'>
+                            {recipe.recipeName}
+                        </Typography>
+
+                        <Stack
+                            spacing={0.5}
+                            sx={{
+                                mt: '0.75rem'
+                            }}
+                        >
+                            <DetailBox>
+                                <LocalDiningIcon fontSize='' sx={{ color: '#fff' }} />
+                                <CardText>
+                                    Prep time <span className='subtext'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='value-highlight'>{recipe.prepTime}</span>
+                                </CardText>
+                            </DetailBox>
+                            <DetailBox>
+                                <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
+                                <CardText>
+                                    Cook time <span className='subtext'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='value-highlight'>{recipe.cookTime}</span>
+                                </CardText>
+                            </DetailBox>
+                            <DetailBox>
+                                <PersonIcon fontSize='' sx={{ color: '#fff' }} />
+                                <CardText>
+                                    Serves&nbsp;&nbsp;&nbsp;<span className='value-highlight'>{recipe.serves}</span>
+                                </CardText>
+                            </DetailBox>
+                            <DetailBox>
+                                <SignalCellularAltIcon fontSize='' sx={{ color: '#fff' }} />
+                                <CardText>
+                                    Difficulty&nbsp;&nbsp;
+                                </CardText>
+                                <StyledRating
+                                    readonly
+                                    size="small"
+                                    value={recipe.difficulty}
+                                    precision={0.5}
+                                    icon={<LunchDiningIcon fontSize="inherit" />}
+                                    emptyIcon={<LunchDiningOutlinedIcon fontSize="inherit" />}
+                                />
+                            </DetailBox>
+                        </Stack>
+
+                        <CardActions sx={{ p: '0', mt: '1.5rem' }}>
+                            <AddToShoppingListButton
+                                size="small"
+                                onClick={handleAddToShoppingListClick(recipe.index)}
+                            >
+                                Add to Shopping List
+                            </AddToShoppingListButton>
+                        </CardActions>
+
+                        <Stack sx={{ my: '1.5rem' }}>
+                            <SectionTitle>
+                                Ingredients
+                            </SectionTitle>
+                            <Typography>
+                                {recipe.ingredientsList.map((ingredient, index) => (
+                                    <IngredientsText
+                                        key={index}
+                                        sx={{
+                                            mb: '3px'
+                                        }}
+                                    >
+                                        {ingredient}
+                                    </IngredientsText>
+                                ))}
+                            </Typography>
+                        </Stack>
+
+                        <Stack>
+                            <SectionTitle>
+                                Instructions
+                            </SectionTitle>
+                            <Typography>
+                                {recipe.instructionsList.map((instruction, index) => (
+                                    <FormControlLabel
+                                        key={index}
+                                        control={
+                                            <InstructionCheckbox
+                                                checked={checkboxStates[index] || false}
+                                                onChange={handleCheckboxChange(index)}
+                                            />
+                                        }
+                                        label={
+                                            <InstructionText>{instruction}</InstructionText>
+                                        }
+                                        sx={{
+                                            alignItems: 'flex-start',
+                                            margin: '0.675rem 4px'
+                                        }}
+                                    />
+                                ))}
+                            </Typography>
+                        </Stack>
+                    </CardContent>
+                    {/* <CardActions>
+                        <Button size="small">Share</Button>
+                        <Button size="small">Learn More</Button>
+                    </CardActions> */}
+                </Card>
+            </RecipeContainer>
+
+            {/* <RecipeContainer>
                 <RecipePaper elevation={12}>
                     <SectionStack>
                         {recipe ? (
@@ -209,7 +357,7 @@ const Recipe = () => {
                         )}
                     </SectionStack>
                 </RecipePaper>
-            </RecipeContainer>
+            </RecipeContainer> */}
         </Stack>
     );
 };

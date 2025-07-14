@@ -18,7 +18,14 @@ function App() {
                         <Menu setShoppingList={setShoppingList} />
                     }
                 />
-                <Route path="/recipe" element={<Recipe />} />
+                <Route
+                    path="/recipe"
+                    element={
+                        <Recipe
+                            setShoppingList={setShoppingList}
+                        />
+                    }
+                />
                 <Route
                     path="/shopping-list"
                     element={

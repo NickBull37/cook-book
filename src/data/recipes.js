@@ -60,16 +60,16 @@ const recipes = [
                 'fresh basil leaves (optional)'
             ],
         instructionsList: [
-                '1. Preheat oven to 425°F.',
-                '2. Tenderize chicken breasts to an even thickness (about 1/2 inch).',
-                '3. Season both sides with salt, pepper, and garlic powder.',
-                '4. Dredge chicken in flour, dip in beaten eggs, then coat with a mix of breadcrumbs and parmesan cheese.',
-                '5. Heat 2 tbsp olive oil in a large skillet over medium heat.',
-                '6. Cook chicken until golden brown, about 2-3 minutes each side.',
-                '7. Transfer chicken to a baking dish and spoon marinara sauce evenly over the top.',
-                '8. Add shredded mozzarella cheese to each piece of chicken.',
-                '9. Bake in oven for 15-20 minutes, or until chicken reaches 165°F and cheese is bubbly and browned.',
-                '10. Garnish with fresh basil if desired.'
+                'Preheat oven to 425°F.',
+                'Tenderize chicken breasts to an even thickness (about 1/2 inch).',
+                'Season both sides with salt, pepper, and garlic powder.',
+                'Dredge chicken in flour, dip in beaten eggs, then coat with a mix of breadcrumbs and parmesan cheese.',
+                'Heat 2 tbsp olive oil in a large skillet over medium heat.',
+                'Cook chicken until golden brown, about 2-3 minutes each side.',
+                'Transfer chicken to a baking dish and spoon marinara sauce evenly over the top.',
+                'Add shredded mozzarella cheese to each piece of chicken.',
+                'Bake in oven for 15-20 minutes, or until chicken reaches 165°F and cheese is bubbly and browned.',
+                'Garnish with fresh basil if desired.'
             ],
         prepTime: '20',
         cookTime: '25',
