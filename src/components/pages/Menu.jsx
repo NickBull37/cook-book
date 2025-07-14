@@ -34,7 +34,7 @@ const Menu = ({ setShoppingList }) => {
             recipeType: 'dessert'
         },
         {
-            title: 'Extra',
+            title: 'Extras',
             recipeType: 'extra'
         },
     ];

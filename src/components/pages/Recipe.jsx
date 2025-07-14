@@ -144,10 +144,11 @@ const Recipe = ({ setShoppingList }) => {
 
     return (
         <Stack>
-            <Navbar showReturnLink={true} />
+            <Navbar showReturnLink={true} showShoppingListLink={true} />
 
             <RecipeContainer>
                 <Card
+                    elevation={8}
                     sx={{
                         maxWidth: 500,
                         bgcolor: '#595959',
@@ -208,7 +209,7 @@ const Recipe = ({ setShoppingList }) => {
                             </DetailBox>
                         </Stack>
 
-                        <CardActions sx={{ p: '0', mt: '1.5rem' }}>
+                        <CardActions sx={{ p: '0', mt: '1.75rem' }}>
                             <AddToShoppingListButton
                                 size="small"
                                 onClick={handleAddToShoppingListClick(recipe.index)}
@@ -217,7 +218,7 @@ const Recipe = ({ setShoppingList }) => {
                             </AddToShoppingListButton>
                         </CardActions>
 
-                        <Stack sx={{ my: '1.5rem' }}>
+                        <Stack sx={{ mt: '1.75rem' }}>
                             <SectionTitle>
                                 Ingredients
                             </SectionTitle>
@@ -235,7 +236,7 @@ const Recipe = ({ setShoppingList }) => {
                             </Typography>
                         </Stack>
 
-                        <Stack>
+                        <Stack sx={{ mt: '1.75rem' }}>
                             <SectionTitle>
                                 Instructions
                             </SectionTitle>
@@ -254,7 +255,7 @@ const Recipe = ({ setShoppingList }) => {
                                         }
                                         sx={{
                                             alignItems: 'flex-start',
-                                            margin: '0.675rem 4px'
+                                            margin: '0.55rem 4px'
                                         }}
                                     />
                                 ))}

@@ -31,9 +31,9 @@ const recipes = [
                 '1/4 cup seeded & diced tomatoes'
             ],
         instructionsList: [
-                '1. In a large bowl, combine avocados, red onion, cilantro, lime juice, jalapenos, & salt.',
-                '2. Mash until guacamole reaches desired consistency.',
-                '3. Mix in tomatoes & add more salt to taste if desired.'
+                'In a large bowl, combine avocados, red onion, cilantro, lime juice, jalapenos, & salt.',
+                'Mash until guacamole reaches desired consistency.',
+                'Mix in tomatoes & add more salt to taste if desired.'
             ],
         prepTime: '15',
         cookTime: '0',
@@ -101,12 +101,12 @@ const recipes = [
                 '3. Finely chop 1 shallot'
             ],
         instructionsList: [
-                '1. Add olive oil & butter to a pan on medium heat',
-                '2. Add chicken once oil is up to temp & butter is melted, flip halfway through',
-                '3. Remove chicken from pan and add shallots & garlic',
-                '4. Pour in chicken stock and scrape up any fond stuck to the pan',
-                '5. Add another 1/4 stick of butter  & lemon juice',
-                '6. Add chicken back to the pan and season with salt & pepper'
+                'Add olive oil & butter to a pan on medium heat',
+                'Add chicken once oil is up to temp & butter is melted, flip halfway through',
+                'Remove chicken from pan and add shallots & garlic',
+                'Pour in chicken stock and scrape up any fond stuck to the pan',
+                'Add another 1/4 stick of butter  & lemon juice',
+                'Add chicken back to the pan and season with salt & pepper'
             ],
         prepTime: '15',
         cookTime: '30',
@@ -133,13 +133,13 @@ const recipes = [
                 'parsley'
             ],
         instructionsList: [
-                '1. Pre-heat oven to 400 degrees.',
-                '2. If salmon still has skin: pour 1/2 cup boiling water on skin and peel off.',
-                '3. Melt butter in oven-safe tray.',
-                '4. Add salt & pepper to salmon on both sides and place in tray with butter.',
-                '5. In a mixing bowl, combine crab meat, breadcrumbs, mayo, egg(s), dijon mustard, and garlic powder. Mix thoroughly.',
-                '6. Spread crabmeat mixture on top of salmon.',
-                '7. Bake in oven at 400 degrees for approx 20-25 mins.'
+                'Pre-heat oven to 400 degrees.',
+                'If salmon still has skin: pour 1/2 cup boiling water on skin and peel off.',
+                'Melt butter in oven-safe tray.',
+                'Add salt & pepper to salmon on both sides and place in tray with butter.',
+                'In a mixing bowl, combine crab meat, breadcrumbs, mayo, egg(s), dijon mustard, and garlic powder. Mix thoroughly.',
+                'Spread crabmeat mixture on top of salmon.',
+                'Bake in oven at 400 degrees for approx 20-25 mins.'
             ],
         prepTime: '15',
         cookTime: '25',
@@ -160,7 +160,7 @@ const recipes = [
                 'ground chicken'
             ],
         instructionsList: [
-                '1. spread ground chicken to edge of tortilla.',
+                'Spread ground chicken to edge of tortilla.',
                 'Pan fry on medium (chicken side down) until chicken is crispy.',
                 'Flip and fry tortilla side shortly until brown & crispy.',
                 'Remove tacos from pan and top with lettuce and ceaser dressing.'
@@ -186,13 +186,13 @@ const recipes = [
                 '1/2 tbsp minced garlic'
             ],
         instructionsList: [
-                '1. Cut chicken thighs into 1 inch cubes.',
-                '2. Add corstach and salt to mixing bowl.',
-                '3. Toss chicken until evenly coated.',
-                '4. Cook chicken in oven at 400 for 20 mins.',
-                '5. Add soy sauce, honey, vinegar, and minced garlic to sauce pot on MED heat.',
-                '6. Simmer for 4-5 mins until it starts to thicken.',
-                '7. Remove chicken from oven and toss with honey garlic sauce.'
+                'Cut chicken thighs into 1 inch cubes.',
+                'Add corstach and salt to mixing bowl.',
+                'Toss chicken until evenly coated.',
+                'Cook chicken in oven at 400 for 20 mins.',
+                'Add soy sauce, honey, vinegar, and minced garlic to sauce pot on MED heat.',
+                'Simmer for 4-5 mins until it starts to thicken.',
+                'Remove chicken from oven and toss with honey garlic sauce.'
             ],
         prepTime: '10',
         cookTime: '25',
@@ -214,16 +214,16 @@ const recipes = [
                 'crushed black pepper'
             ],
         instructionsList: [
-                '1. Heat cast iron skillet on high until smoking.',
-                '2. Add enough avacado oil to cover the bottom of the skillet.',
-                '3. Place steak in skillet and place steak press on top.',
-                '4. Sear each side for approx 1 min 30 seconds.',
-                '5. Turn heat down to low, remove steak from pan and drain remaining oil.',
-                '6. Add 1 stick of butter, garlic, & shallots to skillet.',
-                '7. Once butter is mostly melted, add the steak back in and baste on each side for 1 min.',
-                '8. Place the entire skillet in 400 degree oven for 4 mins.',
-                '9. Remove skillet from oven & steak from the skillet.',
-                '10. Allow 5-10 mins to rest before cutting.'
+                'Heat cast iron skillet on high until smoking.',
+                'Add enough avacado oil to cover the bottom of the skillet.',
+                'Place steak in skillet and place steak press on top.',
+                'Sear each side for approx 1 min 30 seconds.',
+                'Turn heat down to low, remove steak from pan and drain remaining oil.',
+                'Add 1 stick of butter, garlic, & shallots to skillet.',
+                'Once butter is mostly melted, add the steak back in and baste on each side for 1 min.',
+                'Place the entire skillet in 400 degree oven for 4 mins.',
+                'Remove skillet from oven & steak from the skillet.',
+                'Allow 5-10 mins to rest before cutting.'
             ],
         prepTime: '25',
         cookTime: '10',
@@ -249,7 +249,7 @@ const recipes = [
                 'splash of white vinegar'
             ],
         instructionsList: [
-                '1. Mix all listed ingredients into a bowl.'
+                'Mix all listed ingredients into a bowl.'
             ],
         prepTime: '10',
         cookTime: '0',
@@ -273,12 +273,12 @@ const recipes = [
                 '2 tbsp sugar'
             ],
         instructionsList: [
-                '1. Peel, chop, and boil potatoes.',
-                '2. Once soft, mash potatoes in a bowl and mix in potato starch, salt, and avocado oil. Mix thoroughly.',
-                '3. Take a small handfull of mashed potatoes and form a ball with a pinch of mozz cheese in the center.',
-                '4. Pan fry both sides until golden brown.',
-                '5. Remove potato cakes and add soy sauce, mirin, and sugar to pan and stir.',
-                '6. Add potatoes back to pan.'
+                'Peel, chop, and boil potatoes.',
+                'Once soft, mash potatoes in a bowl and mix in potato starch, salt, and avocado oil. Mix thoroughly.',
+                'Take a small handfull of mashed potatoes and form a ball with a pinch of mozz cheese in the center.',
+                'Pan fry both sides until golden brown.',
+                'Remove potato cakes and add soy sauce, mirin, and sugar to pan and stir.',
+                'Add potatoes back to pan.'
             ],
         prepTime: '15',
         cookTime: '30',
@@ -299,14 +299,14 @@ const recipes = [
                 '450ml heavy cream'
             ],
         instructionsList: [
-                '1. Crush 200g wafers into mixing bowl. Add 200g nutella and mix throroughly.',
-                '2. Transfer base layer to tray and pack down.',
-                '3. Add 400g cream cheese & 150g nutella to a bowl and mix throroughly.',
-                '4. Add 50g powdered sugar and 300ml heavy cream to the same bowl and whip until the filling holds its shape.',
-                '5. Transfer middle layer to tray and smooth out the top.',
-                '6. Melt 150g milk chocolate and 150ml heavy cream on low heat.',
-                '7. Once melted pour top layer into tray (may be extra depending on size of tray).',
-                '8. Place tray in refrigerator to set for 5-6 hours.'
+                'Crush 200g wafers into mixing bowl. Add 200g nutella and mix throroughly.',
+                'Transfer base layer to tray and pack down.',
+                'Add 400g cream cheese & 150g nutella to a bowl and mix throroughly.',
+                'Add 50g powdered sugar and 300ml heavy cream to the same bowl and whip until the filling holds its shape.',
+                'Transfer middle layer to tray and smooth out the top.',
+                'Melt 150g milk chocolate and 150ml heavy cream on low heat.',
+                'Once melted pour top layer into tray (may be extra depending on size of tray).',
+                'Place tray in refrigerator to set for 5-6 hours.'
             ],
         prepTime: '< 5',
         cookTime: '30',
@@ -327,8 +327,8 @@ const recipes = [
                 '1 tbsp chives'
             ],
         instructionsList: [
-                '1. Mix all listed ingredients into a bowl.',
-                '2. Chill in fridge for 30 mins.'
+                'Mix all listed ingredients into a bowl.',
+                'Chill in fridge for 30 mins.'
             ],
         prepTime: '0',
         cookTime: '5',
@@ -349,13 +349,13 @@ const recipes = [
                 '1/2 tbsp minced garlic'
             ],
         instructionsList: [
-                '1. Melt button in a pan and add minced garlic. Cook till golden brown.',
-                '2. Remove pan from heat, let cool 1-2 mins.',
-                '3. Add in room temperature heavy cream, whisk until blended.',
-                '4. Add pan back to heat on low - do not allow sauce to boil.',
-                '5. Slowly add shredded cheese, whisking to blend in melted cheese.',
-                '6. Add salt & pepper.',
-                '7. Mix in pasta when ready.'
+                'Melt button in a pan and add minced garlic. Cook till golden brown.',
+                'Remove pan from heat, let cool 1-2 mins.',
+                'Add in room temperature heavy cream, whisk until blended.',
+                'Add pan back to heat on low - do not allow sauce to boil.',
+                'Slowly add shredded cheese, whisking to blend in melted cheese.',
+                'Add salt & pepper.',
+                'Mix in pasta when ready.'
             ],
         prepTime: '10',
         cookTime: '15',
@@ -379,7 +379,7 @@ const recipes = [
                 '1/4 tsp cayenne pepper'
             ],
         instructionsList: [
-                '1. Mix all listed ingredients into a bowl.'
+                'Mix all listed ingredients into a bowl.'
             ],
         prepTime: '0',
         cookTime: '5',
@@ -407,8 +407,8 @@ const recipes = [
                 'salt & pepper to taste'
             ],
         instructionsList: [
-                '1. Melt butter in a sauce pan with garlic, lemon juice, lemon zest, dijon mustard, salt, pepper, paprika, & cayenne.',
-                '2. Stir and add parsley, chives, chili flakes, & thyme.'
+                'Melt butter in a sauce pan with garlic, lemon juice, lemon zest, dijon mustard, salt, pepper, paprika, & cayenne.',
+                'Stir and add parsley, chives, chili flakes, & thyme.'
             ],
         prepTime: '0',
         cookTime: '10',
@@ -430,9 +430,9 @@ const recipes = [
                 '0.75 oz watermelon combier'
             ],
         instructionsList: [
-                '1. Add mint leaves, watermelon, and agave simple syrup to mixer & muddle',
-                '2. Add tequila, lemon juice, & water melon combier, shake well',
-                '3. Strain and pour over ice to serve'
+                'Add mint leaves, watermelon, and agave simple syrup to mixer & muddle',
+                'Add tequila, lemon juice, & water melon combier, shake well',
+                'Strain and pour over ice to serve'
             ],
         prepTime: '10',
         cookTime: '0',

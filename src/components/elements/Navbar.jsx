@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Tooltip, Divider } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
 
 import { bullLogo } from '../../utils/constants';
 
@@ -26,13 +27,13 @@ const HeaderBox = styled(Box)(({ theme }) => ({
 
 const NavItemsContainer = styled(Box)(({ theme }) => ({
     display: 'flex',
-    gap: '4rem',
+    gap: '1.5rem',
     alignItems: 'center',
     width: 'inherit',
     marginRight: '1rem',
     marginLeft: '0.5rem',
     [theme.breakpoints.down('md')]: {
-        gap: '4rem',
+        gap: '1rem',
     },
 }));
 
@@ -73,6 +74,21 @@ const Navbar = ({ showReturnLink, showShoppingListLink }) => {
                     :
                         <></>
                 }
+
+                { showReturnLink && showShoppingListLink
+                    ?
+                        <Divider
+                            orientation="vertical"
+                            variant="middle"
+                            flexItem
+                            sx={{
+                                borderColor: '#808080'
+                            }}
+                        />
+                    :
+                        <></>
+                }
+
                 { showShoppingListLink
                     ?
                         <Box
@@ -80,14 +96,14 @@ const Navbar = ({ showReturnLink, showShoppingListLink }) => {
                         >
                             <Link to="/shopping-list">
                                 <NavLink>
-                                    <Box
-                                        display="flex"
-                                        alignItems="center"
-                                    >
-                                        <ShoppingCartIcon fontSize='small'/>&nbsp;&nbsp;
-                                        <span className='kepo-nav-link'>
-                                            Shopping List
-                                        </span>
+                                    <Box>
+                                        <Tooltip title="Shopping List">
+                                            <ReceiptLongIcon
+                                                sx={{
+                                                    fontSize: '28px'
+                                                }}
+                                            />
+                                        </Tooltip>
                                     </Box>  
                                 </NavLink>
                             </Link>
