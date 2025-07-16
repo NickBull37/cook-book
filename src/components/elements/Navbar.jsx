@@ -38,6 +38,10 @@ const NavItemsContainer = styled(Box)(({ theme }) => ({
 }));
 
 const NavLink = styled(Typography)(() => ({
+    // color: '#cccccc',
+    // '&:hover': {
+    //     color: 'rgba(255, 102, 0, 0.95)',
+    // },
     color: 'rgba(255, 102, 0, 0.7)',
     '&:hover': {
         color: 'rgba(255, 102, 0, 0.95)',
@@ -65,9 +69,7 @@ const Navbar = ({ showReturnLink, showShoppingListLink }) => {
                                     alignItems="center"
                                 >
                                     <ArrowBackIcon fontSize='small' />&nbsp;
-                                    <span className='kepo-nav-link'>
-                                        Back to Menu
-                                    </span>
+                                    <Typography variant='button'>MENU</Typography>
                                 </Box>
                             </NavLink>
                         </Link>
@@ -100,7 +102,7 @@ const Navbar = ({ showReturnLink, showShoppingListLink }) => {
                                         <Tooltip title="Shopping List">
                                             <ReceiptLongIcon
                                                 sx={{
-                                                    fontSize: '28px'
+                                                    fontSize: '24px'
                                                 }}
                                             />
                                         </Tooltip>

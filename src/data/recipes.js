@@ -153,7 +153,7 @@ const recipes = [
         type: 'dinner',
         recipeName: 'Crispy Chicken Tacos',
         ingredientsList: [
-                '2 tortillas',
+                'tortillas',
                 'grated parmesan cheese',
                 'shredded lettuce',
                 'ceaser dressing',

@@ -39,6 +39,12 @@
 :root {
 
     /* ----------------- 1.1 Colors ----------------- */
+    --white-salt: #EDEFEF;
+    --rose-white: #FFFAFA;
+    --white-dove: #F0EFE7;
+    --titan-white: #EEEEFF;
+    --greek-villa: #F0EBE3;
+
     --white-100: #e6e6e6;
     --white-200: #cccccc;
     --white-300: #b3b3b3;
@@ -64,6 +70,12 @@
     --zinc-700: #3f3f46;
     --zinc-800: #27272a;
     --zinc-900: #18181b;
+
+    --parisian-night: #323441;
+    --cool-black: #151922;
+    --crow: #0D0907;
+    --black-chesnut: #252321;
+    --basalt-black: #4D423E;
 
     /* Color Palette */
     --pal-primary: #000;
