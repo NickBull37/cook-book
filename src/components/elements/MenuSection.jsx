@@ -26,7 +26,7 @@ const RecipeMapContainer = styled(Box)(({ theme }) => ({
     width: '100%',
     padding: '0 9rem',
     [theme.breakpoints.down('md')]: {
-        padding: '0 2.5rem',
+        padding: '0 2.25rem',
     },
 }));
 

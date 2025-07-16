@@ -157,7 +157,8 @@ html {
 
 body {
     /* Set background color for entire site */
-    background: #404040;
+    /* background: #404040; */
+    background: #1a1a1a;
     /* Set default text color for entire site */
     color: #fff;
 }

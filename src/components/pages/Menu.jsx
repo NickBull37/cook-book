@@ -5,7 +5,7 @@ import { styled } from '@mui/material/styles';
 
 import { Navbar, MenuSection } from '..';
 
-const DashboardContainer = styled(Box)(() => ({
+const MenuContainer = styled(Box)(() => ({
     marginTop: '8rem',
 }));
 
@@ -42,7 +42,7 @@ const Menu = ({ setShoppingList }) => {
     return (
         <Stack>
             <Navbar showReturnLink={false} showShoppingListLink={true} />
-            <DashboardContainer>
+            <MenuContainer>
                 {sections.map((section, index) => (
                     <MenuSection
                         sectionTitle={section.title}
@@ -50,7 +50,7 @@ const Menu = ({ setShoppingList }) => {
                         setShoppingList={setShoppingList}
                     />
                 ))}
-            </DashboardContainer>
+            </MenuContainer>
         </Stack>
     );
 }
