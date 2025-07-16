@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/cook-book/static/css/main.e9d6e9e8.css",
-    "main.js": "/cook-book/static/js/main.98f84462.js",
+    "main.css": "/cook-book/static/css/main.a8a92295.css",
+    "main.js": "/cook-book/static/js/main.ab4774f8.js",
     "static/media/bulls-kitchen.png": "/cook-book/static/media/bulls-kitchen.e81612a8e6f4dfdabb98.png",
     "static/media/guacamole.jpg": "/cook-book/static/media/guacamole.fce8bb1a2bd937aaea3b.jpg",
     "static/media/bulls-menu-text-trimmed.png": "/cook-book/static/media/bulls-menu-text-trimmed.a98252f42d720d4f70d3.png",
     "static/media/honey-garlic-chicken.jpg": "/cook-book/static/media/honey-garlic-chicken.aa6593a6db5573d3895e.jpg",
     "static/media/chicken-picatta.png": "/cook-book/static/media/chicken-picatta.814a07cc0f6e8d90f2cf.png",
-    "static/media/bull-logo.png": "/cook-book/static/media/bull-logo.61d5157ea4361641922e.png",
     "static/media/watermelon-marg.jpeg": "/cook-book/static/media/watermelon-marg.45753466c82914b2997a.jpeg",
+    "static/media/bull-logo.png": "/cook-book/static/media/bull-logo.bd56f99de19e8964b945.png",
     "static/media/potato-mochi.jpg": "/cook-book/static/media/potato-mochi.d60adef1d1fbc0e219e8.jpg",
     "static/media/box-cat.jpg": "/cook-book/static/media/box-cat.36c0159b06f3d276d6bd.jpg",
     "static/media/burger-sauce.png": "/cook-book/static/media/burger-sauce.4ca58e7b636ed66a3c88.png",
@@ -24,11 +24,11 @@
     "static/media/TheSignature.ttf": "/cook-book/static/media/TheSignature.57d1b8bdb828ed798354.ttf",
     "static/media/crab-topped-salmon.jpg": "/cook-book/static/media/crab-topped-salmon.43ed1f83b5141ac66f6f.jpg",
     "index.html": "/cook-book/index.html",
-    "main.e9d6e9e8.css.map": "/cook-book/static/css/main.e9d6e9e8.css.map",
-    "main.98f84462.js.map": "/cook-book/static/js/main.98f84462.js.map"
+    "main.a8a92295.css.map": "/cook-book/static/css/main.a8a92295.css.map",
+    "main.ab4774f8.js.map": "/cook-book/static/js/main.ab4774f8.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9d6e9e8.css",
-    "static/js/main.98f84462.js"
+    "static/css/main.a8a92295.css",
+    "static/js/main.ab4774f8.js"
   ]
 }
