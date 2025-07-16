@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
@@ -6,9 +5,6 @@ import { Box, Stack, Typography, Grid, Rating, Button, IconButton } from '@mui/m
 import { Card, CardActions, CardContent, CardMedia } from '@mui/material';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PersonIcon from '@mui/icons-material/Person';
-import LocalDiningIcon from '@mui/icons-material/LocalDining';
-import LunchDiningIcon from '@mui/icons-material/LunchDining';
-import LunchDiningOutlinedIcon from '@mui/icons-material/LunchDiningOutlined';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
 
@@ -132,7 +128,7 @@ const RecipeMap = ({ recipes, recipeType, setShoppingList }) => {
                                     elevation={8}
                                     sx={{
                                         maxWidth: 340,
-                                        bgcolor: '#333333',
+                                        bgcolor: '#595959',
                                         color: '#fff',
                                         borderRadius: '10px',
                                     }}
@@ -169,7 +165,10 @@ const RecipeMap = ({ recipes, recipeType, setShoppingList }) => {
                                             <FullRecipeButton size="small">Full Recipe</FullRecipeButton>
                                         </Link>
                                         <AddToGroceryListIconButton aria-label="add to grocery list">
-                                            <AddShoppingCartIcon fontSize='small' />
+                                            <AddShoppingCartIcon
+                                                fontSize='small'
+                                                onClick={handleAddToShoppingListClick(recipe.index)}
+                                            />
                                         </AddToGroceryListIconButton>
                                     </CardActions>
                                 </Card>

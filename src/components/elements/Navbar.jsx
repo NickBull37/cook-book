@@ -1,17 +1,15 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
 import { Box, Typography, Tooltip, Divider } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
 
 import { bullLogo } from '../../utils/constants';
 
 const HeaderBox = styled(Box)(({ theme }) => ({
     height: '14vh',
-    maxHeight: '70px',
+    maxHeight: '60px',
     width: '100%',
     position: 'fixed',
     display: "flex",
@@ -38,10 +36,6 @@ const NavItemsContainer = styled(Box)(({ theme }) => ({
 }));
 
 const NavLink = styled(Typography)(() => ({
-    // color: '#cccccc',
-    // '&:hover': {
-    //     color: 'rgba(255, 102, 0, 0.95)',
-    // },
     color: 'rgba(255, 102, 0, 0.7)',
     '&:hover': {
         color: 'rgba(255, 102, 0, 0.95)',
@@ -57,7 +51,7 @@ const Navbar = ({ showReturnLink, showShoppingListLink }) => {
                     sx={{ mt: '2px' }}
                 >
                     <Link to="/">
-                        <img src={bullLogo} height={50}/>
+                        <img src={bullLogo} height={40}/>
                     </Link>
                 </Box>
                 { showReturnLink
