@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cook-book/static/css/main.a6bfc2d1.css",
-    "main.js": "/cook-book/static/js/main.3850c7a3.js",
+    "main.css": "/cook-book/static/css/main.e9d6e9e8.css",
+    "main.js": "/cook-book/static/js/main.98f84462.js",
     "static/media/bulls-kitchen.png": "/cook-book/static/media/bulls-kitchen.e81612a8e6f4dfdabb98.png",
     "static/media/guacamole.jpg": "/cook-book/static/media/guacamole.fce8bb1a2bd937aaea3b.jpg",
     "static/media/bulls-menu-text-trimmed.png": "/cook-book/static/media/bulls-menu-text-trimmed.a98252f42d720d4f70d3.png",
@@ -24,11 +24,11 @@
     "static/media/TheSignature.ttf": "/cook-book/static/media/TheSignature.57d1b8bdb828ed798354.ttf",
     "static/media/crab-topped-salmon.jpg": "/cook-book/static/media/crab-topped-salmon.43ed1f83b5141ac66f6f.jpg",
     "index.html": "/cook-book/index.html",
-    "main.a6bfc2d1.css.map": "/cook-book/static/css/main.a6bfc2d1.css.map",
-    "main.3850c7a3.js.map": "/cook-book/static/js/main.3850c7a3.js.map"
+    "main.e9d6e9e8.css.map": "/cook-book/static/css/main.e9d6e9e8.css.map",
+    "main.98f84462.js.map": "/cook-book/static/js/main.98f84462.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6bfc2d1.css",
-    "static/js/main.3850c7a3.js"
+    "static/css/main.e9d6e9e8.css",
+    "static/js/main.98f84462.js"
   ]
 }
