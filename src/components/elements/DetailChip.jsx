@@ -8,11 +8,11 @@ const DetailChip = ({ icon, label }) => (
             alignItems: 'center',
             backgroundColor: 'rgba(0,0,0,0.65)',
             borderRadius: '8px',
-            padding: '4px 10px',
-            fontSize: '0.875rem',
+            padding: '6px 10px',
+            fontSize: '0.938rem',
         }}
     >
-        {icon && React.cloneElement(icon, { sx: { fontSize: 18, mr: 1, color: '#fff' } })}
+        {icon && React.cloneElement(icon, { sx: { fontSize: 16, mr: 0.75, color: '#fff' } })}
         {label}
     </Box>
 );

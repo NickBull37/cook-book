@@ -2,14 +2,11 @@ import React, { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
-import { Box, Stack, Typography, Paper, Rating, Checkbox, FormControlLabel, Button, Tooltip } from '@mui/material';
+import { Box, Stack, Typography, Checkbox, FormControlLabel, Button, Tooltip } from '@mui/material';
 import { Card, CardActions, CardContent, CardMedia } from '@mui/material';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PersonIcon from '@mui/icons-material/Person';
-import LocalDiningIcon from '@mui/icons-material/LocalDining';
-import LunchDiningIcon from '@mui/icons-material/LunchDining';
 import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
-import LunchDiningOutlinedIcon from '@mui/icons-material/LunchDiningOutlined';
 
 import { Navbar, DetailChip } from '../../components';
 import recipes from '../../data/recipes';
@@ -142,16 +139,14 @@ const Recipe = ({ setShoppingList }) => {
 
                             <Stack
                                 direction="row"
-                                spacing={4}
                                 alignItems="center"
-                                justifyContent="center"
+                                justifyContent="space-between"
                             >
                                 <Tooltip title="Cook time">
                                     <DetailChip icon={<AccessTimeIcon />} label={`${recipe.prepTime} min`} />
                                 </Tooltip>
-                                {/* <DetailChip icon={<LocalDiningIcon />} label={`${recipe.cookTime} min`} /> */}
                                 <DetailChip icon={<PersonIcon />} label={recipe.serves} />
-                                <DetailChip icon={<SignalCellularAltIcon />} label={recipe.difficulty < 2 ? 'Easy' : recipe.difficulty < 4 ? 'Medium' : 'Hard'} />
+                                <DetailChip icon={<SignalCellularAltIcon />} label={recipe.difficulty < 2 ? 'Easy' : recipe.difficulty < 4 ? 'Med' : 'Hard'} />
                             </Stack>
                         </Box>
                     </Box>
@@ -203,97 +198,6 @@ const Recipe = ({ setShoppingList }) => {
                     </CardContent>
                 </Card>
             </RecipeContainer>
-
-            {/* <RecipeContainer>
-                <RecipePaper elevation={12}>
-                    <SectionStack>
-                        {recipe ? (
-                            <>
-                                <RecipeHeaderBox>
-                                    <Stack
-                                        display="flex"
-                                        gap={1.5}
-                                    >
-                                        <RecipeNameText className='kepo-h3-orange'>
-                                            {recipe.recipeName}
-                                        </RecipeNameText>
-                                        <DetailBox>
-                                            <LocalDiningIcon fontSize='' sx={{ color: '#fff' }} />
-                                            <CardText>
-                                                Prep time <span className='subtext'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='value-highlight'>{recipe.prepTime}</span>
-                                            </CardText>
-                                        </DetailBox>
-                                        <DetailBox>
-                                            <AccessTimeIcon fontSize='' sx={{ color: '#fff' }} />
-                                            <CardText>
-                                                Cook time <span className='subtext'>(min)</span>&nbsp;&nbsp;&nbsp;<span className='value-highlight'>{recipe.cookTime}</span>
-                                            </CardText>
-                                        </DetailBox>
-                                        <DetailBox>
-                                            <PersonIcon fontSize='' sx={{ color: '#fff' }} />
-                                            <CardText>
-                                                Serves&nbsp;&nbsp;&nbsp;<span className='value-highlight'>{recipe.serves}</span>
-                                            </CardText>
-                                        </DetailBox>
-                                        <DetailBox>
-                                            <SignalCellularAltIcon fontSize='' sx={{ color: '#fff' }} />
-                                            <CardText>
-                                                Difficulty&nbsp;&nbsp;
-                                            </CardText>
-                                            <StyledRating
-                                                readonly
-                                                size="small"
-                                                value={recipe.difficulty}
-                                                precision={0.5}
-                                                icon={<LunchDiningIcon fontSize="inherit" />}
-                                                emptyIcon={<LunchDiningOutlinedIcon fontSize="inherit" />}
-                                            />
-                                        </DetailBox>
-                                    </Stack>
-                                    <RecipeImageBox>
-                                        <img className="recipe-photo" src={recipe.photo}/>
-                                    </RecipeImageBox>
-                                </RecipeHeaderBox>
-                                <Box>
-                                    <SectionTitle>
-                                        Ingredients
-                                    </SectionTitle>
-                                    {recipe.ingredientsList.map((ingredient, index) => (
-                                        <IngredientsText key={index}>{ingredient}</IngredientsText>
-                                    ))}
-                                </Box>
-                                <Box>
-                                    <SectionTitle>
-                                        Steps
-                                    </SectionTitle>
-                                    {recipe.instructionsList.map((instruction, index) => (
-                                        <FormControlLabel
-                                            key={index}
-                                            control={
-                                                <InstructionCheckbox
-                                                    checked={checkboxStates[index] || false}
-                                                    onChange={handleCheckboxChange(index)}
-                                                />
-                                            }
-                                            label={
-                                                <InstructionText>{instruction}</InstructionText>
-                                            }
-                                            sx={{
-                                                alignItems: 'flex-start',
-                                                margin: '0.675rem 4px'
-                                            }}
-                                        />
-                                    ))}
-                                </Box>
-                            </>
-                        ) : (
-                            <Typography variant="h6" color="error">
-                                Recipe not found.
-                            </Typography>
-                        )}
-                    </SectionStack>
-                </RecipePaper>
-            </RecipeContainer> */}
         </Stack>
     );
 };
