@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 import { Box, Stack } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
@@ -7,12 +5,8 @@ import { Navbar, MenuSection } from '..';
 
 import Particles from '../backgrounds/Particles';
 
-// const MenuContainer = styled(Box)(() => ({
-//     marginTop: '8rem',
-// }));
-
 const MenuContainer = styled(Box)(() => ({
-    marginTop: '7rem',
+    marginTop: '6rem',
     position: 'relative',
     zIndex: 1,
 }));
@@ -65,7 +59,6 @@ const Menu = ({ setShoppingList }) => {
 
     return (
         <PageWrapper>
-            {/* Background Particles */}
             <BackgroundWrapper>
                 <Particles
                     particleColors={['#cc5200', '#ff6600']}
@@ -81,7 +74,6 @@ const Menu = ({ setShoppingList }) => {
                 />
             </BackgroundWrapper>
 
-            {/* Foreground Content */}
             <Stack sx={{ position: 'relative', zIndex: 1 }}>
                 <Navbar showReturnLink={false} showShoppingListLink={true} />
                 <MenuContainer>
@@ -96,6 +88,7 @@ const Menu = ({ setShoppingList }) => {
                 </MenuContainer>
             </Stack>
         </PageWrapper>
+        
         // <Stack>
         //     <Navbar showReturnLink={false} showShoppingListLink={true} />
         //     <div style={{ width: '100%', height: '600px', position: 'relative' }}>

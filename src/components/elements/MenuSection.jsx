@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Box, Stack, Typography, Grid } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
@@ -18,7 +16,8 @@ const SectionTitle = styled(Typography)(({ theme }) => ({
     paddingLeft: '4rem',
     cursor: 'default',
     [theme.breakpoints.down('md')]: {
-        paddingLeft: '1rem',
+        marginBottom: '1rem',
+        paddingLeft: '1.5rem',
     },
 }));
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Stack, Typography, Paper, Rating, Checkbox, FormControlLabel, Button } from '@mui/material';
+import { Box } from '@mui/material';
 
 const DetailChip = ({ icon, label }) => (
     <Box
