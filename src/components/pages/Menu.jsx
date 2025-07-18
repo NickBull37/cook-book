@@ -38,7 +38,7 @@ const Menu = ({ setShoppingList }) => {
     // Constants
     const sections = [
         {
-            title: 'Appetizers',
+            title: 'Apps',
             recipeType: 'appetizer'
         },
         {

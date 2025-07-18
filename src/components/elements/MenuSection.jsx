@@ -14,11 +14,11 @@ const SectionContainer = styled(Box)(({ theme }) => ({
 }));
 
 const SectionTitle = styled(Typography)(({ theme }) => ({
-    marginBottom: '1.75rem',
+    marginBottom: '1.5rem',
     paddingLeft: '4rem',
     cursor: 'default',
     [theme.breakpoints.down('md')]: {
-        paddingLeft: '1.25rem',
+        paddingLeft: '1rem',
     },
 }));
 
@@ -34,7 +34,7 @@ const GridContainer = (props) => (
     <Grid
         container
         flexDirection={{ xs: 'column', sm: 'row' }}
-        rowSpacing={{ xs: 10, sm: 12 }}
+        rowSpacing={{ xs: 8, sm: 12 }}
         columnSpacing={{ xs: 0, sm: 24 }}
         {...props}
     />
