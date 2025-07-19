@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cook-book/static/css/main.fa3f1b99.css",
-    "main.js": "/cook-book/static/js/main.cf29bb30.js",
+    "main.js": "/cook-book/static/js/main.ea468c6f.js",
     "static/media/bulls-kitchen.png": "/cook-book/static/media/bulls-kitchen.e81612a8e6f4dfdabb98.png",
     "static/media/bulls-kitchen-landing.png": "/cook-book/static/media/bulls-kitchen-landing.c76b329a676f06cd2b8e.png",
     "static/media/guacamole.jpg": "/cook-book/static/media/guacamole.fce8bb1a2bd937aaea3b.jpg",
@@ -13,6 +13,7 @@
     "static/media/potato-mochi.jpg": "/cook-book/static/media/potato-mochi.d60adef1d1fbc0e219e8.jpg",
     "static/media/box-cat.jpg": "/cook-book/static/media/box-cat.36c0159b06f3d276d6bd.jpg",
     "static/media/burger-sauce.png": "/cook-book/static/media/burger-sauce.4ca58e7b636ed66a3c88.png",
+    "static/media/hoagie-dip.jpg": "/cook-book/static/media/hoagie-dip.d64b34660b8f9c36646e.jpg",
     "static/media/chicken-parm.jpg": "/cook-book/static/media/chicken-parm.49b850fcd76c3719f903.jpg",
     "static/media/chicken-tacos.jpg": "/cook-book/static/media/chicken-tacos.d660c133ff07368d594c.jpg",
     "static/media/greek-salad.jpg": "/cook-book/static/media/greek-salad.3412d0a5d33a4133561c.jpg",
@@ -26,10 +27,10 @@
     "static/media/crab-topped-salmon.jpg": "/cook-book/static/media/crab-topped-salmon.43ed1f83b5141ac66f6f.jpg",
     "index.html": "/cook-book/index.html",
     "main.fa3f1b99.css.map": "/cook-book/static/css/main.fa3f1b99.css.map",
-    "main.cf29bb30.js.map": "/cook-book/static/js/main.cf29bb30.js.map"
+    "main.ea468c6f.js.map": "/cook-book/static/js/main.ea468c6f.js.map"
   },
   "entrypoints": [
     "static/css/main.fa3f1b99.css",
-    "static/js/main.cf29bb30.js"
+    "static/js/main.ea468c6f.js"
   ]
 }
