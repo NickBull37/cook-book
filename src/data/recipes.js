@@ -13,7 +13,8 @@ import {
     alfredoSauce,
     honeyGarlicChicken,
     chickenParm,
-    guacamole
+    guacamole,
+    hoagieDip
 } from "../utils/constants";
 
 const recipes = [
@@ -455,7 +456,36 @@ const recipes = [
         rating: 4.5,
         difficulty: 2.5,
         photo: watermelonMarg
-    }
+    },
+    {
+        index: 16,
+        type: 'appetizer',
+        recipeName: 'Hoagie Dip',
+        ingredientsList: [
+                '1/2 lb ham',
+                '1/2 lb genova salami',
+                '1/2 lb provolone cheese',
+                '1 vidalia onion ',
+                'tomatoes',
+                'chopped sweet peppers',
+                '2 tbsp mayo',
+                '1 tbsp olive oil',
+                'oregano',
+                'garlic powder',
+                'salt & pepper to tase'
+            ],
+        instructionsList: [
+                'Chop everything and mix together in a large bowl.',
+                'Serve with fresh bread.'
+            ],
+        prepTime: '45',
+        cookTime: '0',
+        time: 45,
+        serves: '6-12',
+        rating: 4,
+        difficulty: 2.5,
+        photo: hoagieDip
+    },
 ];
     
 

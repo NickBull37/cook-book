@@ -21,3 +21,4 @@ export const alfredoSauce = require('../images/recipes/alfredo-sauce.jpg');
 export const honeyGarlicChicken = require('../images/recipes/honey-garlic-chicken.jpg');
 export const chickenParm = require('../images/recipes/chicken-parm.jpg');
 export const guacamole = require('../images/recipes/guacamole.jpg');
+export const hoagieDip = require('../images/recipes/hoagie-dip.jpg');
