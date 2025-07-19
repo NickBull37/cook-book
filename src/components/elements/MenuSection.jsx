@@ -12,7 +12,7 @@ const SectionContainer = styled(Box)(({ theme }) => ({
 
 const SectionTitle = styled(Typography)(({ theme }) => ({
     marginBottom: '1.5rem',
-    paddingLeft: '4rem',
+    paddingLeft: '12rem',
     cursor: 'default',
     [theme.breakpoints.down('md')]: {
         marginBottom: '0.5rem',

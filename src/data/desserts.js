@@ -26,6 +26,7 @@ const recipes = [
             ],
         prepTime: '< 5',
         cookTime: '30',
+        time: 30,
         serves: '6-12',
         rating: 4.5,
         difficulty: 2,

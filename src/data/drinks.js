@@ -22,6 +22,7 @@ const drinks = [
             ],
         prepTime: '10',
         cookTime: '0',
+        time: 10,
         serves: '1',
         rating: 4.5,
         difficulty: 2.5,

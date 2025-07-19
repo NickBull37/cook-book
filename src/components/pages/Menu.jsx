@@ -10,10 +10,10 @@ import desserts from '../../data/desserts';
 import drinks from '../../data/drinks';
 import extras from '../../data/extras';
 
-const MenuContainer = styled(Box)(() => ({
-    marginTop: '6rem',
+const PageWrapper = styled(Box)(() => ({
     position: 'relative',
-    zIndex: 1,
+    minHeight: '100vh',
+    overflow: 'hidden',
 }));
 
 const BackgroundWrapper = styled('div')(() => ({
@@ -26,10 +26,13 @@ const BackgroundWrapper = styled('div')(() => ({
     overflow: 'hidden',
 }));
 
-const PageWrapper = styled(Box)(() => ({
+const MenuContainer = styled(Box)(({ theme }) => ({
+    margin: '6rem 8rem 0 12rem',
     position: 'relative',
-    minHeight: '100vh',
-    overflow: 'hidden',
+    zIndex: 1,
+    [theme.breakpoints.down('md')]: {
+        margin: '6rem 0 0 0',
+    },
 }));
 
 const Menu = ({ setShoppingList }) => {
@@ -67,7 +70,7 @@ const Menu = ({ setShoppingList }) => {
             <BackgroundWrapper>
                 <Particles
                     particleColors={['#cc5200', '#ff6600']}
-                    particleCount={10000}
+                    particleCount={5000}
                     particleSpread={5}
                     speed={0.005}
                     particleBaseSize={100}

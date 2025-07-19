@@ -23,6 +23,7 @@ const appetizers = [
             ],
         prepTime: '15',
         cookTime: '0',
+        time: 15,
         serves: '4-6',
         rating: 4,
         difficulty: 1.5,

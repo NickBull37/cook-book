@@ -51,7 +51,9 @@ const Navbar = ({ showReturnLink, showShoppingListLink }) => {
                     sx={{ mt: '2px' }}
                 >
                     <Link to="/">
-                        <img src={bullLogo} height={42}/>
+                        <Box sx={{ mb: '-2px' }}>
+                            <img src={bullLogo} height={42}/>
+                        </Box>
                     </Link>
                 </Box>
                 { showReturnLink
