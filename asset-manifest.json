@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cook-book/static/css/main.fa3f1b99.css",
-    "main.js": "/cook-book/static/js/main.ec882d7e.js",
+    "main.js": "/cook-book/static/js/main.cf29bb30.js",
     "static/media/bulls-kitchen.png": "/cook-book/static/media/bulls-kitchen.e81612a8e6f4dfdabb98.png",
     "static/media/bulls-kitchen-landing.png": "/cook-book/static/media/bulls-kitchen-landing.c76b329a676f06cd2b8e.png",
     "static/media/guacamole.jpg": "/cook-book/static/media/guacamole.fce8bb1a2bd937aaea3b.jpg",
@@ -26,10 +26,10 @@
     "static/media/crab-topped-salmon.jpg": "/cook-book/static/media/crab-topped-salmon.43ed1f83b5141ac66f6f.jpg",
     "index.html": "/cook-book/index.html",
     "main.fa3f1b99.css.map": "/cook-book/static/css/main.fa3f1b99.css.map",
-    "main.ec882d7e.js.map": "/cook-book/static/js/main.ec882d7e.js.map"
+    "main.cf29bb30.js.map": "/cook-book/static/js/main.cf29bb30.js.map"
   },
   "entrypoints": [
     "static/css/main.fa3f1b99.css",
-    "static/js/main.ec882d7e.js"
+    "static/js/main.cf29bb30.js"
   ]
 }
