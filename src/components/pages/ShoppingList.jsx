@@ -53,13 +53,16 @@ const ShoppingList = ({ shoppingList, setShoppingList }) => {
                 spacing={1}
                 sx={{
                     mt: '8rem',
-                    mx: '3rem'
+                    mx: '3rem',
+                    mb: '4rem'
                 }}
             >
                 {isEmpty ? (
                     <Stack
                         alignItems="center"
+                        justifyContent="center"
                         spacing={2}
+                        sx={{ minHeight: '70vh' }}
                     >
                         <Typography>
                             Shopping list is empty

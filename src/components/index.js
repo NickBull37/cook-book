@@ -13,5 +13,7 @@ export { default as ShoppingList } from './pages/ShoppingList';
 //##########################################################################################//
 export { default as Navbar } from './elements/Navbar';
 export { default as MenuSection } from './elements/MenuSection';
-export { default as RecipeMap } from './elements/RecipeMap';
+export { default as MenuSectionMap } from './elements/MenuSectionMap';
+export { default as MenuItem } from './elements/MenuItem';
 export { default as DetailChip } from './elements/DetailChip';
+export { default as CoverflowCarousel } from './elements/carousels/CoverflowCarousel';

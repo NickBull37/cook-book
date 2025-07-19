@@ -2,8 +2,13 @@ import { Box, Stack } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 import { Navbar, MenuSection } from '..';
-
 import Particles from '../backgrounds/Particles';
+import appetizers from '../../data/appetizers';
+import entrees from '../../data/entrees';
+import sides from '../../data/sides';
+import desserts from '../../data/desserts';
+import drinks from '../../data/drinks';
+import extras from '../../data/extras';
 
 const MenuContainer = styled(Box)(() => ({
     marginTop: '6rem',
@@ -33,27 +38,27 @@ const Menu = ({ setShoppingList }) => {
     const sections = [
         {
             title: 'Apps',
-            recipeType: 'appetizer'
+            recipes: appetizers
         },
         {
             title: 'Entrees',
-            recipeType: 'dinner'
+            recipes: entrees
         },
         {
             title: 'Sides',
-            recipeType: 'side'
+            recipes: sides
         },
         {
             title: 'Drinks',
-            recipeType: 'drink'
+            recipes: drinks
         },
         {
             title: 'Desserts',
-            recipeType: 'dessert'
+            recipes: desserts
         },
         {
             title: 'Extras',
-            recipeType: 'extra'
+            recipes: extras
         },
     ];
 
@@ -62,7 +67,7 @@ const Menu = ({ setShoppingList }) => {
             <BackgroundWrapper>
                 <Particles
                     particleColors={['#cc5200', '#ff6600']}
-                    particleCount={20000}
+                    particleCount={10000}
                     particleSpread={5}
                     speed={0.005}
                     particleBaseSize={100}
@@ -81,14 +86,14 @@ const Menu = ({ setShoppingList }) => {
                         <MenuSection
                             key={index}
                             sectionTitle={section.title}
-                            recipeType={section.recipeType}
+                            recipes={section.recipes}
                             setShoppingList={setShoppingList}
                         />
                     ))}
                 </MenuContainer>
             </Stack>
         </PageWrapper>
-        
+
         // <Stack>
         //     <Navbar showReturnLink={false} showShoppingListLink={true} />
         //     <div style={{ width: '100%', height: '600px', position: 'relative' }}>

@@ -1,13 +1,12 @@
 import { Box, Stack, Typography, Grid } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-import { RecipeMap } from '../../components';
-import recipes from '../../data/recipes';
+import { MenuSectionMap } from '../../components';
 
 const SectionContainer = styled(Box)(({ theme }) => ({
     marginBottom: '9rem',
     [theme.breakpoints.down('md')]: {
-        marginBottom: '6rem',
+        marginBottom: '5rem',
     },
 }));
 
@@ -16,16 +15,16 @@ const SectionTitle = styled(Typography)(({ theme }) => ({
     paddingLeft: '4rem',
     cursor: 'default',
     [theme.breakpoints.down('md')]: {
-        marginBottom: '1rem',
+        marginBottom: '0.5rem',
         paddingLeft: '1.5rem',
     },
 }));
 
-const RecipeMapContainer = styled(Box)(({ theme }) => ({
+const SectionMapContainer = styled(Box)(({ theme }) => ({
     width: '100%',
     padding: '0 9rem',
     [theme.breakpoints.down('md')]: {
-        padding: '0 2.25rem',
+        padding: '0',
     },
 }));
 
@@ -39,26 +38,27 @@ const GridContainer = (props) => (
     />
 );
 
-const MenuSection = ({ sectionTitle, recipeType, setShoppingList }) => {
+const MenuSection = ({ sectionTitle, recipes, setShoppingList }) => {
     return (
-        <SectionContainer>
-            <Stack>
-                <SectionTitle
-                    className='kepo-h1-orange'
-                >
-                    {sectionTitle}
-                </SectionTitle>
-                <RecipeMapContainer>
-                    <GridContainer>
-                        <RecipeMap
-                            recipes={recipes}
-                            recipeType={recipeType}
-                            setShoppingList={setShoppingList}
-                        />
-                    </GridContainer>
-                </RecipeMapContainer>
-            </Stack>
-        </SectionContainer>
+        <>
+            <SectionContainer>
+                <Stack>
+                    <SectionTitle
+                        className='kepo-h1-orange'
+                    >
+                        {sectionTitle}
+                    </SectionTitle>
+                    <SectionMapContainer>
+                        <GridContainer>
+                            <MenuSectionMap
+                                recipes={recipes}
+                                setShoppingList={setShoppingList}
+                            />
+                        </GridContainer>
+                    </SectionMapContainer>
+                </Stack>
+            </SectionContainer>
+        </>
     );
 }
 
