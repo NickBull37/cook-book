@@ -70,7 +70,7 @@ const Menu = ({ setShoppingList }) => {
             <BackgroundWrapper>
                 <Particles
                     particleColors={['#cc5200', '#ff6600']}
-                    particleCount={5000}
+                    particleCount={3500}
                     particleSpread={5}
                     speed={0.005}
                     particleBaseSize={100}

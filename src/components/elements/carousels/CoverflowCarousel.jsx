@@ -25,7 +25,7 @@ const CoverflowCarousel = ({ recipes, setShoppingList }) => {
                 pagination={{ clickable: true }}
                 modules={[EffectCoverflow, Pagination]}
                 className="mySwiper"
-                style={{ width: '100%', paddingBottom: '2rem' }}
+                style={{ width: '100%', paddingBottom: '3rem' }}
             >
                 {recipes.map((recipe, index) => (
                     <SwiperSlide style={{ width: '300px' }}>
