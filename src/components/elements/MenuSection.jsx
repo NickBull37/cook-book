@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, Grid } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 import { MenuSectionMap } from '../../components';
@@ -6,7 +6,7 @@ import { MenuSectionMap } from '../../components';
 const SectionContainer = styled(Box)(({ theme }) => ({
     marginBottom: '9rem',
     [theme.breakpoints.down('md')]: {
-        marginBottom: '5rem',
+        marginBottom: '4rem',
     },
 }));
 
@@ -28,16 +28,6 @@ const SectionMapContainer = styled(Box)(({ theme }) => ({
     },
 }));
 
-const GridContainer = (props) => (
-    <Grid
-        container
-        flexDirection={{ xs: 'column', sm: 'row' }}
-        rowSpacing={{ xs: 8, sm: 12 }}
-        columnSpacing={{ xs: 0, sm: 24 }}
-        {...props}
-    />
-);
-
 const MenuSection = ({ sectionTitle, recipes, setShoppingList }) => {
     return (
         <>
@@ -49,12 +39,10 @@ const MenuSection = ({ sectionTitle, recipes, setShoppingList }) => {
                         {sectionTitle}
                     </SectionTitle>
                     <SectionMapContainer>
-                        <GridContainer>
-                            <MenuSectionMap
-                                recipes={recipes}
-                                setShoppingList={setShoppingList}
-                            />
-                        </GridContainer>
+                        <MenuSectionMap
+                            recipes={recipes}
+                            setShoppingList={setShoppingList}
+                        />
                     </SectionMapContainer>
                 </Stack>
             </SectionContainer>

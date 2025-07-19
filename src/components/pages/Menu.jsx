@@ -1,7 +1,7 @@
 import { Box, Stack } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-import { Navbar, MenuSection } from '..';
+import { Navbar, MenuSection, QuickNav } from '..';
 import Particles from '../backgrounds/Particles';
 import appetizers from '../../data/appetizers';
 import entrees from '../../data/entrees';
@@ -81,6 +81,8 @@ const Menu = ({ setShoppingList }) => {
                     // cameraDistance={20}
                 />
             </BackgroundWrapper>
+
+            <QuickNav />
 
             <Stack sx={{ position: 'relative', zIndex: 1 }}>
                 <Navbar showReturnLink={false} showShoppingListLink={true} />

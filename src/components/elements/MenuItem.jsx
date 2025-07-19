@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
-import { Stack, Typography, Grid, Button, IconButton } from '@mui/material';
+import { Stack, Typography, Button, IconButton } from '@mui/material';
 import { Card, CardActions, CardContent, CardMedia } from '@mui/material';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PersonIcon from '@mui/icons-material/Person';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
 
 import { DetailChip } from '..';
 
@@ -52,14 +51,21 @@ const MenuItem = ({ recipe, setShoppingList }) => {
             }}
         >
             <CardMedia
-                sx={{ height: 180 }}
+                sx={{ height: 160 }}
                 image={recipe.photo}
                 title={recipe.recipeName}
             />
             <CardContent
-                sx={{ p: '1rem 1rem 0.75rem 1rem' }}
+                sx={{ p: '1rem 1rem 0.25rem 1rem' }}
             >
-                <Typography variant="h5" component="div" sx={{ mb: '1rem' }}>
+                <Typography
+                    variant="h5"
+                    component="div"
+                    sx={{
+                        minHeight: '45px',
+                        mb: '1rem'
+                    }}
+                >
                     {recipe.recipeName}
                 </Typography>
                 <Stack

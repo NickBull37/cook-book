@@ -14,7 +14,8 @@ import {
     honeyGarlicChicken,
     chickenParm,
     guacamole,
-    hoagieDip
+    hoagieDip,
+    oreoCookieCake
 } from "../utils/constants";
 
 const recipes = [
@@ -485,6 +486,37 @@ const recipes = [
         rating: 4,
         difficulty: 2.5,
         photo: hoagieDip
+    },
+    {
+        index: 17,
+        type: 'dessert',
+        recipeName: 'Oreo Cookie Cake',
+        ingredientsList: [
+                '1 pack Devil\'s food cake mix',
+                '4 oz semi-sweet baking chocolate',
+                '1/4 cup butter',
+                '8 oz softened cream cheese',
+                '1/2 cup white sugar',
+                '2 cups thawed frozen whipped topping',
+                '12 crushed Oreo cookies',
+            ],
+        instructionsList: [
+                'Prepare cake batter and bake in 2 separate 9 inch round cake pans.',
+                'Let top & bottom layers cool for 10 mins then remove from pans.',
+                'In a large mixing bowl, beat cream cheese and sugar until blended.',
+                'Gently stir in whipped topping and crushed cookies.',
+                'Place bottom layer on plate, add a 2 inch layer of filling, and then add the top layer.',
+                'Microwave chocolate and butter in small bowl until melted (approx 2 mins).',
+                'Pour melted chocolate on top layer of cake to finish.',
+                'Let cake set in refrigerator until chocolate glaze forms a hard shell.'
+            ],
+        prepTime: '0',
+        cookTime: '0',
+        time: 60,
+        serves: '6-12',
+        rating: 4,
+        difficulty: 4,
+        photo: oreoCookieCake
     },
 ];
     

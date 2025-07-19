@@ -22,3 +22,4 @@ export const honeyGarlicChicken = require('../images/recipes/honey-garlic-chicke
 export const chickenParm = require('../images/recipes/chicken-parm.jpg');
 export const guacamole = require('../images/recipes/guacamole.jpg');
 export const hoagieDip = require('../images/recipes/hoagie-dip.jpg');
+export const oreoCookieCake = require('../images/recipes/oreo-cookie-cake.jpg');

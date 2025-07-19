@@ -18,3 +18,4 @@ export { default as MenuItem } from './elements/MenuItem';
 export { default as DetailChip } from './elements/DetailChip';
 export { default as CoverflowCarousel } from './elements/carousels/CoverflowCarousel';
 export { default as ScrollToTop } from './elements/ScrollToTop';
+export { default as QuickNav } from './elements/QuickNav';
