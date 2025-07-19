@@ -28,7 +28,7 @@ const CoverflowCarousel = ({ recipes, setShoppingList }) => {
                 style={{ width: '100%', paddingBottom: '3rem' }}
             >
                 {recipes.map((recipe, index) => (
-                    <SwiperSlide style={{ width: '300px' }}>
+                    <SwiperSlide style={{ width: '250px' }}>
                         <MenuItem
                             recipe={recipe}
                             setShoppingList={setShoppingList}

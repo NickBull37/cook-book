@@ -52,7 +52,7 @@ const MenuItem = ({ recipe, setShoppingList }) => {
             }}
         >
             <CardMedia
-                sx={{ height: 230 }}
+                sx={{ height: 180 }}
                 image={recipe.photo}
                 title={recipe.recipeName}
             />
@@ -69,7 +69,7 @@ const MenuItem = ({ recipe, setShoppingList }) => {
                 >
                     <DetailChip icon={<AccessTimeIcon />} label={`${recipe.time} min`} />
                     <DetailChip icon={<PersonIcon />} label={recipe.serves} />
-                    <DetailChip icon={<SignalCellularAltIcon />} label={recipe.difficulty < 2 ? 'Easy' : recipe.difficulty < 4 ? 'Med' : 'Hard'} />
+                    {/* <DetailChip icon={<SignalCellularAltIcon />} label={recipe.difficulty < 2 ? 'Easy' : recipe.difficulty < 4 ? 'Med' : 'Hard'} /> */}
                 </Stack>
             </CardContent>
             <CardActions

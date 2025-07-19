@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Box } from '@mui/material';
-import { CookBookLanding, Menu, Recipe, ShoppingList } from "./components";
+import { CookBookLanding, Menu, Recipe, ShoppingList, ScrollToTop } from "./components";
 
 function App() {
 
@@ -10,6 +10,7 @@ function App() {
 
     return (
         <Box>
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<CookBookLanding />} />
                 <Route

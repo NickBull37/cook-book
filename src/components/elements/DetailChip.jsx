@@ -8,7 +8,7 @@ const DetailChip = ({ icon, label }) => (
             alignItems: 'center',
             backgroundColor: 'rgba(0,0,0,0.65)',
             borderRadius: '8px',
-            padding: '6px 10px',
+            padding: '6px 12px',
             fontSize: '0.938rem',
         }}
     >
