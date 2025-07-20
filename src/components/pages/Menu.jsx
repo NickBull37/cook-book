@@ -72,7 +72,7 @@ const Menu = ({ setShoppingList }) => {
                     particleColors={['#cc5200', '#ff6600']}
                     particleCount={2500}
                     particleSpread={5}
-                    speed={0.005}
+                    speed={0.01}
                     particleBaseSize={100}
                     moveParticlesOnHover={false}
                     alphaParticles={true}
