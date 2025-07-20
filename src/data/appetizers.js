@@ -1,9 +1,35 @@
 import {
     guacamole,
-    hoagieDip
+    hoagieDip,
+    buffChickenDip
 } from "../utils/constants";
 
 const appetizers = [
+    {
+        index: 18,
+        type: 'appetizer',
+        recipeName: 'Buffalo Chicken Dip',
+        ingredientsList: [
+            '3 chicken breasts cooked & shredded',
+            '12 oz Frank\s hot sauce',
+            '16 oz cream cheese softenend',
+            '1 cup ranch dressing',
+            '1 cup chopped celery',
+            '2 cups taco/mexican blend shredded cheese',
+        ],
+        instructionsList: [
+            'Add shredded chicken, hot sauce, cream cheese, ranch, and celery into a large pan on MED heat.',
+            'Transfer contents of pan into casserole dish & top with shredded cheese.',
+            'Bake in the oven at 350 degrees for 30-40 mins.',
+        ],
+        prepTime: '0',
+        cookTime: '0',
+        time: 30,
+        serves: '6-12',
+        rating: 4,
+        difficulty: 3,
+        photo: buffChickenDip
+    },
     {
         index: 14,
         type: 'appetizer',

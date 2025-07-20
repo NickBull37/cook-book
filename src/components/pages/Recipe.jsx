@@ -150,7 +150,7 @@ const Recipe = ({ setShoppingList }) => {
                     </Box>
 
                     <CardContent>
-                        <CardActions sx={{ p: '0', mt: '1.25rem' }}>
+                        <CardActions sx={{ p: '0', mt: '1.2rem' }}>
                             <AddToShoppingListButton
                                 size="small"
                                 onClick={handleAddToShoppingListClick(recipe.index)}
@@ -160,11 +160,11 @@ const Recipe = ({ setShoppingList }) => {
                         </CardActions>
 
                         {/* Ingredients */}
-                        <Stack sx={{ mt: '1.85rem' }}>
+                        <Stack sx={{ mt: '1.8rem' }}>
                             <SectionTitle>Ingredients</SectionTitle>
                             <Typography>
                                 {recipe.ingredientsList.map((ingredient, index) => (
-                                    <IngredientsText key={index} sx={{ mb: '3px' }}>
+                                    <IngredientsText key={index} sx={{ mb: '6px' }}>
                                         {ingredient}
                                     </IngredientsText>
                                 ))}

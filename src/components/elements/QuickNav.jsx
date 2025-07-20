@@ -240,6 +240,8 @@ SimpleDialog.propTypes = {
 };
 
 const QuickNavIconButton = styled(IconButton)(({ theme }) => ({
+    maxWidth: '55px',
+    maxHeight: '55px',
     backgroundColor: 'rgba(255, 102, 0, 0.3)',
     color: '#fff',
     transition: '0.3s ease',
