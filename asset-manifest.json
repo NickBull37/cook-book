@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/cook-book/static/css/main.fa3f1b99.css",
-    "main.js": "/cook-book/static/js/main.6a0b3df3.js",
+    "main.js": "/cook-book/static/js/main.f063c46f.js",
     "static/media/bulls-kitchen.png": "/cook-book/static/media/bulls-kitchen.e81612a8e6f4dfdabb98.png",
     "static/media/bulls-kitchen-landing.png": "/cook-book/static/media/bulls-kitchen-landing.c76b329a676f06cd2b8e.png",
     "static/media/guacamole.jpg": "/cook-book/static/media/guacamole.fce8bb1a2bd937aaea3b.jpg",
     "static/media/bulls-menu-text-trimmed.png": "/cook-book/static/media/bulls-menu-text-trimmed.a98252f42d720d4f70d3.png",
     "static/media/honey-garlic-chicken.jpg": "/cook-book/static/media/honey-garlic-chicken.aa6593a6db5573d3895e.jpg",
     "static/media/chicken-picatta.png": "/cook-book/static/media/chicken-picatta.814a07cc0f6e8d90f2cf.png",
+    "static/media/honey-garlic-sauce.png": "/cook-book/static/media/honey-garlic-sauce.01d6b7bc181f86aa1ac7.png",
     "static/media/watermelon-marg.jpeg": "/cook-book/static/media/watermelon-marg.45753466c82914b2997a.jpeg",
     "static/media/chocolate-cheese-cake.jpg": "/cook-book/static/media/chocolate-cheese-cake.590d6ce75410640d52f3.jpg",
     "static/media/bull-logo.png": "/cook-book/static/media/bull-logo.bd56f99de19e8964b945.png",
@@ -16,6 +17,7 @@
     "static/media/burger-sauce.png": "/cook-book/static/media/burger-sauce.4ca58e7b636ed66a3c88.png",
     "static/media/hoagie-dip.jpg": "/cook-book/static/media/hoagie-dip.d64b34660b8f9c36646e.jpg",
     "static/media/chicken-parm.jpg": "/cook-book/static/media/chicken-parm.49b850fcd76c3719f903.jpg",
+    "static/media/fried-rice.png": "/cook-book/static/media/fried-rice.c73ec385d56a1b064379.png",
     "static/media/chicken-tacos.jpg": "/cook-book/static/media/chicken-tacos.d660c133ff07368d594c.jpg",
     "static/media/greek-salad.jpg": "/cook-book/static/media/greek-salad.3412d0a5d33a4133561c.jpg",
     "static/media/cowboy-butter.jpg": "/cook-book/static/media/cowboy-butter.c48202e11aa1dcc0143e.jpg",
@@ -24,15 +26,16 @@
     "static/media/steak-aioli.jpg": "/cook-book/static/media/steak-aioli.68bce3ca6f6de1e5b741.jpg",
     "static/media/alfredo-sauce.jpg": "/cook-book/static/media/alfredo-sauce.f51bbfd76e6883d483d8.jpg",
     "static/media/Kepo.ttf": "/cook-book/static/media/Kepo.6a7e9ac1cec53217ea4a.ttf",
+    "static/media/dynamite-sauce.png": "/cook-book/static/media/dynamite-sauce.727f17e74a5c63d216f7.png",
     "static/media/TheSignature.ttf": "/cook-book/static/media/TheSignature.57d1b8bdb828ed798354.ttf",
     "static/media/crab-topped-salmon.jpg": "/cook-book/static/media/crab-topped-salmon.43ed1f83b5141ac66f6f.jpg",
     "static/media/oreo-cookie-cake.jpg": "/cook-book/static/media/oreo-cookie-cake.f5beb68668c71946e3a5.jpg",
     "index.html": "/cook-book/index.html",
     "main.fa3f1b99.css.map": "/cook-book/static/css/main.fa3f1b99.css.map",
-    "main.6a0b3df3.js.map": "/cook-book/static/js/main.6a0b3df3.js.map"
+    "main.f063c46f.js.map": "/cook-book/static/js/main.f063c46f.js.map"
   },
   "entrypoints": [
     "static/css/main.fa3f1b99.css",
-    "static/js/main.6a0b3df3.js"
+    "static/js/main.f063c46f.js"
   ]
 }
