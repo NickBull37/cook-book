@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cook-book/static/css/main.fa3f1b99.css",
-    "main.js": "/cook-book/static/js/main.f063c46f.js",
+    "main.js": "/cook-book/static/js/main.ffa929a5.js",
     "static/media/bulls-kitchen.png": "/cook-book/static/media/bulls-kitchen.e81612a8e6f4dfdabb98.png",
     "static/media/bulls-kitchen-landing.png": "/cook-book/static/media/bulls-kitchen-landing.c76b329a676f06cd2b8e.png",
     "static/media/guacamole.jpg": "/cook-book/static/media/guacamole.fce8bb1a2bd937aaea3b.jpg",
@@ -24,6 +24,7 @@
     "static/media/buffalo-chicken-dip.jpg": "/cook-book/static/media/buffalo-chicken-dip.85afe3db20a6d88a2b5a.jpg",
     "static/media/tenderloin-steak.jpg": "/cook-book/static/media/tenderloin-steak.56f017433d06bc2382db.jpg",
     "static/media/steak-aioli.jpg": "/cook-book/static/media/steak-aioli.68bce3ca6f6de1e5b741.jpg",
+    "static/media/chipotle-mayo.jpg": "/cook-book/static/media/chipotle-mayo.4cccc37f15f37dd45c9d.jpg",
     "static/media/alfredo-sauce.jpg": "/cook-book/static/media/alfredo-sauce.f51bbfd76e6883d483d8.jpg",
     "static/media/Kepo.ttf": "/cook-book/static/media/Kepo.6a7e9ac1cec53217ea4a.ttf",
     "static/media/dynamite-sauce.png": "/cook-book/static/media/dynamite-sauce.727f17e74a5c63d216f7.png",
@@ -32,10 +33,10 @@
     "static/media/oreo-cookie-cake.jpg": "/cook-book/static/media/oreo-cookie-cake.f5beb68668c71946e3a5.jpg",
     "index.html": "/cook-book/index.html",
     "main.fa3f1b99.css.map": "/cook-book/static/css/main.fa3f1b99.css.map",
-    "main.f063c46f.js.map": "/cook-book/static/js/main.f063c46f.js.map"
+    "main.ffa929a5.js.map": "/cook-book/static/js/main.ffa929a5.js.map"
   },
   "entrypoints": [
     "static/css/main.fa3f1b99.css",
-    "static/js/main.f063c46f.js"
+    "static/js/main.ffa929a5.js"
   ]
 }
