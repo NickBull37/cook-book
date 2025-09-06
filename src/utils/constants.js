@@ -24,3 +24,6 @@ export const guacamole = require('../images/recipes/guacamole.jpg');
 export const hoagieDip = require('../images/recipes/hoagie-dip.jpg');
 export const oreoCookieCake = require('../images/recipes/oreo-cookie-cake.jpg');
 export const buffChickenDip = require('../images/recipes/buffalo-chicken-dip.jpg');
+export const honeyGarlicSauce = require('../images/recipes/honey-garlic-sauce.png');
+export const dynamiteSauce = require('../images/recipes/dynamite-sauce.png');
+export const friedRice = require('../images/recipes/fried-rice.png');

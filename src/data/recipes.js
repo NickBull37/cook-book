@@ -16,7 +16,10 @@ import {
     guacamole,
     hoagieDip,
     oreoCookieCake,
-    buffChickenDip
+    buffChickenDip,
+    honeyGarlicSauce,
+    dynamiteSauce,
+    friedRice
 } from "../utils/constants";
 
 const recipes = [
@@ -543,6 +546,78 @@ const recipes = [
         rating: 4,
         difficulty: 3,
         photo: buffChickenDip
+    },
+    {
+        index: 19,
+        type: 'extra',
+        recipeName: 'Dynamite Sauce',
+        ingredientsList: [
+            '1/2 cup mayo',
+            '2 tbsp siracha sauce',
+            '1 tbsp honey',
+            't tsp lemon juice',
+        ],
+        instructionsList: [
+            'Mix all ingredients into a large bowl.',
+        ],
+        prepTime: '0',
+        cookTime: '0',
+        time: 5,
+        serves: '1-2',
+        rating: 4,
+        difficulty: 1,
+        photo: dynamiteSauce
+    },
+    {
+        index: 20,
+        type: 'extra',
+        recipeName: 'Honey Galic Sauce',
+        ingredientsList: [
+            '2 tbsp honey',
+            '2 tbsp soy sauce',
+            '1 tbsp vinegar',
+            '1/2 tbsp minced garlic',
+        ],
+        instructionsList: [
+            'Add all ingredients to a sauce pan on MED heat. Stir occasionally.',
+            'Remove from heat after a few mins when sauce has thickened.',
+        ],
+        prepTime: '0',
+        cookTime: '0',
+        time: 10,
+        serves: '1-2',
+        rating: 4,
+        difficulty: 2,
+        photo: honeyGarlicSauce
+    },
+    {
+        index: 21,
+        type: 'side',
+        recipeName: 'Fried Rice',
+        ingredientsList: [
+            '1 cup day old cooked rice',
+            '1/4 cup diced onion',
+            '1/4 cup diced carrots',
+            '3 tbsp butter',
+            '1/8 green onion',
+            '21 tbsp minced garlic',
+            '3 tbsp soy sauce',
+            '2 scrambled eggs'
+        ],
+        instructionsList: [
+            'Scrable eggs in seperate pan and set aside.',
+            'Add butter, onions, carrots and garlic to wok and satuee for ~5 mins on med heat.',
+            'Add day old rice, soy sauce, and green onions. Turn the heat up to high.',
+            'Stir every 30 - 60 seconds. Fry rice for approx 4 - 5 mins.',
+            'Turn off heat and mix in scrambled eggs. Add salt to taste.',
+        ],
+        prepTime: '0',
+        cookTime: '0',
+        time: 15,
+        serves: '1-2',
+        rating: 4,
+        difficulty: 3,
+        photo: friedRice
     },
 ];
     
