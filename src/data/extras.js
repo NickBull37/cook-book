@@ -4,7 +4,8 @@ import {
     steakAioli,
     alfredoSauce,
     dynamiteSauce,
-    honeyGarlicSauce
+    honeyGarlicSauce,
+    chipotleMayo
 } from "../utils/constants";
 
 const extras = [
@@ -156,6 +157,28 @@ const extras = [
         rating: 4,
         difficulty: 2,
         photo: honeyGarlicSauce
+    },
+    {
+        index: 22,
+        type: 'extra',
+        recipeName: 'Chipotle Mayo',
+        ingredientsList: [
+            '1/2 cup mayo',
+            '1 tbsp lime juice',
+            '1 tsp chipotle chili powder',
+            '1 tsp papprika',
+            'salt',
+        ],
+        instructionsList: [
+            'Mix all ingredients into a bowl. Refrigerate for 20 mins.',
+        ],
+        prepTime: '0',
+        cookTime: '0',
+        time: 5,
+        serves: '1-2',
+        rating: 4,
+        difficulty: 1,
+        photo: chipotleMayo
     },
 ];
     

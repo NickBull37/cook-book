@@ -19,7 +19,8 @@ import {
     buffChickenDip,
     honeyGarlicSauce,
     dynamiteSauce,
-    friedRice
+    friedRice,
+    chipotleMayo
 } from "../utils/constants";
 
 const recipes = [
@@ -618,6 +619,28 @@ const recipes = [
         rating: 4,
         difficulty: 3,
         photo: friedRice
+    },
+    {
+        index: 22,
+        type: 'extra',
+        recipeName: 'Chipotle Mayo',
+        ingredientsList: [
+            '1/2 cup mayo',
+            '1 tbsp lime juice',
+            '1 tsp chipotle chili powder',
+            '1 tsp papprika',
+            'salt',
+        ],
+        instructionsList: [
+            'Mix all ingredients into a bowl. Refrigerate for 20 mins.',
+        ],
+        prepTime: '0',
+        cookTime: '0',
+        time: 5,
+        serves: '1-2',
+        rating: 4,
+        difficulty: 1,
+        photo: chipotleMayo
     },
 ];
     
