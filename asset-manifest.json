@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cook-book/static/css/main.fa3f1b99.css",
-    "main.js": "/cook-book/static/js/main.df024e03.js",
+    "main.js": "/cook-book/static/js/main.dd06d602.js",
     "static/media/bulls-kitchen.png": "/cook-book/static/media/bulls-kitchen.e81612a8e6f4dfdabb98.png",
     "static/media/bulls-kitchen-landing.png": "/cook-book/static/media/bulls-kitchen-landing.c76b329a676f06cd2b8e.png",
     "static/media/guacamole.jpg": "/cook-book/static/media/guacamole.fce8bb1a2bd937aaea3b.jpg",
@@ -19,14 +19,18 @@
     "static/media/chicken-parm.jpg": "/cook-book/static/media/chicken-parm.49b850fcd76c3719f903.jpg",
     "static/media/fried-rice.png": "/cook-book/static/media/fried-rice.c73ec385d56a1b064379.png",
     "static/media/chicken-tacos.jpg": "/cook-book/static/media/chicken-tacos.d660c133ff07368d594c.jpg",
+    "static/media/maple-chicken.jpg": "/cook-book/static/media/maple-chicken.7ef0bea9469042a07109.jpg",
     "static/media/greek-salad.jpg": "/cook-book/static/media/greek-salad.3412d0a5d33a4133561c.jpg",
     "static/media/cowboy-butter.jpg": "/cook-book/static/media/cowboy-butter.c48202e11aa1dcc0143e.jpg",
     "static/media/buffalo-chicken-dip.jpg": "/cook-book/static/media/buffalo-chicken-dip.85afe3db20a6d88a2b5a.jpg",
+    "static/media/baked-potato-soup.jpg": "/cook-book/static/media/baked-potato-soup.1483229aa4f0ab086074.jpg",
     "static/media/meatballs.jpg": "/cook-book/static/media/meatballs.71c099602376da5a57ff.jpg",
     "static/media/tenderloin-steak.jpg": "/cook-book/static/media/tenderloin-steak.56f017433d06bc2382db.jpg",
     "static/media/steak-aioli.jpg": "/cook-book/static/media/steak-aioli.68bce3ca6f6de1e5b741.jpg",
     "static/media/chipotle-mayo.jpg": "/cook-book/static/media/chipotle-mayo.4cccc37f15f37dd45c9d.jpg",
+    "static/media/banana-bread.jpg": "/cook-book/static/media/banana-bread.ae04dd5ca6aeedd0ab3d.jpg",
     "static/media/alfredo-sauce.jpg": "/cook-book/static/media/alfredo-sauce.f51bbfd76e6883d483d8.jpg",
+    "static/media/cb-sloppy-joe.jpeg": "/cook-book/static/media/cb-sloppy-joe.dbf8702c3ef718137945.jpeg",
     "static/media/Kepo.ttf": "/cook-book/static/media/Kepo.6a7e9ac1cec53217ea4a.ttf",
     "static/media/dynamite-sauce.png": "/cook-book/static/media/dynamite-sauce.727f17e74a5c63d216f7.png",
     "static/media/TheSignature.ttf": "/cook-book/static/media/TheSignature.57d1b8bdb828ed798354.ttf",
@@ -34,10 +38,10 @@
     "static/media/oreo-cookie-cake.jpg": "/cook-book/static/media/oreo-cookie-cake.f5beb68668c71946e3a5.jpg",
     "index.html": "/cook-book/index.html",
     "main.fa3f1b99.css.map": "/cook-book/static/css/main.fa3f1b99.css.map",
-    "main.df024e03.js.map": "/cook-book/static/js/main.df024e03.js.map"
+    "main.dd06d602.js.map": "/cook-book/static/js/main.dd06d602.js.map"
   },
   "entrypoints": [
     "static/css/main.fa3f1b99.css",
-    "static/js/main.df024e03.js"
+    "static/js/main.dd06d602.js"
   ]
 }
