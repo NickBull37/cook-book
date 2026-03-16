@@ -6,6 +6,9 @@ export const bullsMenuTextTrimmed = require('../images/logos/bulls-menu-text-tri
 export const boxCat = require('../images/box-cat.jpg');
 
 // Recipes
+export const bakedPotatoSoup = require('../images/recipes/baked-potato-soup.jpg');
+export const bananaBread = require('../images/recipes/banana-bread.jpg');
+export const cbSloppyJoe = require('../images/recipes/cb-sloppy-joe.jpeg');
 export const chickenPicatta = require('../images/recipes/chicken-picatta.png');
 export const tenerloinSteak = require('../images/recipes/tenderloin-steak.jpg');
 export const potatoMochi = require('../images/recipes/potato-mochi.jpg');
@@ -28,3 +31,5 @@ export const honeyGarlicSauce = require('../images/recipes/honey-garlic-sauce.pn
 export const dynamiteSauce = require('../images/recipes/dynamite-sauce.png');
 export const friedRice = require('../images/recipes/fried-rice.png');
 export const chipotleMayo = require('../images/recipes/chipotle-mayo.jpg');
+export const meatballs = require('../images/recipes/meatballs.jpg');
+export const mapleChicken = require('../images/recipes/maple-chicken.jpg');

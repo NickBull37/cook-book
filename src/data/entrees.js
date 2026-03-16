@@ -5,6 +5,7 @@ import {
     chickenTacos,
     honeyGarlicChicken,
     chickenParm,
+    meatballs,
 } from "../utils/constants";
 
 const entrees = [
@@ -203,6 +204,39 @@ const entrees = [
         rating: 4.5,
         difficulty: 3.5,
         photo: tenerloinSteak
+    },
+    {
+        index: 23,
+        type: 'dinner',
+        recipeName: 'Meatballs',
+        ingredientsList: [
+                '1/2 lb groud beef',
+                '1 mild Italian sausage link',
+                '1 egg',
+                '1/4 cup breadcrumbs',
+                '1/4 cup parmesean cheese',
+                '1/4 cup heavy cream',
+                'salt',
+                'pepper',
+                'garlic powder',
+                'parsley',
+            ],
+        instructionsList: [
+                'Remove the casing from one sausage link and cut into small pieces',
+                'Add sausage, ground beef, 1 egg, breadcrumbs, parmesean cheese, heavy cream, salt, pepper, and parsley to a large mixing bowl.',
+                'Mix thoroughly until well combined.',
+                'Cover a baking sheet with parchment paper or aluminum foil.',
+                'Grab handfuls from the bowl, shape into a ball then place on baking sheet.',
+                'Place baking sheet in a 400 degree oven for 15 mins.',
+                'Heat sauce in a pot to add meatballs to once cooked.',
+            ],
+        prepTime: '10',
+        cookTime: '25',
+        time: 35,
+        serves: '2-4',
+        rating: 4.5,
+        difficulty: 2,
+        photo: meatballs
     },
 ];
     

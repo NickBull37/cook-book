@@ -1,4 +1,7 @@
 import {
+    bakedPotatoSoup,
+    bananaBread,
+    cbSloppyJoe,
     chickenPicatta,
     tenerloinSteak,
     potatoMochi,
@@ -20,7 +23,9 @@ import {
     honeyGarlicSauce,
     dynamiteSauce,
     friedRice,
-    chipotleMayo
+    chipotleMayo,
+    meatballs,
+    mapleChicken
 } from "../utils/constants";
 
 const recipes = [
@@ -52,7 +57,7 @@ const recipes = [
     },
     {
         index: 1,
-        type: 'dinner',
+        type: 'entree',
         recipeName: 'Chicken Parmesan',
         ingredientsList: [
             '2 chicken breasts',
@@ -87,47 +92,47 @@ const recipes = [
         difficulty: 4,
         photo: chickenParm
     },
-    {
-        index: 2,
-        type: 'dinner',
-        recipeName: 'Chicken Picatta',
-        ingredientsList: [
-            '2 lbs boneless chicken breast',
-            '1 shallot',
-            '1 lemon',
-            '1 ½ cups chicken stock',
-            '1 cup flour',
-            '1/2 cup olive oil',
-            '1 stick unsalted butter',
-            '1 tablespoon minced garlic (4-6 cloves)',
-            '2 tbsp capers',
-            '2 tsp salt',
-            '1/2 tsp cracked black pepper'
-        ],
-        prepList: [
-            '1. Slice chicken horizontally into thin slices',
-            '2. Season chicken with salt & pepper then coat them in flower',
-            '3. Finely chop 1 shallot'
-        ],
-        instructionsList: [
-            'Add olive oil & butter to a pan on medium heat',
-            'Add chicken once oil is up to temp & butter is melted, flip halfway through',
-            'Remove chicken from pan and add shallots & garlic',
-            'Pour in chicken stock and scrape up any fond stuck to the pan',
-            'Add another 1/4 stick of butter  & lemon juice',
-            'Add chicken back to the pan and season with salt & pepper'
-        ],
-        prepTime: '15',
-        cookTime: '30',
-        time: 45,
-        serves: '6-12',
-        rating: 4.5,
-        difficulty: 3,
-        photo: chickenPicatta
-    },
+    // {
+    //     index: 2,
+    //     type: 'entree',
+    //     recipeName: 'Chicken Picatta',
+    //     ingredientsList: [
+    //         '2 lbs boneless chicken breast',
+    //         '1 shallot',
+    //         '1 lemon',
+    //         '1 ½ cups chicken stock',
+    //         '1 cup flour',
+    //         '1/2 cup olive oil',
+    //         '1 stick unsalted butter',
+    //         '1 tablespoon minced garlic (4-6 cloves)',
+    //         '2 tbsp capers',
+    //         '2 tsp salt',
+    //         '1/2 tsp cracked black pepper'
+    //     ],
+    //     prepList: [
+    //         '1. Slice chicken horizontally into thin slices',
+    //         '2. Season chicken with salt & pepper then coat them in flower',
+    //         '3. Finely chop 1 shallot'
+    //     ],
+    //     instructionsList: [
+    //         'Add olive oil & butter to a pan on medium heat',
+    //         'Add chicken once oil is up to temp & butter is melted, flip halfway through',
+    //         'Remove chicken from pan and add shallots & garlic',
+    //         'Pour in chicken stock and scrape up any fond stuck to the pan',
+    //         'Add another 1/4 stick of butter  & lemon juice',
+    //         'Add chicken back to the pan and season with salt & pepper'
+    //     ],
+    //     prepTime: '15',
+    //     cookTime: '30',
+    //     time: 45,
+    //     serves: '6-12',
+    //     rating: 4.5,
+    //     difficulty: 3,
+    //     photo: chickenPicatta
+    // },
     {
         index: 3,
-        type: 'dinner',
+        type: 'entree',
         recipeName: 'Crab Topped Salmon',
         ingredientsList: [
             '1 pc salmon',
@@ -143,13 +148,13 @@ const recipes = [
             'parsley'
         ],
         instructionsList: [
-            'Pre-heat oven to 400 degrees.',
+            'Pre-heat oven to 400°.',
             'If salmon still has skin: pour 1/2 cup boiling water on skin and peel off.',
             'Melt butter in oven-safe tray.',
             'Add salt & pepper to salmon on both sides and place in tray with butter.',
             'In a mixing bowl, combine crab meat, breadcrumbs, mayo, egg(s), dijon mustard, and garlic powder. Mix thoroughly.',
             'Spread crabmeat mixture on top of salmon.',
-            'Bake in oven at 400 degrees for approx 20-25 mins.'
+            'Bake in oven at 400° for approx 20-25 mins.'
         ],
         prepTime: '15',
         cookTime: '25',
@@ -161,7 +166,7 @@ const recipes = [
     },
     {
         index: 4,
-        type: 'dinner',
+        type: 'entree',
         recipeName: 'Crispy Chicken Tacos',
         ingredientsList: [
             'tortillas',
@@ -186,7 +191,7 @@ const recipes = [
     },
     {
         index: 5,
-        type: 'dinner',
+        type: 'entree',
         recipeName: 'Honey Garlic Chicken',
         ingredientsList: [
             '2 chicken thighs',
@@ -216,7 +221,7 @@ const recipes = [
     },
     {
         index: 6,
-        type: 'dinner',
+        type: 'entree',
         recipeName: 'Tenderloin Steak',
         ingredientsList: [
             '1 tenderloin steak',
@@ -234,7 +239,7 @@ const recipes = [
             'Turn heat down to low, remove steak from pan and drain remaining oil.',
             'Add 1 stick of butter, garlic, & shallots to skillet.',
             'Once butter is mostly melted, add the steak back in and baste on each side for 1 min.',
-            'Place the entire skillet in 400 degree oven for 4 mins.',
+            'Place the entire skillet in 400° oven for 4 mins.',
             'Remove skillet from oven & steak from the skillet.',
             'Allow 5-10 mins to rest before cutting.'
         ],
@@ -273,68 +278,68 @@ const recipes = [
         difficulty: 1.5,
         photo: greekSalad
     },
-    {
-        index: 8,
-        type: 'side',
-        recipeName: 'Potato Mochi',
-        ingredientsList: [
-            '2 large russet potatoes',
-            '1 cup shredded mozz cheese',
-            '4 tbsp potato starch',
-            '2 tbsp milk',
-            '1 tbsp avocado oil',
-            '2 tbsp soy sauce',
-            '2 tbsp mirin',
-            '2 tbsp sugar'
-        ],
-        instructionsList: [
-            'Peel, chop, and boil potatoes.',
-            'Once soft, mash potatoes in a bowl and mix in potato starch, salt, and avocado oil. Mix thoroughly.',
-            'Take a small handfull of mashed potatoes and form a ball with a pinch of mozz cheese in the center.',
-            'Pan fry both sides until golden brown.',
-            'Remove potato cakes and add soy sauce, mirin, and sugar to pan and stir.',
-            'Add potatoes back to pan.'
-        ],
-        prepTime: '15',
-        cookTime: '30',
-        time: 45,
-        serves: '1-2',
-        rating: 4.5,
-        difficulty: 2.5,
-        photo: potatoMochi
-    },
-    {
-        index: 9,
-        type: 'dessert',
-        recipeName: 'Chocolate Cheese Cake',
-        ingredientsList: [
-            '400g cream cheese',
-            '350g nutella',
-            '200g chocolate wafers',
-            '50g powdered sugar',
-            '450ml heavy cream'
-        ],
-        instructionsList: [
-            'Crush 200g wafers into mixing bowl. Add 200g nutella and mix throroughly.',
-            'Transfer base layer to tray and pack down.',
-            'Add 400g cream cheese & 150g nutella to a bowl and mix throroughly.',
-            'Add 50g powdered sugar and 300ml heavy cream to the same bowl and whip until the filling holds its shape.',
-            'Transfer middle layer to tray and smooth out the top.',
-            'Melt 150g milk chocolate and 150ml heavy cream on low heat.',
-            'Once melted pour top layer into tray (may be extra depending on size of tray).',
-            'Place tray in refrigerator to set for 5-6 hours.'
-        ],
-        prepTime: '< 5',
-        cookTime: '30',
-        time: 30,
-        serves: '6-12',
-        rating: 4.5,
-        difficulty: 2,
-        photo: chocolateCheeseCake
-    },
+    // {
+    //     index: 8,
+    //     type: 'side',
+    //     recipeName: 'Potato Mochi',
+    //     ingredientsList: [
+    //         '2 large russet potatoes',
+    //         '1 cup shredded mozz cheese',
+    //         '4 tbsp potato starch',
+    //         '2 tbsp milk',
+    //         '1 tbsp avocado oil',
+    //         '2 tbsp soy sauce',
+    //         '2 tbsp mirin',
+    //         '2 tbsp sugar'
+    //     ],
+    //     instructionsList: [
+    //         'Peel, chop, and boil potatoes.',
+    //         'Once soft, mash potatoes in a bowl and mix in potato starch, salt, and avocado oil. Mix thoroughly.',
+    //         'Take a small handfull of mashed potatoes and form a ball with a pinch of mozz cheese in the center.',
+    //         'Pan fry both sides until golden brown.',
+    //         'Remove potato cakes and add soy sauce, mirin, and sugar to pan and stir.',
+    //         'Add potatoes back to pan.'
+    //     ],
+    //     prepTime: '15',
+    //     cookTime: '30',
+    //     time: 45,
+    //     serves: '1-2',
+    //     rating: 4.5,
+    //     difficulty: 2.5,
+    //     photo: potatoMochi
+    // },
+    // {
+    //     index: 9,
+    //     type: 'dessert',
+    //     recipeName: 'Chocolate Cheese Cake',
+    //     ingredientsList: [
+    //         '400g cream cheese',
+    //         '350g nutella',
+    //         '200g chocolate wafers',
+    //         '50g powdered sugar',
+    //         '450ml heavy cream'
+    //     ],
+    //     instructionsList: [
+    //         'Crush 200g wafers into mixing bowl. Add 200g nutella and mix throroughly.',
+    //         'Transfer base layer to tray and pack down.',
+    //         'Add 400g cream cheese & 150g nutella to a bowl and mix throroughly.',
+    //         'Add 50g powdered sugar and 300ml heavy cream to the same bowl and whip until the filling holds its shape.',
+    //         'Transfer middle layer to tray and smooth out the top.',
+    //         'Melt 150g milk chocolate and 150ml heavy cream on low heat.',
+    //         'Once melted pour top layer into tray (may be extra depending on size of tray).',
+    //         'Place tray in refrigerator to set for 5-6 hours.'
+    //     ],
+    //     prepTime: '< 5',
+    //     cookTime: '30',
+    //     time: 30,
+    //     serves: '6-12',
+    //     rating: 4.5,
+    //     difficulty: 2,
+    //     photo: chocolateCheeseCake
+    // },
     {
         index: 10,
-        type: 'extra',
+        type: 'sauce',
         recipeName: 'Aioli Steak Sauce',
         ingredientsList: [
             '1 cup mayo',
@@ -357,7 +362,7 @@ const recipes = [
     },
     {
         index: 11,
-        type: 'extra',
+        type: 'sauce',
         recipeName: 'Alfredo Sauce',
         ingredientsList: [
             '2 oz shredded parmesean cheese',
@@ -385,7 +390,7 @@ const recipes = [
     },
     {
         index: 12,
-        type: 'extra',
+        type: 'sauce',
         recipeName: 'Burger Sauce',
         ingredientsList: [
             '1/2 cup mayo',
@@ -410,7 +415,7 @@ const recipes = [
     },
     {
         index: 13,
-        type: 'extra',
+        type: 'sauce',
         recipeName: 'Cowboy Butter',
         ingredientsList: [
             '6 tbsp butter',
@@ -538,7 +543,7 @@ const recipes = [
         instructionsList: [
             'Add shredded chicken, hot sauce, cream cheese, ranch, and celery into a large pan on MED heat.',
             'Transfer contents of pan into casserole dish & top with shredded cheese.',
-            'Bake in the oven at 350 degrees for 30-40 mins.',
+            'Bake in the oven at 350° for 30-40 mins.',
         ],
         prepTime: '0',
         cookTime: '0',
@@ -550,7 +555,7 @@ const recipes = [
     },
     {
         index: 19,
-        type: 'extra',
+        type: 'sauce',
         recipeName: 'Dynamite Sauce',
         ingredientsList: [
             '1/2 cup mayo',
@@ -571,7 +576,7 @@ const recipes = [
     },
     {
         index: 20,
-        type: 'extra',
+        type: 'sauce',
         recipeName: 'Honey Galic Sauce',
         ingredientsList: [
             '2 tbsp honey',
@@ -622,7 +627,7 @@ const recipes = [
     },
     {
         index: 22,
-        type: 'extra',
+        type: 'sauce',
         recipeName: 'Chipotle Mayo',
         ingredientsList: [
             '1/2 cup mayo',
@@ -641,6 +646,176 @@ const recipes = [
         rating: 4,
         difficulty: 1,
         photo: chipotleMayo
+    },
+    {
+        index: 23,
+        type: 'entree',
+        recipeName: 'Meatballs',
+        ingredientsList: [
+                '1/2 lb groud beef',
+                '1 mild Italian sausage link',
+                '1 egg',
+                '1/4 cup breadcrumbs',
+                '1/4 cup parmesean cheese',
+                '1/4 cup heavy cream',
+                'salt',
+                'pepper',
+                'garlic powder',
+                'parsley',
+            ],
+        instructionsList: [
+                'Remove the casing from one sausage link and cut into small pieces',
+                'Add sausage, ground beef, 1 egg, breadcrumbs, parmesean cheese, heavy cream, salt, pepper, and parsley to a large mixing bowl.',
+                'Mix thoroughly until well combined.',
+                'Cover a baking sheet with parchment paper or aluminum foil.',
+                'Grab handfuls from the bowl, shape into a ball then place on baking sheet.',
+                'Place baking sheet in a 400° oven for 15 mins.',
+                'Heat sauce in a pot to add meatballs to once cooked.',
+            ],
+        prepTime: '10',
+        cookTime: '25',
+        time: 35,
+        serves: '2-4',
+        rating: 4.5,
+        difficulty: 2,
+        photo: meatballs
+    },
+    {
+        index: 24,
+        type: 'entree',
+        recipeName: 'Cheeseburger Sloppy Joes',
+        ingredientsList: [
+            '1/2 lb groud beef',
+            '1/2 onion (diced)',
+            '1 tbsp butter',
+            '1 tbsp all-purpose flour',
+            '1/2 cup heavy cream',
+            '1 cup cheddar cheese (shredded)',
+            '1 slice american cheese',
+            'worchestershire sauce',
+            'garlic powder',
+            'salt',
+            'pepper',
+        ],
+        instructionsList: [
+            'Add diced onions to a pan on MED heat, cook until soft.',
+            'Add ground beef, garlic powder, salt, pepper, & a dash of worchestershire sauce. Cook until brown.',
+            'Remove ground beef & onions from pan and set aside.',
+            'Melt butter and add flour to pan and mix to form a roux. Cook 2-3 mins.',
+            'Add heavy cream and whisk until fully blended.',
+            'Slowly add cheddar & american cheese while mixing until cheese is fully melted.',
+            'Add beef and onions to cheese sauce and mix well.',
+        ],
+        prepTime: '5',
+        cookTime: '20',
+        time: 25,
+        serves: '2-4',
+        rating: 3.5,
+        difficulty: 2,
+        photo: cbSloppyJoe
+    },
+    {
+        index: 25,
+        type: 'entree',
+        recipeName: 'Baked Potato Soup',
+        ingredientsList: [
+            '1 lb potatoes (peeled & diced)',
+            '3 slices bacon (chopped)',
+            '1 tbsp butter (unsalted)',
+            '1/3 yellow onion (diced)',
+            '1 tbsp garlic (minced)',
+            '1 tbsp all-purpose flour',
+            '1 cup chicken broth',
+            '1/2 cup milk',
+            '1/4 cup heavy cream',
+            '2 tbsp sour cream',
+            '1 tsp paprika',
+            'salt',
+            'pepper',
+        ],
+        instructionsList: [
+            'Cook bacon until crispy, remove & set aside. Leave some bacon grease in the pot.',
+            'Add butter, onions, and garlic, cook until soft.',
+            'Add flour and mix to form a roux.',
+            'Add chicken broth, milk, heavy cream, and seasonings. Whisk until blended.',
+            'Add diced potatoes. Simmer until potatoes are tender.',
+            'Remove half the soup and blend until smooth then add back to pot.',
+            'Add sour cream and cooked bacon. Mix well.',
+            'Optional: top with bacon bits, sour cream, cheddar cheese, & chives.',
+        ],
+        prepTime: '10',
+        cookTime: '20',
+        time: 30,
+        serves: '3-6',
+        rating: 3.5,
+        difficulty: 3,
+        photo: bakedPotatoSoup
+    },
+    {
+        index: 26,
+        type: 'dessert',
+        recipeName: 'Banana Bread',
+        ingredientsList: [
+            '3 ripe bananas',
+            '1 egg',
+            '1 cup brown sugar',
+            '1.5 cup all-purpose flour',
+            '1/4 cup browned butter',
+            '1 tsp baking soda',
+            'chocolate chips',
+        ],
+        instructionsList: [
+            'Melt butter on MED heat and cook for 3-5 mins until brown. Set aside to cool.',
+            'Add 3 ripe bananas to a mixing bowl and mash well.',
+            'Add 1 egg, brown sugar, flour, browned butter, and baking soda. Mix thoroughly.',
+            'Add desired amount of chocolate chips. Mix again.',
+            'Transfer bread mixture to bread pan. Optionally top with more chocolate chips.',
+            'Bake at 350° for 45 mins.',
+            'Remove pan from oven and let cool for 20 mins before removing bread loaf. Let bread loaf set for 60 mins before cutting.',
+        ],
+        prepTime: '15',
+        cookTime: '45',
+        time: 120,
+        serves: '8-12',
+        rating: 4,
+        difficulty: 1.5,
+        photo: bananaBread
+    },
+    {
+        index: 27,
+        type: 'entree',
+        recipeName: 'Maple Chicken',
+        ingredientsList: [
+            '4 chicken thighs',
+            '1/4 cup olive oil (marinade)',
+            '1 tbsp paprika (marinade)',
+            '1 tbsp italian seasoning (marinade)',
+            '1 tbsp garlic powder (marinade)',
+            '1 tsp cumin (marinade)',
+            'salt (marinade)',
+            'pepper (marinade)',
+            '1/2 cup maple syrup (sauce)',
+            '1/2 cup brown sugar (sauce)',
+            '1/4 cup worchestershire sauce (sauce)',
+            '3 tbsp dijon mustard (sauce)',
+        ],
+        instructionsList: [
+            'Add chicken thighs & marinade ingredients to a bowl. Mix until chicken is evenly coated.',
+            'For best results, marinade for at least 2 hours.',
+            'Add chicken to baking tray and bake at 425° for 25 mins.',
+            'Flip chicken thighs and put back in oven for another 20 mins.',
+            'Add sauce ingredients to a pan on MED heat. Whisk thoroughly and simmer for 5 mins.',
+            'Remove sauce from heat and let cool for 5-10 mins to allow sauce to thicken.',
+            'After second round of baking the chicken, brush both sides of chicken thighs with maple sauce.',
+            'Bake chicken a third time for 5-10 mins.'
+        ],
+        prepTime: '15',
+        cookTime: '60',
+        time: 75,
+        serves: '2-4',
+        rating: 4.5,
+        difficulty: 3.5,
+        photo: mapleChicken
     },
 ];
     

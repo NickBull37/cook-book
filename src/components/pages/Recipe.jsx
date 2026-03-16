@@ -144,7 +144,7 @@ const Recipe = ({ setShoppingList }) => {
                             >
                                 <DetailChip icon={<AccessTimeIcon />} label={`${recipe.time} min`} />
                                 <DetailChip icon={<PersonIcon />} label={recipe.serves} />
-                                <DetailChip icon={<SignalCellularAltIcon />} label={recipe.difficulty < 2 ? 'Easy' : recipe.difficulty < 4 ? 'Med' : 'Hard'} />
+                                <DetailChip icon={<SignalCellularAltIcon />} label={recipe.difficulty <= 2 ? 'Easy' : recipe.difficulty < 4 ? 'Med' : 'Hard'} />
                             </Stack>
                         </Box>
                     </Box>

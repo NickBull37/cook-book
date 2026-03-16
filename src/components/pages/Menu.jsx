@@ -1,14 +1,8 @@
 import { Box, Stack } from '@mui/material';
 import { styled } from '@mui/material/styles';
-
 import { Navbar, MenuSection, QuickNav } from '..';
 import Particles from '../backgrounds/Particles';
-import appetizers from '../../data/appetizers';
-import entrees from '../../data/entrees';
-import sides from '../../data/sides';
-import desserts from '../../data/desserts';
-import drinks from '../../data/drinks';
-import extras from '../../data/extras';
+import recipes from '../../data/recipes';
 
 const PageWrapper = styled(Box)(() => ({
     position: 'relative',
@@ -37,32 +31,18 @@ const MenuContainer = styled(Box)(({ theme }) => ({
 
 const Menu = ({ setShoppingList }) => {
 
-    // Constants
+    const getSortedRecipesByType = (type) =>
+        recipes
+            .filter(recipe => recipe.type === type)
+            .sort((a, b) => a.recipeName.localeCompare(b.recipeName));
+
     const sections = [
-        {
-            title: 'Apps',
-            recipes: appetizers
-        },
-        {
-            title: 'Entrees',
-            recipes: entrees
-        },
-        {
-            title: 'Sides',
-            recipes: sides
-        },
-        {
-            title: 'Drinks',
-            recipes: drinks
-        },
-        {
-            title: 'Desserts',
-            recipes: desserts
-        },
-        {
-            title: 'Extras',
-            recipes: extras
-        },
+        { title: 'Apps', recipes: getSortedRecipesByType('appetizer') },
+        { title: 'Entrees', recipes: getSortedRecipesByType('entree') },
+        { title: 'Sides', recipes: getSortedRecipesByType('side') },
+        { title: 'Drinks', recipes: getSortedRecipesByType('drink') },
+        { title: 'Desserts', recipes: getSortedRecipesByType('dessert') },
+        { title: 'Sauces', recipes: getSortedRecipesByType('sauce') },
     ];
 
     return (
@@ -77,8 +57,6 @@ const Menu = ({ setShoppingList }) => {
                     moveParticlesOnHover={false}
                     alphaParticles={true}
                     disableRotation={false}
-                    // sizeRandomness={0}
-                    // cameraDistance={20}
                 />
             </BackgroundWrapper>
 
@@ -98,21 +76,6 @@ const Menu = ({ setShoppingList }) => {
                 </MenuContainer>
             </Stack>
         </PageWrapper>
-
-        // <Stack>
-        //     <Navbar showReturnLink={false} showShoppingListLink={true} />
-        //     <div style={{ width: '100%', height: '600px', position: 'relative' }}>
-        //         <MenuContainer>
-        //             {sections.map((section, index) => (
-        //                 <MenuSection
-        //                     sectionTitle={section.title}
-        //                     recipeType={section.recipeType}
-        //                     setShoppingList={setShoppingList}
-        //                 />
-        //             ))}
-        //         </MenuContainer>
-        //     </div>
-        // </Stack>
     );
 }
 

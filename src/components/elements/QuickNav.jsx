@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import { Box, Stack, Typography } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
@@ -11,28 +11,95 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Dialog from '@mui/material/Dialog';
-import IconButton from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
 
 import recipes from '../../data/recipes';
-import appetizers from '../../data/appetizers';
-import entrees from '../../data/entrees';
-import sides from '../../data/sides';
-import desserts from '../../data/desserts';
-import drinks from '../../data/drinks';
-import extras from '../../data/extras';
 
 const SectionTitle = styled(Typography)(({ theme }) => ({
     padding: '0.5rem 1rem',
     marginBottom: '0.5rem',
     borderBottom: '2px solid rgba(255, 102, 0, 0.5)',
+    fontSize: '1rem',
     [theme.breakpoints.down('md')]: {
         padding: '0.5rem 1rem',
         marginBottom: '0.5rem',
-        borderBottom: '2px solid rgba(255, 102, 0, 0.5)'
+        borderBottom: '2px solid rgba(255, 102, 0, 0.5)',
+        fontSize: '1.125rem',
     },
 }));
+
+const RecipeLink = styled(Link)(() => ({
+    textDecoration: 'none',
+    color: 'inherit',
+    display: 'block',
+    width: '100%',
+}));
+
+const QuickNavIconButton = styled(IconButton)(() => ({
+    backgroundColor: 'rgba(255, 102, 0, 0.3)',
+    color: '#fff',
+    '&:hover': {
+        backgroundColor: 'rgba(255, 102, 0, 0.8)',
+        cursor: 'pointer',
+    },
+}));
+
+const sectionConfig = [
+    { title: 'Appetizers', type: 'appetizer' },
+    { title: 'Entrees', type: 'entree' },
+    { title: 'Sides', type: 'side' },
+    { title: 'Drinks', type: 'drink' },
+    { title: 'Desserts', type: 'dessert' },
+    { title: 'Extras', type: 'extra' },
+    { title: 'Sauces', type: 'sauce' },
+];
+
+function RecipeSection({ title, recipes }) {
+
+    if (!recipes.length) {
+        return null;
+    }
+
+    return (
+        <Box>
+            <SectionTitle>
+                {title}
+            </SectionTitle>
+
+            <List sx={{ pt: 0 }}>
+                {recipes.map((recipe) => (
+                    <ListItem disablePadding key={recipe.index}>
+                        <RecipeLink to={`/recipe?index=${recipe.index}`}>
+                            <ListItemButton>
+                                <ListItemAvatar sx={{ minWidth: '50px' }}>
+                                    <Avatar
+                                        sx={{
+                                            bgcolor: 'rgba(255, 102, 0, 0.15)',
+                                            color: 'rgba(255, 102, 0, 0.7)',
+                                            height: '30px',
+                                            width: '30px',
+                                        }}
+                                    >
+                                        <LocalDiningIcon fontSize='small' />
+                                    </Avatar>
+                                </ListItemAvatar>
+
+                                <ListItemText primary={recipe.recipeName} />
+                            </ListItemButton>
+                        </RecipeLink>
+                    </ListItem>
+                ))}
+            </List>
+        </Box>
+    );
+}
+
+RecipeSection.propTypes = {
+    title: PropTypes.string.isRequired,
+    recipes: PropTypes.array.isRequired,
+};
 
 function SimpleDialog(props) {
     const { onClose, selectedValue, open } = props;
@@ -41,193 +108,50 @@ function SimpleDialog(props) {
         onClose(selectedValue);
     };
 
+    const getSortedRecipesByType = (type) =>
+        recipes
+            .filter((recipe) => recipe.type === type)
+            .sort((a, b) =>
+                a.recipeName.localeCompare(b.recipeName, undefined, {
+                    sensitivity: 'base',
+                })
+            );
+
+    const sections = sectionConfig.map((section) => ({
+        title: section.title,
+        recipes: getSortedRecipesByType(section.type),
+    }));
+
     return (
         <Dialog
             onClose={handleClose}
             open={open}
-            PaperProps={{
-                sx: {
-                    backgroundColor: '#333333',
-                    color: '#fff',
+            slotProps={{
+                paper: {
+                    sx: {
+                        backgroundColor: '#333333',
+                        color: '#fff',
+                    },
                 },
             }}
         >
-            <DialogTitle>Jump to Recipe:</DialogTitle>
+            <DialogTitle
+                sx={{
+                    fontSize: '16px',
+                    px: '1rem'
+                }}
+            >
+                JUMP TO RECIPE:
+            </DialogTitle>
 
             <Stack spacing={2}>
-                <Box>
-                    <SectionTitle>
-                        Appetizers
-                    </SectionTitle>
-                    <List sx={{ pt: 0 }}>
-                        {appetizers.map((recipe) => (
-                            <ListItem disablePadding key={recipe}>
-                                <Link to={`/recipe?index=${recipe.index}`}>
-                                    <ListItemButton>
-                                        <ListItemAvatar sx={{ minWidth: '50px' }}>
-                                            <Avatar
-                                                sx={{
-                                                    bgcolor: 'rgba(255, 102, 0, 0.2)',
-                                                    color: 'rgba(255, 102, 0, 0.9)',
-                                                    height: '35px',
-                                                    width: '35px',
-                                                }}
-                                            >
-                                                <LocalDiningIcon fontSize='small' />
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        <ListItemText primary={recipe.recipeName} />
-                                    </ListItemButton>
-                                </Link>
-                            </ListItem>
-                        ))}
-                    </List>
-                </Box>
-
-                <Box>
-                    <SectionTitle>
-                        Entrees
-                    </SectionTitle>
-                    <List sx={{ pt: 0 }}>
-                        {entrees.map((recipe) => (
-                            <ListItem disablePadding key={recipe}>
-                                <Link to={`/recipe?index=${recipe.index}`}>
-                                    <ListItemButton>
-                                        <ListItemAvatar sx={{ minWidth: '50px' }}>
-                                            <Avatar
-                                                sx={{
-                                                    bgcolor: 'rgba(255, 102, 0, 0.2)',
-                                                    color: 'rgba(255, 102, 0, 0.9)',
-                                                    height: '35px',
-                                                    width: '35px',
-                                                }}
-                                            >
-                                                <LocalDiningIcon fontSize='small' />
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        <ListItemText primary={recipe.recipeName} />
-                                    </ListItemButton>
-                                </Link>
-                            </ListItem>
-                        ))}
-                    </List>
-                </Box>
-
-                <Box>
-                    <SectionTitle>
-                        Sides
-                    </SectionTitle>
-                    <List sx={{ pt: 0 }}>
-                        {sides.map((recipe) => (
-                            <ListItem disablePadding key={recipe}>
-                                <Link to={`/recipe?index=${recipe.index}`}>
-                                    <ListItemButton>
-                                        <ListItemAvatar sx={{ minWidth: '50px' }}>
-                                            <Avatar
-                                                sx={{
-                                                    bgcolor: 'rgba(255, 102, 0, 0.2)',
-                                                    color: 'rgba(255, 102, 0, 0.9)',
-                                                    height: '35px',
-                                                    width: '35px',
-                                                }}
-                                            >
-                                                <LocalDiningIcon fontSize='small' />
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        <ListItemText primary={recipe.recipeName} />
-                                    </ListItemButton>
-                                </Link>
-                            </ListItem>
-                        ))}
-                    </List>
-                </Box>
-
-                <Box>
-                    <SectionTitle>
-                        Drinks
-                    </SectionTitle>
-                    <List sx={{ pt: 0 }}>
-                        {drinks.map((recipe) => (
-                            <ListItem disablePadding key={recipe}>
-                                <Link to={`/recipe?index=${recipe.index}`}>
-                                    <ListItemButton>
-                                        <ListItemAvatar sx={{ minWidth: '50px' }}>
-                                            <Avatar
-                                                sx={{
-                                                    bgcolor: 'rgba(255, 102, 0, 0.2)',
-                                                    color: 'rgba(255, 102, 0, 0.9)',
-                                                    height: '35px',
-                                                    width: '35px',
-                                                }}
-                                            >
-                                                <LocalDiningIcon fontSize='small' />
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        <ListItemText primary={recipe.recipeName} />
-                                    </ListItemButton>
-                                </Link>
-                            </ListItem>
-                        ))}
-                    </List>
-                </Box>
-
-                <Box>
-                    <SectionTitle>
-                        Desserts
-                    </SectionTitle>
-                    <List sx={{ pt: 0 }}>
-                        {desserts.map((recipe) => (
-                            <ListItem disablePadding key={recipe}>
-                                <Link to={`/recipe?index=${recipe.index}`}>
-                                    <ListItemButton>
-                                        <ListItemAvatar sx={{ minWidth: '50px' }}>
-                                            <Avatar
-                                                sx={{
-                                                    bgcolor: 'rgba(255, 102, 0, 0.2)',
-                                                    color: 'rgba(255, 102, 0, 0.9)',
-                                                    height: '35px',
-                                                    width: '35px',
-                                                }}
-                                            >
-                                                <LocalDiningIcon fontSize='small' />
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        <ListItemText primary={recipe.recipeName} />
-                                    </ListItemButton>
-                                </Link>
-                            </ListItem>
-                        ))}
-                    </List>
-                </Box>
-
-                <Box>
-                    <SectionTitle>
-                        Extras
-                    </SectionTitle>
-                    <List sx={{ pt: 0 }}>
-                        {extras.map((recipe) => (
-                            <ListItem disablePadding key={recipe}>
-                                <Link to={`/recipe?index=${recipe.index}`}>
-                                    <ListItemButton>
-                                        <ListItemAvatar sx={{ minWidth: '50px' }}>
-                                            <Avatar
-                                                sx={{
-                                                    bgcolor: 'rgba(255, 102, 0, 0.2)',
-                                                    color: 'rgba(255, 102, 0, 0.9)',
-                                                    height: '35px',
-                                                    width: '35px',
-                                                }}
-                                            >
-                                                <LocalDiningIcon fontSize='small' />
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        <ListItemText primary={recipe.recipeName} />
-                                    </ListItemButton>
-                                </Link>
-                            </ListItem>
-                        ))}
-                    </List>
-                </Box>
+                {sections.map((section) => (
+                    <RecipeSection
+                        key={section.title}
+                        title={section.title}
+                        recipes={section.recipes}
+                    />
+                ))}
             </Stack>
         </Dialog>
     );
@@ -236,32 +160,18 @@ function SimpleDialog(props) {
 SimpleDialog.propTypes = {
     onClose: PropTypes.func.isRequired,
     open: PropTypes.bool.isRequired,
-    selectedValue: PropTypes.string.isRequired,
+    selectedValue: PropTypes.string,
 };
 
-const QuickNavIconButton = styled(IconButton)(({ theme }) => ({
-    maxWidth: '55px',
-    maxHeight: '55px',
-    backgroundColor: 'rgba(255, 102, 0, 0.3)',
-    color: '#fff',
-    transition: '0.3s ease',
-    padding: '10px',
-    borderRadius: '100px',
-    '&:hover': {
-        backgroundColor: 'rgba(255, 102, 0, 0.8)',
-        cursor: 'pointer'
-    },
-}));
-
 export default function SimpleDialogDemo() {
-
+    
     const [open, setOpen] = React.useState(false);
 
     const handleToggleDialog = () => {
         setOpen((prev) => !prev);
     };
 
-    const handleClose = (value) => {
+    const handleClose = () => {
         setOpen(false);
     };
 
@@ -275,14 +185,8 @@ export default function SimpleDialogDemo() {
                     zIndex: 11,
                 }}
             >
-                <QuickNavIconButton
-                    onClick={handleToggleDialog}
-                >
-                    <MenuBookIcon
-                        sx={{
-                            fontSize: "30px"
-                        }}
-                    />
+                <QuickNavIconButton onClick={handleToggleDialog}>
+                    <MenuBookIcon />
                 </QuickNavIconButton>
             </Box>
 
