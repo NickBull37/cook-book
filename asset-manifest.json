@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cook-book/static/css/main.fa3f1b99.css",
-    "main.js": "/cook-book/static/js/main.693643fc.js",
+    "main.js": "/cook-book/static/js/main.92ce4102.js",
     "static/media/bulls-kitchen.png": "/cook-book/static/media/bulls-kitchen.e81612a8e6f4dfdabb98.png",
     "static/media/bulls-kitchen-landing.png": "/cook-book/static/media/bulls-kitchen-landing.c76b329a676f06cd2b8e.png",
     "static/media/guacamole.jpg": "/cook-book/static/media/guacamole.fce8bb1a2bd937aaea3b.jpg",
@@ -19,6 +19,7 @@
     "static/media/chicken-parm.jpg": "/cook-book/static/media/chicken-parm.49b850fcd76c3719f903.jpg",
     "static/media/fried-rice.png": "/cook-book/static/media/fried-rice.c73ec385d56a1b064379.png",
     "static/media/chicken-tacos.jpg": "/cook-book/static/media/chicken-tacos.d660c133ff07368d594c.jpg",
+    "static/media/newengland-clam-chowder.jpg": "/cook-book/static/media/newengland-clam-chowder.27206afc0e4cee88dbfc.jpg",
     "static/media/maple-chicken.jpg": "/cook-book/static/media/maple-chicken.7ef0bea9469042a07109.jpg",
     "static/media/greek-salad.jpg": "/cook-book/static/media/greek-salad.3412d0a5d33a4133561c.jpg",
     "static/media/cowboy-butter.jpg": "/cook-book/static/media/cowboy-butter.c48202e11aa1dcc0143e.jpg",
@@ -38,10 +39,10 @@
     "static/media/oreo-cookie-cake.jpg": "/cook-book/static/media/oreo-cookie-cake.f5beb68668c71946e3a5.jpg",
     "index.html": "/cook-book/index.html",
     "main.fa3f1b99.css.map": "/cook-book/static/css/main.fa3f1b99.css.map",
-    "main.693643fc.js.map": "/cook-book/static/js/main.693643fc.js.map"
+    "main.92ce4102.js.map": "/cook-book/static/js/main.92ce4102.js.map"
   },
   "entrypoints": [
     "static/css/main.fa3f1b99.css",
-    "static/js/main.693643fc.js"
+    "static/js/main.92ce4102.js"
   ]
 }
