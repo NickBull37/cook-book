@@ -33,3 +33,4 @@ export const friedRice = require('../images/recipes/fried-rice.png');
 export const chipotleMayo = require('../images/recipes/chipotle-mayo.jpg');
 export const meatballs = require('../images/recipes/meatballs.jpg');
 export const mapleChicken = require('../images/recipes/maple-chicken.jpg');
+export const newEnglandClamChowder = require('../images/recipes/newengland-clam-chowder.jpg');

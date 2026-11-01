@@ -38,6 +38,7 @@ const Menu = ({ setShoppingList }) => {
 
     const sections = [
         { title: 'Apps', recipes: getSortedRecipesByType('appetizer') },
+        { title: 'Soups', recipes: getSortedRecipesByType('soup') },
         { title: 'Entrees', recipes: getSortedRecipesByType('entree') },
         { title: 'Sides', recipes: getSortedRecipesByType('side') },
         { title: 'Drinks', recipes: getSortedRecipesByType('drink') },

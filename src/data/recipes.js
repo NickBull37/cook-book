@@ -25,7 +25,8 @@ import {
     friedRice,
     chipotleMayo,
     meatballs,
-    mapleChicken
+    mapleChicken,
+    newEnglandClamChowder
 } from "../utils/constants";
 
 const recipes = [
@@ -720,7 +721,7 @@ const recipes = [
     },
     {
         index: 25,
-        type: 'entree',
+        type: 'soup',
         recipeName: 'Baked Potato Soup',
         ingredientsList: [
             '1 lb potatoes (peeled & diced)',
@@ -820,6 +821,41 @@ const recipes = [
         rating: 4.5,
         difficulty: 3.5,
         photo: mapleChicken
+    },
+    {
+        index: 28,
+        type: 'soup',
+        recipeName: 'New England Clam Chowder',
+        ingredientsList: [
+            '1/3 pack bacon',
+            '3 russet potatoes',
+            '2 cans chopped clams',
+            '2 tbsp butter',
+            '2 stalks celery (diced)',
+            '1 small onion (diced)',
+            '3 cloves garlic (minced)',
+            '3 tbsp flour',
+            '2 cups whole milk',
+            '1 cup heavy cream',
+            '1/4 tsp thyme',
+            '1 bay leaf',
+        ],
+        instructionsList: [
+            'Cook chopped bacon in a dutch oven until crispy.',
+            'Remove bacon and add butter, onions, celery, and garlic. Cook until soft.',
+            'Add flour and mix to form a roux.',
+            'Strain clam juice from both cans and add clam juice, milk, and heavy cream. Bring to a simmer.',
+            'Add in diced potatoes, thyme, and bay leaf. Simmer for 30 - 40 mins.',
+            'Add chopped clams. Cook for another 5 mins.',
+            'Serve and top with bacon bits.'
+        ],
+        prepTime: '15',
+        cookTime: '60',
+        time: 75,
+        serves: '4-6',
+        rating: 4,
+        difficulty: 2.5,
+        photo: newEnglandClamChowder
     },
 ];
     
